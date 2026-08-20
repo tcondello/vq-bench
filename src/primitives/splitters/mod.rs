@@ -3,6 +3,7 @@
 
 primitives! { Splitter:
     segment => SegmentSplit,
+    spectral => SpectralSplit,
 }
 
 mod split;

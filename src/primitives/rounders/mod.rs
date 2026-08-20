@@ -17,5 +17,6 @@ primitives! { Primitive:
     cast_angular => CastAngular,
     cast_sign => CastSign,
     cast_hamming => CastHamming,
+    cast_ternary => CastTernary,
     kmeans => Kmeans,
 }

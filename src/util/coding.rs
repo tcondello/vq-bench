@@ -71,6 +71,15 @@ pub(crate) fn unpack_model<T: ModelField>(model: &[u8]) -> T {
     out
 }
 
+impl ModelField for u8 {
+    fn write(&self, buf: &mut Vec<u8>) {
+        buf.push(*self);
+    }
+    fn read(cur: &mut &[u8]) -> Self {
+        take(cur, 1)[0]
+    }
+}
+
 impl ModelField for u32 {
     fn write(&self, buf: &mut Vec<u8>) {
         buf.extend_from_slice(&self.to_le_bytes());

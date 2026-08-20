@@ -32,4 +32,7 @@ quantizers! {
     pq => Pq,
     opq => Opq,
     opq_p => OpqP,
+    spectralquant => SpectralQuant,
+    anchorquant => AnchorQuant,
+    bitnet => BitNetQuant,
 }
