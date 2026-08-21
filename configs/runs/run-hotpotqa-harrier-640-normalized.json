@@ -1,0 +1,71 @@
+{
+  "datasets": [
+    "hotpotqa-harrier-640-normalized"
+  ],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [
+    1,
+    10,
+    100
+  ],
+  "temp": [
+    0.05,
+    0.2,
+    1.0
+  ],
+  "methods": [
+    {
+      "name": "spike_eden",
+      "b": [
+        2,
+        3,
+        4
+      ],
+      "ratio": [
+        0.05
+      ]
+    },
+    {
+      "name": "water_filled_lattice",
+      "b": [
+        2,
+        4,
+        6
+      ],
+      "ratio": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "name": "spike_adapt_manifold",
+      "b": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "spike_ratio": [
+        0.05
+      ],
+      "spectral_ratio": [
+        0.25,
+        0.5
+      ]
+    }
+  ],
+  "metrics": [
+    "recall",
+    "mse_score",
+    "mse_recon",
+    "bias_score",
+    "bias_recon",
+    "sos",
+    "exp_sos",
+    "kl",
+    "tv"
+  ]
+}
