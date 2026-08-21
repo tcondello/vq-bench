@@ -1,0 +1,19 @@
+{
+  "datasets": ["llama-128-ip"],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [1, 10, 50],
+  "temp": [0.5, 1.0, 2.0],
+  "methods": [
+    { "name": "bitnet", "rotation": ["hadamard", "full"] },
+    { "name": "simhash", "b": 1 },
+    { "name": "qjl", "b": 1 },
+    { "name": "anchorquant", "k": 64, "res_ratio": 0.2, "b_res": 2 },
+    { "name": "eden_prod", "b": 2 },
+    { "name": "spectralquant", "b": 2 },
+    { "name": "turboquant_prod", "b": 2 }
+  ],
+  "metrics": ["recall", "mse_score", "mse_recon", "sos"]
+}

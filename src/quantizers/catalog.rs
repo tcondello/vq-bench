@@ -111,6 +111,12 @@ impl FromParam for f32 {
     }
 }
 
+impl FromParam for bool {
+    fn from_value(v: &Value) -> Result<bool> {
+        v.as_bool().context("must be a boolean (true/false)")
+    }
+}
+
 impl FromParam for usize {
     fn from_value(v: &Value) -> Result<usize> {
         let n = v.as_u64().context("must be a non-negative integer")?;

@@ -1,6 +1,36 @@
 {
-  "generated": 1786935434,
+  "generated": 1787331870,
   "runs": [
+    {
+      "name": "all-adv-phases-bench",
+      "path": "all-adv-phases-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787318752
+    },
+    {
+      "name": "all-methods-bench",
+      "path": "all-methods-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        }
+      ],
+      "timestamp": 1787258582
+    },
     {
       "name": "aug-2026",
       "path": "aug-2026.json",
@@ -47,6 +77,250 @@
         }
       ],
       "timestamp": 1786731355
+    },
+    {
+      "name": "complete-all-phases-bench",
+      "path": "complete-all-phases-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787286071
+    },
+    {
+      "name": "e8-lattice-bench",
+      "path": "e8-lattice-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787279643
+    },
+    {
+      "name": "full-sweep-8bit",
+      "path": "full-sweep-8bit.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787265983
+    },
+    {
+      "name": "high-bit-manifold-bench",
+      "path": "high-bit-manifold-bench.json",
+      "datasets": [
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787326383
+    },
+    {
+      "name": "master-comparison",
+      "path": "master-comparison.json",
+      "datasets": [
+        {
+          "dataset": "arxiv-nomic-768-normalized",
+          "n_base": 1344643
+        },
+        {
+          "dataset": "ccnews-nomic-768-normalized",
+          "n_base": 495328
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "hotpotqa-harrier-640-normalized",
+          "n_base": 5233329
+        },
+        {
+          "dataset": "imagenet-clip-512-normalized",
+          "n_base": 1281167
+        },
+        {
+          "dataset": "laion-clip-512-normalized",
+          "n_base": 1000448
+        },
+        {
+          "dataset": "landmark-nomic-768-normalized",
+          "n_base": 760757
+        },
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 8840823
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        }
+      ],
+      "timestamp": 1787330000
+    },
+    {
+      "name": "matrix-grand-bench",
+      "path": "matrix-grand-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787281913
+    },
+    {
+      "name": "matrix-manifold-sweeps",
+      "path": "matrix-manifold-sweeps.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787325663
+    },
+    {
+      "name": "msmarco-1024-bench",
+      "path": "msmarco-1024-bench.json",
+      "datasets": [
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787317359
+    },
+    {
+      "name": "multi-dataset-experiments",
+      "path": "multi-dataset-experiments.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787262634
+    },
+    {
+      "name": "phase2-hybrid-bench",
+      "path": "phase2-hybrid-bench.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "yahoo-minilm-384-normalized",
+          "n_base": 677305
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787281057
+    },
+    {
+      "name": "phase4-grand-metasynthesis",
+      "path": "phase4-grand-metasynthesis.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787320327
+    },
+    {
+      "name": "phase5-novel-synthesis",
+      "path": "phase5-novel-synthesis.json",
+      "datasets": [
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "msmarco-qwen-1024-normalized",
+          "n_base": 500000
+        }
+      ],
+      "timestamp": 1787328008
     }
   ]
 }

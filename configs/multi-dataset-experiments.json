@@ -1,0 +1,24 @@
+{
+  "datasets": [
+    "llama-128-ip",
+    "yahoo-minilm-384-normalized",
+    "coco-nomic-768-normalized"
+  ],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [1, 10, 50],
+  "temp": [0.5, 1.0, 2.0],
+  "methods": [
+    { "name": "bitnet", "rotation": ["hadamard", "full"] },
+    { "name": "anchorquant", "k": [64, 128], "res_ratio": [0.0, 0.2, 0.5], "b_res": 2 },
+    { "name": "spectralquant", "b": [2, 3, 4] },
+    { "name": "turboquant_prod", "b": [2, 3, 4] },
+    { "name": "eden_prod", "b": [2, 3, 4] },
+    { "name": "simhash", "b": [1, 2] },
+    { "name": "qjl", "b": [1, 2] },
+    { "name": "opq", "centroids": 256, "section_dim": 8 }
+  ],
+  "metrics": ["recall", "mse_score", "mse_recon", "bias_score", "bias_recon", "sos", "exp_sos", "kl", "tv"]
+}

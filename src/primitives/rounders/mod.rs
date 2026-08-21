@@ -18,5 +18,9 @@ primitives! { Primitive:
     cast_sign => CastSign,
     cast_hamming => CastHamming,
     cast_ternary => CastTernary,
+    cast_e8 => CastE8,
+    cast_shell_e8 => CastShellE8,
+    cast_multi_shell_e8 => CastMultiShellE8,
+    cast_leech24 => CastLeech24,
     kmeans => Kmeans,
 }

@@ -1,0 +1,19 @@
+{
+  "datasets": ["llama-128-ip"],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [1, 10, 50],
+  "temp": [0.5, 1.0, 2.0],
+  "methods": [
+    { "name": "spectralquant", "b": [2, 3, 4] },
+    { "name": "spectralquant", "b": [2, 3, 4], "ratio": 0.05 },
+    { "name": "turboquant_prod", "b": [2, 3, 4] },
+    { "name": "turboquant_mse", "b": [2, 3, 4] },
+    { "name": "eden_prod", "b": [2, 3, 4] },
+    { "name": "e_rabitq", "b": [2, 3, 4] },
+    { "name": "opq", "centroids": 256, "section_dim": [8, 4] }
+  ],
+  "metrics": ["recall", "mse_score", "mse_recon", "sos"]
+}

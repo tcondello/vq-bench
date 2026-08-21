@@ -4,6 +4,7 @@
 primitives! { Splitter:
     segment => SegmentSplit,
     spectral => SpectralSplit,
+    spike => SpikeSplit,
 }
 
 mod split;

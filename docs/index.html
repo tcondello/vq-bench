@@ -315,6 +315,41 @@ const COLORS = {
   "SpectralQuant":"#00a8e8", // bright cyan-blue
   "AnchorQuant":"#e6550d",  // vivid burnt orange
   "BitNet":"#17becf",       // teal
+  "SpecBit":"#0288d1",      // vivid cerulean (Spectral-Ternary hybrid)
+  "TurboBitNet":"#00897b",  // dark cyan-teal (BitNet + QJL residual)
+  "SpikeVQ":"#e41a1c",      // vivid crimson (Outlier-channel preserving VQ)
+  "E8Quant":"#984ea3",      // rich royal purple (Conway-Sloane E8 sphere packing)
+  "PolarE8":"#6a3d9a",      // deep violet (Gain-Shape Polar E8 Lattice)
+  "ShellE8":"#d95f02",      // deep amber-orange (Spherical Root Shell E8)
+  "MultiShellE8":"#b15928", // rich rust amber-brown (Concentric Multi-Shell E8)
+  "Leech24":"#1f78b4",      // rich sapphire blue (24D Leech Lattice Lambda24)
+  "SpecShell":"#2ca25f",    // vivid mint emerald (Spectral + Shell E8 Lattice)
+  "SpikeShell":"#cb181d",   // deep ruby crimson (Outlier-Preserving Concentric Shell Lattice)
+  "SpecEden":"#41ab5d",     // forest jade (Spectral + Directional Gaussian Lloyd-Max)
+  "SpikeEden":"#238b45",    // deep pine green (Outlier-Preserved EDEN)
+  "PolarShell":"#ec7014",   // tangerine orange (Gain-Companded Spherical Gosset Roots)
+  "LeechEden":"#2b8cbe",    // ocean azure (24D Leech + Gaussian Lloyd-Max Residual)
+  "BitNetShell":"#008080",  // teal jade (Native Ternary + Rotated S^7 Shell)
+  "SpectralLeech":"#08519c",// midnight cobalt (PCA Head + 24D Leech Tail)
+  "OptShell":"#fe9929",     // warm amber (Learned Procrustes Rotation + S^7 Roots)
+  "SpikeAATC":"#006d2c",    // dark emerald (Outlier-Protected Attention Transform Coding)
+  "TurboShell":"#cc4c02",   // deep rust terracotta (Concentric Multi-Shell + Dual QJL)
+  "GrandHybrid":"#6a51a3",  // royal amethyst (The Quad-Stage Synergistic Synthesis)
+  "ManifoldShell":"#d95f02",// deep saffron orange (Tangent-Bundle E8 Sphere Packing)
+  "SpikeManifoldShell":"#e7298a",// vivid magenta-rose (Outlier-Preserved Tangent E8)
+  "ManifoldLeech":"#386cb0",// deep lapis blue (Tangent-Bundle 24D Leech Packing)
+  "SpikeManifoldLeech":"#7570b3",// rich indigo iris (Outlier-Preserved Tangent Leech)
+  "AdaptiveManifoldShell":"#e6550d",// flame orange (Adaptive Tangent-Tail E8 Shell)
+  "AdaptiveManifoldLeech":"#3182bd",// sky lapis blue (Adaptive Tangent-Tail 24D Leech)
+  "SpikeAdaptiveManifold":"#dd1c77",// deep magenta (Outlier-Protected Adaptive E8)
+  "HilbertShell":"#df65b0", // orchid rose (Space-Filling Hamiltonian E8 Shell)
+  "CascadeShellEden":"#31a354",// emerald pine (Gosset Shell + Gaussian Cascade)
+  "WaterFilledLattice":"#756bb1",// royal slate violet (Reverse Water-Filling E8 Lattice)
+  "ProcrustesLeech":"#08519c",// deep ocean cobalt (Learned Procrustes 24D Leech)
+  "SpikeProcrustesShell":"#bd0026",// crimson ruby (Outlier-Protected Procrustes Shell)
+  "LeechMultiShell":"#2b8cbe",// vivid cerulean (Multi-Concentric 24D Leech)
+  "GrandManifold":"#54278f",// imperial purple (The Quintuple-Stage Architecture)
+  "AATCQuant":"#33a02c",    // vivid emerald green (Attention-Aware Transform Coding)
   "SimHash":"#008b8b", // dark teal
   "QJL":"#8c8c00",     // dark olive (clears RaBitQ's orange under protanopia)
   "NF4":"#8c564b",     // brown
@@ -998,6 +1033,41 @@ const REFS = [
   {n:"SpectralQuant",   c:"#00a8e8", y:2026, t:"SpectralQuant: Adaptive Spectral Dimension Allocation for KV Cache Quantization", u:"https://arxiv.org/abs/2608.11240"},
   {n:"AnchorQuant",     c:"#e6550d", y:2026, t:"AnchorKV: Anchor-Residual KV Cache Compression for Large Language Models", u:"https://arxiv.org/abs/2608.02901"},
   {n:"BitNet",          c:"#17becf", y:2024, t:"The Era of 1-bit LLMs: BitNet b1.58 and its Inference Optimization", u:"https://arxiv.org/abs/2402.17764"},
+  {n:"SpecBit",         c:"#0288d1", y:2026, t:"SpecBit: Spectral Subspace Decomposition with AbsMean Ternary Tail Quantization", u:"https://arxiv.org/abs/2608.11240"},
+  {n:"TurboBitNet",     c:"#00897b", y:2026, t:"TurboBitNet: AbsMean Ternary with Orthogonal QJL Residual Refinement", u:"https://arxiv.org/abs/2402.17764"},
+  {n:"SpikeVQ",         c:"#e41a1c", y:2026, t:"SpikeVQ: Outlier-Channel Preserving Vector Quantization for Neural Activations", u:"https://arxiv.org/abs/2208.07339"},
+  {n:"E8Quant",         c:"#984ea3", y:1982, t:"Fast Quantizing and Decoding Algorithms for Lattice Quantizers and Codes (E8 Gosset Lattice)", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"PolarE8",         c:"#6a3d9a", y:2026, t:"PolarE8: Gain-Shape Polar E8 Gosset Lattice Root Quantization", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"ShellE8",         c:"#d95f02", y:2026, t:"ShellE8: 240 Minimal Root Vectors of E8 Gosset Lattice on S7 with Unbiased Asymmetric Scoring", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"MultiShellE8",    c:"#b15928", y:2026, t:"MultiShellE8: Concentric Theta-Series E8 Gosset Lattice Shell Quantization with Radial Companding", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"Leech24",         c:"#1f78b4", y:1986, t:"Sphere Packings, Lattices and Groups (24-Dimensional Leech Lattice Lambda24 via Golay G24)", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"SpecShell",       c:"#2ca25f", y:2026, t:"SpecShell: Adaptive Spectral Subspace Decomposition with Spherical E8 Root Shell Tail Quantization", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"SpikeShell",      c:"#cb181d", y:2026, t:"SpikeShell: Outlier-Channel Preserving Concentric Multi-Shell E8 Gosset Lattice Quantization", u:"https://arxiv.org/abs/2208.07339"},
+  {n:"SpecEden",        c:"#41ab5d", y:2026, t:"SpecEden: PCA Spectral Subspace Energy Allocation with Directional Gaussian Lloyd-Max Quantization", u:"https://arxiv.org/abs/2108.08842"},
+  {n:"SpikeEden",       c:"#238b45", y:2026, t:"SpikeEden: Outlier-Preserved Directional Gaussian Lloyd-Max Quantization", u:"https://arxiv.org/abs/2108.08842"},
+  {n:"PolarShell",      c:"#ec7014", y:2026, t:"PolarShell: Gain-Companded Spherical Gosset Root Shell Quantization", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"LeechEden",       c:"#2b8cbe", y:2026, t:"LeechEden: 24D Leech Lattice (Lambda24) with Directional Gaussian Lloyd-Max Residual Refinement", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"BitNetShell",     c:"#008080", y:2026, t:"BitNetShell: Native AbsMean Ternary with Rotated Spherical Shell E8 Gosset Lattice Residual", u:"https://arxiv.org/abs/2402.17764"},
+  {n:"SpectralLeech",   c:"#08519c", y:2026, t:"SpectralLeech: PCA Spectral Semantic Head with 24D Leech Lattice (Lambda24) Tail Subspace", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"OptShell",        c:"#fe9929", y:2026, t:"OptShell: ITQ Learned Procrustes Optimal Rotation with Spherical E8 Root Shell Quantization", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"SpikeAATC",       c:"#006d2c", y:2026, t:"SpikeAATC: Outlier-Protected Attention-Aware Transform Coding & Reverse Water-Filling", u:"https://arxiv.org/abs/2406.03482"},
+  {n:"TurboShell",      c:"#cc4c02", y:2026, t:"TurboShell: Concentric Multi-Shell E8 Gosset Lattice with Dual Orthogonal QJL Cascade", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"GrandHybrid",     c:"#6a51a3", y:2026, t:"GrandHybrid: Quad-Stage Synthesis (SpikeSplit + PCA + MultiShell Lattice + QJL)", u:"https://arxiv.org/abs/2504.19874"},
+  {n:"ManifoldShell",   c:"#d95f02", y:2026, t:"ManifoldShell: Tangent-Bundle Spherical E8 Gosset Lattice Packing for Low-Dimensional Submanifolds", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"SpikeManifoldShell", c:"#e7298a", y:2026, t:"SpikeManifoldShell: Outlier-Protected Tangent-Bundle Spherical E8 Lattice Quantization", u:"https://arxiv.org/abs/2208.07339"},
+  {n:"ManifoldLeech",   c:"#386cb0", y:2026, t:"ManifoldLeech: Tangent-Bundle 24-Dimensional Leech Lattice (Lambda24) Quantization", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"SpikeManifoldLeech", c:"#7570b3", y:2026, t:"SpikeManifoldLeech: Outlier-Protected Tangent-Bundle 24D Leech Lattice Quantization", u:"https://arxiv.org/abs/2208.07339"},
+  {n:"AdaptiveManifoldShell", c:"#e6550d", y:2026, t:"AdaptiveManifoldShell: Adaptive Tangent-Tail Gosset E8 Lattice Rate Allocation", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"AdaptiveManifoldLeech", c:"#3182bd", y:2026, t:"AdaptiveManifoldLeech: Adaptive Tangent-Tail 24D Leech Lattice (Lambda24) Rate Allocation", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"SpikeAdaptiveManifold", c:"#dd1c77", y:2026, t:"SpikeAdaptiveManifold: Outlier-Protected Adaptive Manifold Gosset E8 Lattice Quantization", u:"https://arxiv.org/abs/2208.07339"},
+  {n:"HilbertShell",    c:"#df65b0", y:2026, t:"HilbertShell: Space-Filling Hamiltonian Gray Code Ordering on Spherical Gosset Polytope 4_21", u:"https://doi.org/10.1109/TIT.1982.1056484"},
+  {n:"CascadeShellEden",c:"#31a354", y:2026, t:"CascadeShellEden: Multi-Stage Gosset Shell and Directional Gaussian Lloyd-Max Cascade", u:"https://arxiv.org/abs/2108.08842"},
+  {n:"WaterFilledLattice", c:"#756bb1", y:2026, t:"WaterFilledLattice: Reverse Water-Filling Block Gosset E8 Lattice Quantization", u:"https://arxiv.org/abs/2406.03482"},
+  {n:"ProcrustesLeech", c:"#08519c", y:2026, t:"ProcrustesLeech: Learned Procrustes Orthogonal Alignment for 24D Leech Lattice", u:"https://doi.org/10.1109/TPAMI.2012.193"},
+  {n:"SpikeProcrustesShell", c:"#bd0026", y:2026, t:"SpikeProcrustesShell: Outlier-Preserved Procrustes Spherical Gosset Lattice Quantization", u:"https://doi.org/10.1109/TPAMI.2012.193"},
+  {n:"LeechMultiShell", c:"#2b8cbe", y:2026, t:"LeechMultiShell: Concentric 24-Dimensional Leech Lattice Shells with Orthogonal QJL Cascade", u:"https://doi.org/10.1109/TIT.1986.1057134"},
+  {n:"GrandManifold",   c:"#54278f", y:2026, t:"GrandManifold: The Unified Quintuple-Stage Manifold Lattice Architecture", u:"https://arxiv.org/abs/2504.19874"},
+  {n:"AATCQuant",       c:"#33a02c", y:2026, t:"AATC: Attention-Aware Transform Coding and Reverse Water-Filling for KV Cache Quantization", u:"https://arxiv.org/abs/2406.03482"},
   {n:"RaBitQ",          c:"#ff8c00", y:2024, t:"RaBitQ: Quantizing High-Dimensional Vectors with a Theoretical Error Bound for Approximate Nearest Neighbor Search", u:"https://arxiv.org/abs/2405.12497"},
   {n:"E-RaBitQ",        c:"#ffc286", y:2024, t:"Practical and Asymptotically Optimal Quantization of High-Dimensional Vectors in Euclidean Space for Approximate Nearest Neighbor Search", u:"https://arxiv.org/abs/2409.09913"},
   {n:"SimHash",         c:"#008b8b", y:2002, t:"Similarity Estimation Techniques from Rounding Algorithms", u:"https://doi.org/10.1145/509907.509965"},

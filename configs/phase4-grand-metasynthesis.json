@@ -1,0 +1,32 @@
+{
+  "datasets": [
+    "llama-128-ip",
+    "coco-nomic-768",
+    "msmarco-qwen-1024-normalized"
+  ],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [1, 10, 100],
+  "temp": [0.05, 0.2, 1.0],
+  "methods": [
+    { "name": "scalar", "b": [1, 2, 3, 4] },
+    { "name": "eden_prod", "b": [1, 2, 3, 4] },
+    { "name": "turboquant_prod", "b": [2, 3, 4] },
+    { "name": "shell_e8", "residual": [false, true] },
+    { "name": "multi_shell_e8", "b": [1, 2, 3, 4], "residual": [true] },
+    { "name": "aatc", "b": [2, 3, 4] },
+    { "name": "spec_eden", "b": [2, 3, 4], "ratio": [0.25] },
+    { "name": "spike_eden", "b": [2, 3, 4], "ratio": [0.05] },
+    { "name": "polar_shell", "residual": [false, true] },
+    { "name": "leech_eden", "b": [2, 3, 4], "residual": [true] },
+    { "name": "bitnet_shell" },
+    { "name": "spectral_leech", "b": [2, 3, 4], "ratio": [0.25] },
+    { "name": "opt_shell", "residual": [false, true] },
+    { "name": "spike_aatc", "b": [2, 3, 4], "ratio": [0.05] },
+    { "name": "turbo_shell", "b": [2, 3, 4], "cascade": [true] },
+    { "name": "grand_hybrid", "b": [2, 3, 4], "spike_ratio": [0.05], "spectral_ratio": [0.25] }
+  ],
+  "metrics": ["recall", "mse_score", "mse_recon", "bias_score", "bias_recon", "sos", "exp_sos", "kl", "tv"]
+}
