@@ -1205,4 +1205,77 @@ mod tests {
         assert!(!dest.with_extension("tmp.hdf5").exists());
         std::fs::remove_file(&src).ok();
     }
+
+    #[test]
+    #[ignore]
+    fn compute_dataset_diagnostics() {
+        let datasets = [
+            "msmarco-qwen-1024-normalized",
+            "coco-nomic-768-normalized",
+            "llama-128-ip",
+            "yahoo-minilm-384-normalized",
+            "laion-clip-512-normalized",
+            "imagenet-clip-512-normalized",
+        ];
+        let data_dir = std::path::Path::new("data");
+
+        println!("\n{:=<110}", "");
+        println!(" DATASET COORDINATE KURTOSIS & VARIANCE DIAGNOSTIC TABLE");
+        println!("{:=<110}", "");
+        println!("{:<30} | {:>5} | {:>7} | {:>10} | {:>10} | {:>12} | {:>12} | {:>10}",
+            "Dataset", "Dim", "N_Fit", "Max/MedVar", "MedKurt", "MaxKurt", "Top5%Kurt", "Top5%VarFrac");
+        println!("{:-<110}", "");
+
+        for &ds_name in &datasets {
+            let path = data_dir.join(format!("{ds_name}.hdf5"));
+            if !path.exists() {
+                continue;
+            }
+            if let Ok(loaded) = load(&path, Mode::Resident) {
+                let fit_vecs = match &loaded.base {
+                    Base::Mem(m) => m.view(),
+                    Base::Disk(_) => unreachable!(),
+                };
+                let n = fit_vecs.nrows().min(20000) as f32;
+                let fit_sub = fit_vecs.slice(ndarray::s![..fit_vecs.nrows().min(20000), ..]);
+                let d = fit_sub.ncols();
+
+                let mut vars = Vec::with_capacity(d);
+                let mut kurts = Vec::with_capacity(d);
+
+                for j in 0..d {
+                    let col = fit_sub.column(j);
+                    let mean = col.sum() / n;
+                    let var = col.iter().map(|&x| (x - mean).powi(2)).sum::<f32>() / n;
+                    vars.push(var);
+
+                    let std = var.sqrt().max(1e-9);
+                    let m4 = col.iter().map(|&x| ((x - mean) / std).powi(4)).sum::<f32>() / n;
+                    let kurt = m4 - 3.0;
+                    kurts.push(kurt);
+                }
+
+                let mut sorted_vars = vars.clone();
+                sorted_vars.sort_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+                let med_var = sorted_vars[d / 2].max(1e-9);
+                let max_var = *sorted_vars.last().unwrap();
+                let var_ratio = max_var / med_var;
+
+                let total_var: f32 = vars.iter().sum();
+                let top5_count = (d as f32 * 0.05).ceil() as usize;
+                let top5_var: f32 = sorted_vars[d.saturating_sub(top5_count)..].iter().sum();
+                let top5_frac = if total_var > 0.0 { top5_var / total_var } else { 0.0 };
+
+                let mut sorted_kurts = kurts.clone();
+                sorted_kurts.sort_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+                let med_kurt = sorted_kurts[d / 2];
+                let max_kurt = *sorted_kurts.last().unwrap();
+                let top5_kurt: f32 = sorted_kurts[d.saturating_sub(top5_count)..].iter().sum::<f32>() / top5_count as f32;
+
+                println!("{:<30} | {:>5} | {:>7} | {:>9.1}x | {:>10.2} | {:>12.1} | {:>12.1} | {:>9.1}%",
+                    ds_name, d, fit_sub.nrows(), var_ratio, med_kurt, max_kurt, top5_kurt, top5_frac * 100.0);
+            }
+        }
+        println!("{:=<110}\n", "");
+    }
 }
