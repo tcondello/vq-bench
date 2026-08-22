@@ -76,6 +76,11 @@ pub const DATASETS: &[Dataset] = &[
         source: "VIBE",
     },
     Dataset {
+        name: "cifar100-clip-512-normalized",
+        dim: 512,
+        source: "ForwardTest",
+    },
+    Dataset {
         name: "llama-128-ip",
         dim: 128,
         source: "VIBE",

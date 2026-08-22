@@ -1211,6 +1211,7 @@ mod tests {
     fn reconcile_variance_statistics() {
         let datasets = [
             "imagenet-clip-512-normalized",
+            "cifar100-clip-512-normalized",
             "laion-clip-512-normalized",
             "coco-nomic-768-normalized",
             "msmarco-qwen-1024-normalized",
@@ -1280,5 +1281,119 @@ mod tests {
             }
         }
         println!("{:=<110}\n", "");
+    }
+
+    #[test]
+    #[ignore]
+    fn compute_quantizability_theory_metrics() {
+        use vqb::Primitive;
+        let datasets = [
+            "imagenet-clip-512-normalized",
+            "cifar100-clip-512-normalized",
+            "laion-clip-512-normalized",
+            "coco-nomic-768-normalized",
+            "msmarco-qwen-1024-normalized",
+        ];
+        let data_dir = std::path::Path::new("data");
+
+        println!("\n{:=<120}", "");
+        println!(" LANE 2: A THEORY OF QUANTIZABILITY — JOINT STRUCTURE & CLUSTER TENDENCY DIAGNOSTICS");
+        println!("{:=<120}", "");
+        println!("{:<30} | {:>5} | {:>9} | {:>10} | {:>10} | {:>10} | {:>10} | {:>14}",
+            "Dataset", "Dim", "Eff_Dim", "D_kmeans64", "D_Gauss64", "Gap_Ratio", "Hopkins_H", "Measured_Delta");
+        println!("{:-<120}", "");
+
+        for &ds_name in &datasets {
+            let path = data_dir.join(format!("{ds_name}.hdf5"));
+            if !path.exists() {
+                continue;
+            }
+            if let Ok(loaded) = load(&path, Mode::Resident) {
+                let fit_vecs = match &loaded.base {
+                    Base::Mem(m) => m.view(),
+                    Base::Disk(_) => unreachable!(),
+                };
+                let n_sample = fit_vecs.nrows().min(5000);
+                let sub = fit_vecs.slice(ndarray::s![..n_sample, ..]);
+                let d = sub.ncols();
+                let n = n_sample as f32;
+
+                let mean = sub.mean_axis(Axis(0)).unwrap();
+                let mut centered = sub.to_owned();
+                for mut row in centered.rows_mut() {
+                    row -= &mean;
+                }
+                
+                let vars: Vec<f32> = (0..d).map(|j| {
+                    let col = centered.column(j);
+                    col.iter().map(|&x| x * x).sum::<f32>() / n
+                }).collect();
+                let tr_sigma: f32 = vars.iter().sum();
+                let tr_sigma_sq: f32 = vars.iter().map(|&v| v * v).sum();
+                let d_eff = if tr_sigma_sq > 0.0 { (tr_sigma * tr_sigma) / tr_sigma_sq } else { d as f32 };
+
+                let kmeans = vqb::Kmeans::new(64, 42);
+                let km_model = kmeans.fit(sub.view(), None);
+                let km_codes = kmeans.encode(&km_model, sub.view());
+                let km_refs: Vec<&[u8]> = km_codes.iter().map(Vec::as_slice).collect();
+                let km_recon = kmeans.reconstruct(&km_model, &km_refs, None);
+                
+                let mut total_dist = 0.0f32;
+                for (orig, rec) in sub.rows().into_iter().zip(km_recon.rows()) {
+                    total_dist += orig.iter().zip(rec.iter()).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>();
+                }
+                let d_kmeans = total_dist / (n * d as f32);
+
+                let rate = (64.0f32).log2() / (d as f32);
+                let d_gauss = (tr_sigma / d as f32) * 2.0f32.powf(-2.0 * rate);
+                let gap_ratio = if d_kmeans > 0.0 { d_gauss / d_kmeans } else { 1.0 };
+
+                let m_test = 100;
+                let mut u_dists = Vec::with_capacity(m_test);
+                let mut w_dists = Vec::with_capacity(m_test);
+
+                let min_coords: Vec<f32> = (0..d).map(|j| sub.column(j).iter().copied().fold(f32::INFINITY, f32::min)).collect();
+                let max_coords: Vec<f32> = (0..d).map(|j| sub.column(j).iter().copied().fold(f32::NEG_INFINITY, f32::max)).collect();
+
+                let mut lcg_state: u64 = 42;
+                for _ in 0..m_test {
+                    let rand_pt: Vec<f32> = (0..d).map(|j| {
+                        let span = max_coords[j] - min_coords[j];
+                        lcg_state = lcg_state.wrapping_mul(6364136223846793005).wrapping_add(1);
+                        let r = ((lcg_state >> 33) as f32) / (u32::MAX as f32);
+                        min_coords[j] + r * span
+                    }).collect();
+                    let min_u = sub.rows().into_iter().map(|row| {
+                        row.iter().zip(&rand_pt).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>()
+                    }).fold(f32::INFINITY, f32::min).sqrt();
+                    u_dists.push(min_u);
+
+                    lcg_state = lcg_state.wrapping_mul(6364136223846793005).wrapping_add(1);
+                    let idx = ((lcg_state >> 33) as usize) % (n_sample);
+                    let row = sub.row(idx);
+                    let min_w = sub.rows().into_iter().enumerate().filter(|&(i, _)| i != idx).map(|(_, r)| {
+                        row.iter().zip(r.iter()).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>()
+                    }).fold(f32::INFINITY, f32::min).sqrt();
+                    w_dists.push(min_w);
+                }
+
+                let sum_u: f32 = u_dists.iter().sum();
+                let sum_w: f32 = w_dists.iter().sum();
+                let hopkins = if (sum_u + sum_w) > 0.0 { sum_u / (sum_u + sum_w) } else { 0.5 };
+
+                let measured_delta = match ds_name {
+                    "imagenet-clip-512-normalized" => "+1.86% to +8.19%",
+                    "cifar100-clip-512-normalized" => "FORWARD TEST",
+                    "laion-clip-512-normalized" => "-1.09% to -2.51%",
+                    "coco-nomic-768-normalized" => "-2.31% to -8.32%",
+                    "msmarco-qwen-1024-normalized" => "+0.19% ± 0.14%",
+                    _ => "N/A",
+                };
+
+                println!("{:<30} | {:>5} | {:>9.1} | {:>10.4} | {:>10.4} | {:>10.2}x | {:>10.3} | {:>14}",
+                    ds_name, d, d_eff, d_kmeans, d_gauss, gap_ratio, hopkins, measured_delta);
+            }
+        }
+        println!("{:=<120}\n", "");
     }
 }

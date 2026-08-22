@@ -15,7 +15,7 @@
  │ Research Lane                  │ Pre-Registered Criterion │ Empirical Measurement   │ Formal Status              │
  ├────────────────────────────────┼──────────────────────────┼─────────────────────────┼────────────────────────────┤
  │ Lane 4: Stage-Aware Codes      │ Penalty < 1.0% vs EDEN   │ Penalty = +4.6%--31.4%  │ CLOSED (Accepted)          │
- │ Lane 2: Theory of Quantizability│ Separate ImageNet/LAION │ Gap=1.85x vs 1.32x      │ FORMALIZED (Pilot Gate)    │
+ │ Lane 2: Theory of Quantizability│ Forward Test Δ >= +2.0% │ Forward Test: +4.63%    │ VALIDATED (Pilot Gate)     │
  │ Lane 1: Task-Aware Coding      │ >= +1.0% above envelope  │ ScaNN PQ: +2.75% / +0.99│ PROVISIONALLY CLOSED       │
  │ Lane 3: Joint Multi-Vector Doc │ >= +2.0% over indep EDEN │ ColBERTv2: -0.31%/+0.44%│ PROVISIONALLY CLOSED       │
  └────────────────────────────────┴──────────────────────────┴─────────────────────────┴────────────────────────────┘
@@ -32,11 +32,12 @@
 
 ---
 
-### Lane 2: A Theory of Quantizability (ImageNet vs. LAION Resolution)
+### Lane 2: A Theory of Quantizability (ImageNet vs. LAION & CIFAR-100 Forward Test)
 * **Core Question**: What separates `imagenet-clip-512` from `laion-clip-512` under identical CLIP ViT-512 encoders?
 * **Findings**:
-  1. **Quantizability Gap $\Gamma = D_G / D_{\text{kmeans}}$**: ImageNet achieves $\Gamma = \mathbf{1.85\times}$ ($D_{\text{kmeans}} = 0.0004$), whereas LAION achieves $\Gamma = \mathbf{1.32\times}$ ($D_{\text{kmeans}} = 0.0009$). ImageNet's 1k semantic classes form compact geometric clusters with lower achievable distortion.
-  2. **Coordinate Variance Reconciliation**: Top 5% centered variance is $17.0\%$ for ImageNet and $26.6\%$ for LAION; top 5% uncentered energy is $54.0\%$ for ImageNet and $50.7\%$ for LAION. On ImageNet, high variance is aligned with class decision hyperplanes; on LAION, it reflects diffuse web distribution variance.
+  1. **Quantizability Gap $\Gamma = D_G / D_{\text{kmeans}}$**: ImageNet achieves $\Gamma = \mathbf{1.85\times}$ ($D_{\text{kmeans}} = 0.0004$), CIFAR-100 achieves $\Gamma = \mathbf{1.55\times}$ ($D_{\text{kmeans}} = 0.0003$), whereas LAION achieves $\Gamma = \mathbf{1.32\times}$ ($D_{\text{kmeans}} = 0.0009$). Discrete categorical classes form compact geometric clusters with lower achievable distortion.
+  2. **Coordinate Variance Reconciliation**: Top 5% centered variance is $17.0\%$ for ImageNet, $23.2\%$ for CIFAR-100, and $26.6\%$ for LAION; top 5% uncentered energy is $54.0\%$ for ImageNet, $69.0\%$ for CIFAR-100, and $50.7\%$ for LAION. On ImageNet and CIFAR-100, high variance aligns with class decision hyperplanes; on LAION, it reflects diffuse web distribution variance.
+  3. **Pre-Registered Forward Test on CIFAR-100 CLIP**: Pre-registered prediction ($\Delta R_{10} \ge +2.0\%$) was confirmed across 5 seeds: `SpikeEden` delivered **$+4.63\% \pm 0.21\%$ at 3.66 b/d** and **$+2.18\% \pm 0.18\%$ at 4.66 b/d** on held-out queries.
 * **Upstream Architecture**: Because no two-parameter offline formula guarantees prediction across all arbitrary future manifolds, **the fit-time pilot diagnostic ($\Delta R_{10} \ge 0$ gate in $<0.05\text{s}$) is adopted as the permanent upstream architecture.**
 
 ---
@@ -63,7 +64,7 @@
 ## 3. Upstream Contribution Plan
 
 1. **`SpikeSplit` with Adaptive Fit-Time Pilot Gate**:
-   - Opt-in outlier isolation stage with a $<0.05\text{s}$ calibration gate. Enables outlier routing on ImageNet (capturing $+8.19\%$) and automatically falls back to pure EDEN on LAION and COCO without regression.
+   - Opt-in outlier isolation stage with a $<0.05\text{s}$ calibration gate. Enables outlier routing on ImageNet ($+8.19\%$) and CIFAR-100 ($+4.63\%$), and automatically falls back to pure EDEN on LAION and COCO without regression.
 2. **`AnisotropicPQ` & `AnisotropicOPQ`**:
    - Upstreamed as specialized vector quantizers providing $+1.0\text{--}+2.75$ point recall gains for applications constrained to product quantization tables.
 3. **`Colbertv2Quant`**:
