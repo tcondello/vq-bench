@@ -52,13 +52,15 @@ One sentence to ground every decision: **if an experiment cannot, even in princi
 4. **One Test for Post-Hoc Hypotheses**: A post-hoc explanation earns exactly one pre-registered test or it dies.
 5. **Negative Results Archived by Name**: Negative results are archived by name, never rebranded.
 6. **Same-Machine Timings**: Timings come from one machine in one run.
-7. **Transparent Correction Logs**: Corrections are logged with the bug, the affected numbers, and the new values.
-8. **Consolidation is Continuous**: Results get written up when a lane closes, because the writeups are the maps the next lane runs on.
-9. **Closure Requires Countersignature**: A kill criterion firing closes a lane provisionally; the closure becomes final only after an implementation-validity review by the advisor. Kill criteria protect against wishful positives; they do not protect against strawman negatives.
-10. **Baseline Recovery is Mandatory**: Every method with a knob must reproduce the baseline at the knob's neutral setting (e.g., \(\omega=0\)), within seed noise, in the same table. No recovery, no adjudication.
-11. **Existence Proofs Outrank Experiments**: Where the literature demonstrates a hypothesis in some form (ScaNN's anisotropic gain, ColBERTv2's residual compression), the validity gate is reproducing the known result before testing the variant. Failure to reproduce indicts the implementation, not the hypothesis.
-12. **Published Bit Accounting**: Bit accounting is published per configuration — anchors, residuals, scales, model bits, per line — and configurations that must differ (\(L=16\) vs \(L=32\)) must differ.
-13. **Banned Vocabulary**: Definitive, unshakeable, inviolable, all-time, SOTA, record — unless the sentence also contains the measurement that licenses it.
+6. **The Instrument Rule (Two-Tier Claims)**: Any claim about a source must either name its encoder (Tier 1: encoder-conditional product claim) or demonstrate invariance across at least two contrasting encoders (Tier 2: encoder-invariant science claim). Instruments are hypotheses too.
+7. **Same-Machine Timings**: Timings come from one machine in one run.
+8. **Transparent Correction Logs**: Corrections are logged with the bug, the affected numbers, and the new values.
+9. **Consolidation is Continuous**: Results get written up when a lane closes, because the writeups are the maps the next lane runs on.
+10. **Closure Requires Countersignature**: A kill criterion firing closes a lane provisionally; the closure becomes final only after an implementation-validity review by the advisor. Kill criteria protect against wishful positives; they do not protect against strawman negatives.
+11. **Baseline Recovery is Mandatory**: Every method with a knob must reproduce the baseline at the knob's neutral setting (e.g., \(\omega=0\)), within seed noise, in the same table. No recovery, no adjudication.
+12. **Existence Proofs Outrank Experiments**: Where the literature demonstrates a hypothesis in some form (ScaNN's anisotropic gain, ColBERTv2's residual compression), the validity gate is reproducing the known result before testing the variant. Failure to reproduce indicts the implementation, not the hypothesis.
+13. **Published Bit Accounting**: Bit accounting is published per configuration — anchors, residuals, scales, model bits, per line — and configurations that must differ (\(L=16\) vs \(L=32\)) must differ.
+14. **Banned Vocabulary**: *Definitive, unshakeable, inviolable, all-time, SOTA, record* — unless the sentence also contains the measurement that licenses it.
 
 ---
 
