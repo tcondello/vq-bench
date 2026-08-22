@@ -1,0 +1,44 @@
+{
+  "datasets": [
+    "synthetic-shells-128"
+  ],
+  "seed": 4,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [
+    1,
+    10,
+    100
+  ],
+  "temp": [
+    0.05,
+    0.2,
+    1.0
+  ],
+  "methods": [
+    {
+      "name": "scalar",
+      "b": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "eden_prod",
+      "b": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "metrics": [
+    "recall",
+    "mse_score",
+    "mse_recon"
+  ]
+}
