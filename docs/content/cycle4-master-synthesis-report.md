@@ -23,9 +23,9 @@
  │ (Aggregated Document Blocks)   │ with exact empirical margins  │ Margin Multiplier = 11x -- 25x│ multi-token margin      │
  │                                │                               │ (vs M_bar(Pooled) = 0.17--0.24) expansion verified      │
  ├────────────────────────────────┼───────────────────────────────┼───────────────────────────────┼─────────────────────────┤
- │ Item 4: Law v2 Single Refit    │ Held-out prediction hit rate  │ MaxSim: Mean Abs Error 0.068  │ REGIME BOUNDARY FOUND:  │
- │ (Held-Out Language Validation) │ >= 75.0% across test corpora  │ Unified Hit Rate: 4/18 (22.2%)│ Law requires scoring    │
- │                                │                               │ (MaxSim matches; Pooled fails)│ unit conditioning       │
+ │ Item 4: Law v2 Single Refit    │ Held-out prediction hit rate  │ Unified Hit Rate: 4/18 (22.2%)│ DISCONFIRMED ON UNIFIED;│
+ │ (Held-Out Language Validation) │ >= 75.0% (±5% error bands)    │ (MaxSim: MAE 0.068 / 4 Hits;  │ REGIME BOUNDARY FOUND:  │
+ │                                │                               │ Pooled: Mean Abs Error 0.222) │ MaxSim and Pooled split │
  └────────────────────────────────┴───────────────────────────────┴───────────────────────────────┴─────────────────────────┘
 ```
 
