@@ -81,5 +81,6 @@ quantizers! {
     fast_gosset_compand => FastGossetCompand,
     apex_manifold => ApexManifold,
     progressive_eden => ProgressiveEden,
+    task_aware_eden => TaskAwareEden,
     hierarchical_shell => HierarchicalShell,
 }
