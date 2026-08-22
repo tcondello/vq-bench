@@ -1,0 +1,679 @@
+{
+  "meta": {
+    "name": "test-mrl-colbert-quick",
+    "seed": 1,
+    "k": [
+      1,
+      10
+    ],
+    "temp": [
+      0.1,
+      1.0
+    ],
+    "n_reconstruct": 500,
+    "timestamp": 1787346440,
+    "threads": 12,
+    "cores": 12,
+    "arch": "aarch64",
+    "os": "macos"
+  },
+  "datasets": [
+    {
+      "dataset": "coco-nomic-64-normalized",
+      "dim": 64,
+      "n_base": 20000,
+      "n_eval": 500,
+      "n_candidates": 100,
+      "methods": [
+        {
+          "label": "Scalar (b=2)",
+          "bits_per_dim": 2.00332,
+          "model_bits_per_dim": 0.003325,
+          "code_bits_per_dim": 2.0,
+          "fit_s": 0.00293004,
+          "fit_peak_bytes": 30679408,
+          "encode_s": 0.00412379,
+          "encode_peak_bytes": 10865000,
+          "encode_peak_bytes_per_vec": 543.25,
+          "score_us": {
+            "avg": 11.2772,
+            "p50": 10.75,
+            "p90": 11.208,
+            "p99": 18.166
+          },
+          "recon_us": 0.086,
+          "mse_score": 0.00127347,
+          "bias_score": 0.00240905,
+          "mse_recon": 0.0636222,
+          "bias_recon": 0.000146926,
+          "recalls": {
+            "1": 0.278,
+            "10": 0.44
+          },
+          "sos": {
+            "1": 0.825247,
+            "10": 0.841615
+          }
+        },
+        {
+          "label": "Scalar (b=4)",
+          "bits_per_dim": 4.00333,
+          "model_bits_per_dim": 0.003325,
+          "code_bits_per_dim": 4.0,
+          "fit_s": 0.00279629,
+          "fit_peak_bytes": 30679408,
+          "encode_s": 0.00487196,
+          "encode_peak_bytes": 11547440,
+          "encode_peak_bytes_per_vec": 577.372,
+          "score_us": {
+            "avg": 12.7549,
+            "p50": 12.0,
+            "p90": 12.5,
+            "p99": 26.0
+          },
+          "recon_us": 0.09175,
+          "mse_score": 0.0000846901,
+          "bias_score": -0.000124161,
+          "mse_recon": 0.00403436,
+          "bias_recon": 8.08671e-6,
+          "recalls": {
+            "1": 0.776,
+            "10": 0.8198
+          },
+          "sos": {
+            "1": 0.988367,
+            "10": 0.98567
+          }
+        },
+        {
+          "label": "E8Quant (b=2)",
+          "bits_per_dim": 3.00823,
+          "model_bits_per_dim": 0.008225,
+          "code_bits_per_dim": 3.0,
+          "fit_s": 0.0196861,
+          "fit_peak_bytes": 59879328,
+          "encode_s": 0.00946054,
+          "encode_peak_bytes": 11651224,
+          "encode_peak_bytes_per_vec": 582.561,
+          "score_us": {
+            "avg": 8.81499,
+            "p50": 8.667,
+            "p90": 9.041,
+            "p99": 11.375
+          },
+          "recon_us": 0.234334,
+          "mse_score": 0.00389087,
+          "bias_score": 0.0390785,
+          "mse_recon": 0.0968323,
+          "bias_recon": 0.00125867,
+          "recalls": {
+            "1": 0.078,
+            "10": 0.2806
+          },
+          "sos": {
+            "1": 0.655694,
+            "10": 0.749577
+          }
+        },
+        {
+          "label": "E8Quant (b=4)",
+          "bits_per_dim": 5.00823,
+          "model_bits_per_dim": 0.008225,
+          "code_bits_per_dim": 5.0,
+          "fit_s": 0.020146,
+          "fit_peak_bytes": 59879328,
+          "encode_s": 0.0156576,
+          "encode_peak_bytes": 11574512,
+          "encode_peak_bytes_per_vec": 578.726,
+          "score_us": {
+            "avg": 14.1301,
+            "p50": 10.083,
+            "p90": 22.833,
+            "p99": 33.208
+          },
+          "recon_us": 0.2385,
+          "mse_score": 0.00134445,
+          "bias_score": 0.0332939,
+          "mse_recon": 0.0147399,
+          "bias_recon": 0.0000854941,
+          "recalls": {
+            "1": 0.488,
+            "10": 0.6526
+          },
+          "sos": {
+            "1": 0.930503,
+            "10": 0.939502
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=2)",
+          "bits_per_dim": 3.51648,
+          "model_bits_per_dim": 0.016475,
+          "code_bits_per_dim": 3.5,
+          "fit_s": 0.0375569,
+          "fit_peak_bytes": 90359840,
+          "encode_s": 0.0143208,
+          "encode_peak_bytes": 14622896,
+          "encode_peak_bytes_per_vec": 731.145,
+          "score_us": {
+            "avg": 21.3199,
+            "p50": 21.042,
+            "p90": 21.541,
+            "p99": 27.042
+          },
+          "recon_us": 0.440834,
+          "mse_score": 0.000933741,
+          "bias_score": -0.00182248,
+          "mse_recon": 0.0433405,
+          "bias_recon": 0.0000897224,
+          "recalls": {
+            "1": 0.346,
+            "10": 0.5006
+          },
+          "sos": {
+            "1": 0.86115,
+            "10": 0.872665
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=3)",
+          "bits_per_dim": 4.51648,
+          "model_bits_per_dim": 0.016475,
+          "code_bits_per_dim": 4.5,
+          "fit_s": 0.0391318,
+          "fit_peak_bytes": 90359840,
+          "encode_s": 0.0185213,
+          "encode_peak_bytes": 14875184,
+          "encode_peak_bytes_per_vec": 743.759,
+          "score_us": {
+            "avg": 22.3654,
+            "p50": 22.167,
+            "p90": 22.417,
+            "p99": 27.667
+          },
+          "recon_us": 0.419916,
+          "mse_score": 0.000301411,
+          "bias_score": -0.00091262,
+          "mse_recon": 0.0137484,
+          "bias_recon": 0.0000349415,
+          "recalls": {
+            "1": 0.592,
+            "10": 0.673
+          },
+          "sos": {
+            "1": 0.95691,
+            "10": 0.946833
+          }
+        },
+        {
+          "label": "PolarShell (residual=false)",
+          "bits_per_dim": 1.50823,
+          "model_bits_per_dim": 0.008225,
+          "code_bits_per_dim": 1.5,
+          "fit_s": 0.016837,
+          "fit_peak_bytes": 59879328,
+          "encode_s": 0.0236395,
+          "encode_peak_bytes": 10703632,
+          "encode_peak_bytes_per_vec": 535.182,
+          "score_us": {
+            "avg": 6.31225,
+            "p50": 6.167,
+            "p90": 6.458,
+            "p99": 8.292
+          },
+          "recon_us": 0.15625,
+          "mse_score": 0.0867701,
+          "bias_score": -0.273766,
+          "mse_recon": 0.927586,
+          "bias_recon": 0.00227172,
+          "recalls": {
+            "1": 0.176,
+            "10": 0.3506
+          },
+          "sos": {
+            "1": 0.741914,
+            "10": 0.789371
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "coco-nomic-128-normalized",
+      "dim": 128,
+      "n_base": 20000,
+      "n_eval": 500,
+      "n_candidates": 100,
+      "methods": [
+        {
+          "label": "Scalar (b=2)",
+          "bits_per_dim": 2.00326,
+          "model_bits_per_dim": 0.0032625,
+          "code_bits_per_dim": 2.0,
+          "fit_s": 0.00620579,
+          "fit_peak_bytes": 61158768,
+          "encode_s": 0.00418354,
+          "encode_peak_bytes": 21583992,
+          "encode_peak_bytes_per_vec": 1079.2,
+          "score_us": {
+            "avg": 21.7415,
+            "p50": 19.916,
+            "p90": 23.417,
+            "p99": 43.667
+          },
+          "recon_us": 0.154918,
+          "mse_score": 0.000653982,
+          "bias_score": 0.00224943,
+          "mse_recon": 0.0642905,
+          "bias_recon": 0.000155728,
+          "recalls": {
+            "1": 0.26,
+            "10": 0.3866
+          },
+          "sos": {
+            "1": 0.737154,
+            "10": 0.739581
+          }
+        },
+        {
+          "label": "Scalar (b=4)",
+          "bits_per_dim": 4.00326,
+          "model_bits_per_dim": 0.0032625,
+          "code_bits_per_dim": 4.0,
+          "fit_s": 0.00423712,
+          "fit_peak_bytes": 61158768,
+          "encode_s": 0.00559875,
+          "encode_peak_bytes": 22035488,
+          "encode_peak_bytes_per_vec": 1101.77,
+          "score_us": {
+            "avg": 22.7872,
+            "p50": 22.542,
+            "p90": 23.084,
+            "p99": 28.583
+          },
+          "recon_us": 0.159,
+          "mse_score": 0.0000393572,
+          "bias_score": 0.000365943,
+          "mse_recon": 0.00406707,
+          "bias_recon": 7.76478e-6,
+          "recalls": {
+            "1": 0.706,
+            "10": 0.805
+          },
+          "sos": {
+            "1": 0.980776,
+            "10": 0.977126
+          }
+        },
+        {
+          "label": "E8Quant (b=2)",
+          "bits_per_dim": 2.50811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 2.5,
+          "fit_s": 0.0383733,
+          "fit_peak_bytes": 119558560,
+          "encode_s": 0.0144244,
+          "encode_peak_bytes": 21794256,
+          "encode_peak_bytes_per_vec": 1089.71,
+          "score_us": {
+            "avg": 17.9784,
+            "p50": 17.791,
+            "p90": 18.167,
+            "p99": 23.041
+          },
+          "recon_us": 0.451584,
+          "mse_score": 0.00206144,
+          "bias_score": 0.0300149,
+          "mse_recon": 0.114056,
+          "bias_recon": 0.0010566,
+          "recalls": {
+            "1": 0.15,
+            "10": 0.3016
+          },
+          "sos": {
+            "1": 0.615106,
+            "10": 0.67352
+          }
+        },
+        {
+          "label": "E8Quant (b=4)",
+          "bits_per_dim": 4.50811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 4.5,
+          "fit_s": 0.0483331,
+          "fit_peak_bytes": 119558560,
+          "encode_s": 0.0159673,
+          "encode_peak_bytes": 21794256,
+          "encode_peak_bytes_per_vec": 1089.71,
+          "score_us": {
+            "avg": 19.7229,
+            "p50": 19.458,
+            "p90": 19.875,
+            "p99": 25.25
+          },
+          "recon_us": 0.463084,
+          "mse_score": 0.000459077,
+          "bias_score": 0.0189017,
+          "mse_recon": 0.0117243,
+          "bias_recon": 0.0000654849,
+          "recalls": {
+            "1": 0.528,
+            "10": 0.6578
+          },
+          "sos": {
+            "1": 0.934533,
+            "10": 0.923323
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=2)",
+          "bits_per_dim": 2.76624,
+          "model_bits_per_dim": 0.0162375,
+          "code_bits_per_dim": 2.75,
+          "fit_s": 0.0787681,
+          "fit_peak_bytes": 180519456,
+          "encode_s": 0.0233209,
+          "encode_peak_bytes": 27458096,
+          "encode_peak_bytes_per_vec": 1372.9,
+          "score_us": {
+            "avg": 41.6206,
+            "p50": 41.208,
+            "p90": 42.083,
+            "p99": 50.208
+          },
+          "recon_us": 0.8735,
+          "mse_score": 0.000421848,
+          "bias_score": 0.000458709,
+          "mse_recon": 0.0437065,
+          "bias_recon": 0.000103547,
+          "recalls": {
+            "1": 0.362,
+            "10": 0.4834
+          },
+          "sos": {
+            "1": 0.8267,
+            "10": 0.817219
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=3)",
+          "bits_per_dim": 3.76624,
+          "model_bits_per_dim": 0.0162375,
+          "code_bits_per_dim": 3.75,
+          "fit_s": 0.0809712,
+          "fit_peak_bytes": 180519456,
+          "encode_s": 0.0311738,
+          "encode_peak_bytes": 28360240,
+          "encode_peak_bytes_per_vec": 1418.01,
+          "score_us": {
+            "avg": 42.6696,
+            "p50": 42.083,
+            "p90": 42.875,
+            "p99": 52.667
+          },
+          "recon_us": 0.91225,
+          "mse_score": 0.000144058,
+          "bias_score": 8.75815e-6,
+          "mse_recon": 0.0141378,
+          "bias_recon": 0.0000220395,
+          "recalls": {
+            "1": 0.612,
+            "10": 0.664
+          },
+          "sos": {
+            "1": 0.94666,
+            "10": 0.920873
+          }
+        },
+        {
+          "label": "PolarShell (residual=false)",
+          "bits_per_dim": 1.25811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 1.25,
+          "fit_s": 0.0354524,
+          "fit_peak_bytes": 119558560,
+          "encode_s": 0.0452486,
+          "encode_peak_bytes": 21234256,
+          "encode_peak_bytes_per_vec": 1061.71,
+          "score_us": {
+            "avg": 11.7026,
+            "p50": 11.542,
+            "p90": 11.833,
+            "p99": 15.167
+          },
+          "recon_us": 0.335332,
+          "mse_score": 0.1077,
+          "bias_score": -0.309135,
+          "mse_recon": 2.21199,
+          "bias_recon": 0.00516057,
+          "recalls": {
+            "1": 0.19,
+            "10": 0.3468
+          },
+          "sos": {
+            "1": 0.683334,
+            "10": 0.712282
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "msmarco-colbert-128-normalized",
+      "dim": 128,
+      "n_base": 20000,
+      "n_eval": 500,
+      "n_candidates": 100,
+      "methods": [
+        {
+          "label": "Scalar (b=2)",
+          "bits_per_dim": 2.00326,
+          "model_bits_per_dim": 0.0032625,
+          "code_bits_per_dim": 2.0,
+          "fit_s": 0.00159492,
+          "fit_peak_bytes": 2763120,
+          "encode_s": 0.00450154,
+          "encode_peak_bytes": 21689544,
+          "encode_peak_bytes_per_vec": 1084.48,
+          "score_us": {
+            "avg": 22.0089,
+            "p50": 20.167,
+            "p90": 21.0,
+            "p99": 44.625
+          },
+          "recon_us": 0.132582,
+          "mse_score": 0.00192926,
+          "bias_score": 0.000779835,
+          "mse_recon": 0.242427,
+          "bias_recon": 0.00050599,
+          "recalls": {
+            "1": 0.55,
+            "10": 0.7466
+          },
+          "sos": {
+            "1": 0.984251,
+            "10": 0.980131
+          }
+        },
+        {
+          "label": "Scalar (b=4)",
+          "bits_per_dim": 4.00326,
+          "model_bits_per_dim": 0.0032625,
+          "code_bits_per_dim": 4.0,
+          "fit_s": 0.00162446,
+          "fit_peak_bytes": 2763120,
+          "encode_s": 0.00501442,
+          "encode_peak_bytes": 22024448,
+          "encode_peak_bytes_per_vec": 1101.22,
+          "score_us": {
+            "avg": 22.9198,
+            "p50": 22.584,
+            "p90": 23.542,
+            "p99": 29.416
+          },
+          "recon_us": 0.158,
+          "mse_score": 0.000119228,
+          "bias_score": 0.000110818,
+          "mse_recon": 0.0151368,
+          "bias_recon": 0.0000317146,
+          "recalls": {
+            "1": 0.784,
+            "10": 0.919
+          },
+          "sos": {
+            "1": 0.997747,
+            "10": 0.998386
+          }
+        },
+        {
+          "label": "E8Quant (b=2)",
+          "bits_per_dim": 2.50811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 2.5,
+          "fit_s": 0.00192383,
+          "fit_peak_bytes": 5327264,
+          "encode_s": 0.016319,
+          "encode_peak_bytes": 21794256,
+          "encode_peak_bytes_per_vec": 1089.71,
+          "score_us": {
+            "avg": 33.6992,
+            "p50": 36.875,
+            "p90": 39.583,
+            "p99": 91.292
+          },
+          "recon_us": 0.510916,
+          "mse_score": 0.0164428,
+          "bias_score": 0.0921778,
+          "mse_recon": 0.494016,
+          "bias_recon": 0.00454242,
+          "recalls": {
+            "1": 0.438,
+            "10": 0.5892
+          },
+          "sos": {
+            "1": 0.944782,
+            "10": 0.939199
+          }
+        },
+        {
+          "label": "E8Quant (b=4)",
+          "bits_per_dim": 4.50811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 4.5,
+          "fit_s": 0.00192938,
+          "fit_peak_bytes": 5327264,
+          "encode_s": 0.0161024,
+          "encode_peak_bytes": 21794256,
+          "encode_peak_bytes_per_vec": 1089.71,
+          "score_us": {
+            "avg": 19.9473,
+            "p50": 19.458,
+            "p90": 20.916,
+            "p99": 25.875
+          },
+          "recon_us": 0.466582,
+          "mse_score": 0.00395163,
+          "bias_score": 0.0559214,
+          "mse_recon": 0.0532668,
+          "bias_recon": 0.000348126,
+          "recalls": {
+            "1": 0.728,
+            "10": 0.8346
+          },
+          "sos": {
+            "1": 0.993209,
+            "10": 0.992266
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=2)",
+          "bits_per_dim": 2.76624,
+          "model_bits_per_dim": 0.0162375,
+          "code_bits_per_dim": 2.75,
+          "fit_s": 0.010791,
+          "fit_peak_bytes": 8065248,
+          "encode_s": 0.0240425,
+          "encode_peak_bytes": 27458096,
+          "encode_peak_bytes_per_vec": 1372.9,
+          "score_us": {
+            "avg": 41.4287,
+            "p50": 40.667,
+            "p90": 43.208,
+            "p99": 51.459
+          },
+          "recon_us": 0.863166,
+          "mse_score": 0.00143218,
+          "bias_score": -0.00051993,
+          "mse_recon": 0.191741,
+          "bias_recon": 0.000364268,
+          "recalls": {
+            "1": 0.698,
+            "10": 0.7708
+          },
+          "sos": {
+            "1": 0.990359,
+            "10": 0.984319
+          }
+        },
+        {
+          "label": "TurboQuant-prod (b=3)",
+          "bits_per_dim": 3.76624,
+          "model_bits_per_dim": 0.0162375,
+          "code_bits_per_dim": 3.75,
+          "fit_s": 0.0139397,
+          "fit_peak_bytes": 8225248,
+          "encode_s": 0.0311705,
+          "encode_peak_bytes": 28360240,
+          "encode_peak_bytes_per_vec": 1418.01,
+          "score_us": {
+            "avg": 42.7184,
+            "p50": 42.083,
+            "p90": 43.834,
+            "p99": 54.083
+          },
+          "recon_us": 0.89825,
+          "mse_score": 0.000486556,
+          "bias_score": -0.000197208,
+          "mse_recon": 0.0617667,
+          "bias_recon": 0.0000902095,
+          "recalls": {
+            "1": 0.7,
+            "10": 0.8532
+          },
+          "sos": {
+            "1": 0.993905,
+            "10": 0.994405
+          }
+        },
+        {
+          "label": "PolarShell (residual=false)",
+          "bits_per_dim": 1.25811,
+          "model_bits_per_dim": 0.0081125,
+          "code_bits_per_dim": 1.25,
+          "fit_s": 0.00193038,
+          "fit_peak_bytes": 5327264,
+          "encode_s": 0.0467442,
+          "encode_peak_bytes": 21267024,
+          "encode_peak_bytes_per_vec": 1063.35,
+          "score_us": {
+            "avg": 11.7147,
+            "p50": 11.541,
+            "p90": 11.834,
+            "p99": 15.334
+          },
+          "recon_us": 0.33975,
+          "mse_score": 1.0047,
+          "bias_score": -0.929193,
+          "mse_recon": 9.74939,
+          "bias_recon": 0.0191827,
+          "recalls": {
+            "1": 0.64,
+            "10": 0.72
+          },
+          "sos": {
+            "1": 0.983964,
+            "10": 0.975551
+          }
+        }
+      ]
+    }
+  ]
+}

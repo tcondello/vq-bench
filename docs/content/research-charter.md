@@ -54,6 +54,11 @@ One sentence to ground every decision: **if an experiment cannot, even in princi
 6. **Same-Machine Timings**: Timings come from one machine in one run.
 7. **Transparent Correction Logs**: Corrections are logged with the bug, the affected numbers, and the new values.
 8. **Consolidation is Continuous**: Results get written up when a lane closes, because the writeups are the maps the next lane runs on.
+9. **Closure Requires Countersignature**: A kill criterion firing closes a lane provisionally; the closure becomes final only after an implementation-validity review by the advisor. Kill criteria protect against wishful positives; they do not protect against strawman negatives.
+10. **Baseline Recovery is Mandatory**: Every method with a knob must reproduce the baseline at the knob's neutral setting (e.g., \(\omega=0\)), within seed noise, in the same table. No recovery, no adjudication.
+11. **Existence Proofs Outrank Experiments**: Where the literature demonstrates a hypothesis in some form (ScaNN's anisotropic gain, ColBERTv2's residual compression), the validity gate is reproducing the known result before testing the variant. Failure to reproduce indicts the implementation, not the hypothesis.
+12. **Published Bit Accounting**: Bit accounting is published per configuration — anchors, residuals, scales, model bits, per line — and configurations that must differ (\(L=16\) vs \(L=32\)) must differ.
+13. **Banned Vocabulary**: Definitive, unshakeable, inviolable, all-time, SOTA, record — unless the sentence also contains the measurement that licenses it.
 
 ---
 
@@ -65,3 +70,4 @@ One sentence to ground every decision: **if an experiment cannot, even in princi
 * A single code that serves every rate and stage of retrieval.
 
 Any one of these changes how vector databases store embeddings; all four are open; none of them is reachable by inventing another point on the curve.
+

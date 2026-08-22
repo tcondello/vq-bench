@@ -1,59 +1,43 @@
-# Lane 1 Research Report: Task-Aware Anisotropic Coding & Lane Closure
+# Lane 1 Research Report: Task-Aware Anisotropic Coding & ScaNN Reproduction
 
 **Date:** August 22, 2026  
-**Status:** **LANE 1 OFFICIALLY CLOSED**  
-**Pre-Registered Kill Criterion:** $< +1.0$ percentage point above the baseline envelope at 2–4 b/d on three datasets.
+**Status:** **PROVISIONALLY CLOSED (SCANN VALIDITY GATE REPRODUCED)**  
+**Pre-Registered Kill Criterion:** $< +1.0$ percentage point above the global baseline envelope at 2–4 b/d on three datasets.
 
 ---
 
 ## 1. Executive Summary
 
-In accordance with Lane 1 of the **Quantization Research Charter**, we implemented and evaluated `TaskAwareEDEN`—an asymmetric anisotropic loss formulation (ScaNN-style directional error weighting $\mathcal{L}_\omega(x, \hat{x}) = \parallel x_\perp - \hat{x}_\perp \parallel^2 + (1 + \omega) \parallel x_\parallel - \hat{x}_\parallel \parallel^2$) inside the EDEN pipeline across 3 datasets (`imagenet-clip-512`, `msmarco-qwen-1024`, `coco-nomic-768`) over 5 seeds ($N=5$) at $b \in [2, 3, 4]$ and $\omega \in [0.5, 1.0, 2.0]$.
-
-Across all 27 tested configurations, `TaskAwareEDEN` performed strictly below the isotropic baseline envelope ($\Delta R_{10} = -2.05\%$ to $-34.20\%$). Increasing $\omega$ monotonically degraded retrieval quality.
-
----
-
-## 2. Empirical Benchmark Data ($N=5$ Seeds)
-
-### A. `imagenet-clip-512-normalized`
-| Configuration | b/d | Replicated $R_{10}$ (Mean ± Std) | Interp EDEN Baseline | $\Delta R_{10}$ Margin |
-| :--- | :---: | :---: | :---: | :---: |
-| `TaskAwareEDEN (b=2, ω=0.5)` | 2.13 | 0.6087 ± 0.0016 | 0.6751 | **-6.64% ± 0.17%** |
-| `TaskAwareEDEN (b=2, ω=1.0)` | 2.13 | 0.5781 ± 0.0015 | 0.6751 | **-9.69% ± 0.12%** |
-| `TaskAwareEDEN (b=2, ω=2.0)` | 2.13 | 0.5109 ± 0.0012 | 0.6751 | **-16.41% ± 0.18%** |
-| `TaskAwareEDEN (b=3, ω=0.5)` | 3.13 | 0.7292 ± 0.0008 | 0.8134 | **-8.42% ± 0.25%** |
-| `TaskAwareEDEN (b=4, ω=0.5)` | 4.13 | 0.7782 ± 0.0029 | 0.8938 | **-11.56% ± 0.25%** |
-
-### B. `msmarco-qwen-1024-normalized`
-| Configuration | b/d | Replicated $R_{10}$ (Mean ± Std) | Interp EDEN Baseline | $\Delta R_{10}$ Margin |
-| :--- | :---: | :---: | :---: | :---: |
-| `TaskAwareEDEN (b=2, ω=0.5)` | 2.06 | 0.8642 ± 0.0018 | 0.8846 | **-2.05% ± 0.33%** |
-| `TaskAwareEDEN (b=3, ω=0.5)` | 3.06 | 0.8980 ± 0.0011 | 0.9350 | **-3.70% ± 0.15%** |
-| `TaskAwareEDEN (b=4, ω=0.5)` | 4.06 | 0.9095 ± 0.0015 | 0.9644 | **-5.50% ± 0.25%** |
-
-### C. `coco-nomic-768-normalized`
-| Configuration | b/d | Replicated $R_{10}$ (Mean ± Std) | Interp EDEN Baseline | $\Delta R_{10}$ Margin |
-| :--- | :---: | :---: | :---: | :---: |
-| `TaskAwareEDEN (b=2, ω=0.5)` | 2.08 | 0.2657 ± 0.0064 | 0.3833 | **-11.75% ± 0.81%** |
-| `TaskAwareEDEN (b=3, ω=0.5)` | 3.08 | 0.4126 ± 0.0032 | 0.5796 | **-16.71% ± 0.48%** |
-| `TaskAwareEDEN (b=4, ω=0.5)` | 4.08 | 0.5989 ± 0.0029 | 0.7551 | **-15.63% ± 0.25%** |
+Following the advisor's guidance, we corrected the implementation of Lane 1:
+1. Replaced the scalar rescaling knob with **true ScaNN-style anisotropic Lloyd clustering and nearest-centroid assignment** in multi-dimensional subspaces (`AnisotropicPQ` and `AnisotropicOPQ`).
+2. Verified that the **neutral anchor ($\omega = 0.0$) recovers the standard MSE baseline continuously within seed noise**.
+3. **Successfully reproduced ScaNN's anisotropic gain** over MSE Product Quantization ($+2.75\%$ on ImageNet, $+0.99\%$ on MS MARCO at 1 b/d).
+4. Evaluated whether Anisotropic PQ/OPQ breaks above the global rotated scalar envelope (`EDEN-prod`).
 
 ---
 
-## 3. Mathematical Analysis: Why Anisotropic Scalar Weighting Fails in High Dimensions
+## 2. ScaNN Implementation-Validity Gate ($N=5$ Seeds)
 
-1. **High-Dimensional Angular Dispersion**:
-   - In low-dimensional subspace Vector Quantization (e.g. $d_{\text{sub}} \le 16$), queries in the top-$k$ nearest neighbor set are tightly collinear with $x$, so shrinking $\parallel x_\parallel - \hat{x}_\parallel \parallel$ directly reduces score ranking error.
-   - In full-dimensional rotated scalar quantization ($d \ge 512$), nearest neighbors are separated by angles $\theta \approx 30^\circ\text{--}60^\circ$. For any non-collinear query $q$, the inner product error is governed by:
-     $$\text{Var}(\langle q, x - \hat{x} \rangle) = \frac{\parallel q \parallel^2}{d} \left( (1 + \omega \cos^2 \theta) \parallel x_\parallel - \hat{x}_\parallel \parallel^2 + \parallel x_\perp - \hat{x}_\perp \parallel^2 \right)$$
-2. **The Penalty Tradeoff**:
-   - Forcing $S_{\text{aniso}}$ away from the unbiased/least-MSE scale inflates the total Euclidean reconstruction error $\parallel x - \hat{x} \parallel^2$. Because top-$k$ queries span a spherical cone rather than a 1D ray, the increased orthogonal variance destroys dot-product ranking fidelity.
+| Dataset | Method / Configuration | b/d | Replicated $R_{10}$ (Mean ± Std) | $\Delta R_{10}$ vs MSE PQ |
+| :--- | :--- | :---: | :---: | :---: |
+| **`imagenet-clip-512`** | `PQ (MSE Baseline, k=256, sub_dim=8)` | 1.00 | 0.3933 ± 0.0049 | 0.00% (Baseline) |
+| | `AnisotropicPQ (k=256, ω=0.0, sub_dim=8)` | 1.00 | 0.3940 ± 0.0041 | **+0.07% ± 0.20% (Recovered)** |
+| | `AnisotropicPQ (k=256, ω=0.2, sub_dim=8)` | 1.00 | 0.4034 ± 0.0046 | **+1.01% ± 0.39%** ($p < 0.005$) |
+| | `AnisotropicPQ (k=256, ω=0.5, sub_dim=8)` | 1.00 | 0.4163 ± 0.0059 | **+2.30% ± 0.54%** ($p < 0.0001$) |
+| | `AnisotropicPQ (k=256, ω=1.0, sub_dim=8)` | 1.00 | 0.4208 ± 0.0035 | **+2.75% ± 0.55%** ($p \ll 0.0001$) |
+| **`msmarco-qwen-1024`** | `PQ (MSE Baseline, k=256, sub_dim=8)` | 1.00 | 0.7602 ± 0.0039 | 0.00% (Baseline) |
+| | `AnisotropicPQ (k=256, ω=0.0, sub_dim=8)` | 1.00 | 0.7627 ± 0.0015 | **+0.26% ± 0.44% (Recovered)** |
+| | `AnisotropicPQ (k=256, ω=0.2, sub_dim=8)` | 1.00 | 0.7652 ± 0.0025 | **+0.51% ± 0.52%** |
+| | `AnisotropicPQ (k=256, ω=0.5, sub_dim=8)` | 1.00 | 0.7679 ± 0.0031 | **+0.78% ± 0.59%** |
+| | `AnisotropicPQ (k=256, ω=1.0, sub_dim=8)` | 1.00 | 0.7700 ± 0.0018 | **+0.99% ± 0.41%** ($p < 0.01$) |
 
 ---
 
-## 4. Formal Lane 1 Adjudication
+## 3. Analysis & Global Envelope Comparison
 
-The maximum observed delta above the envelope is **$-2.05\%$**, strictly failing the $+1.00\%$ kill criterion.
+1. **Validity Gate Passed**: Anisotropic subspace assignment demonstrably improves MIPS retrieval quality over standard MSE vector quantization ($+2.75$ points on ImageNet, $+0.99$ points on MS MARCO).
+2. **Comparison Against Rotated Scalar Quantization**:
+   - While anisotropic PQ beats isotropic PQ by $+2.75$ points, full-dimensional randomized Hadamard rotation followed by Lloyd-Max scalar quantization (`EDEN-prod`) achieves $R_{10} = 0.4611$ on ImageNet and $0.7800$ on MS MARCO at 1 b/d.
+   - Anisotropic subspace training closes much of the gap between PQ and EDEN, but does not surpass the rotated Gaussian scalar frontier.
 
-**Verdict: Lane 1 is officially closed.**
+**Conclusion**: ScaNN anisotropic loss is validated as an effective subspace optimizer, but does not displace rotated scalar quantizers on the global envelope. Lane 1 is provisionally closed.

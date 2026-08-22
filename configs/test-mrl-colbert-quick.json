@@ -1,0 +1,57 @@
+{
+  "datasets": [
+    "coco-nomic-64-normalized",
+    "coco-nomic-128-normalized",
+    "msmarco-colbert-128-normalized"
+  ],
+  "seed": 1,
+  "n_base": 20000,
+  "n_fit": 5000,
+  "n_reconstruct": 500,
+  "n_eval": 500,
+  "k": [
+    1,
+    10
+  ],
+  "temp": [
+    0.1,
+    1.0
+  ],
+  "methods": [
+    {
+      "name": "scalar",
+      "b": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "e8quant",
+      "b": [
+        2,
+        4
+      ]
+    },
+    {
+      "name": "turboquant_prod",
+      "b": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "polar_shell",
+      "residual": [
+        false
+      ]
+    }
+  ],
+  "metrics": [
+    "recall",
+    "mse_score",
+    "mse_recon",
+    "bias_score",
+    "bias_recon",
+    "sos"
+  ]
+}

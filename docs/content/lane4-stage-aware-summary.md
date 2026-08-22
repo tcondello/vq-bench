@@ -43,9 +43,9 @@ The empirical penalty ranged from **$+4.61\%$ to $+31.44\%$**, decisively violat
 
 ## 4. Formal Lane 4 Certificate of Closure
 
-The multi-part certificate for Lane 4 is now **100% complete and airtight**:
+The multi-part certificate for Lane 4 is summarized as follows:
 * **Test (a)**: Coarse candidate generation below 1.5 b/d vs QJL/RaBitQ failed (1 win, 2 losses).
-* **Test (b)**: Progressive truncation price on shell codes was $2\text{--}8$ points (failed).
-* **Test (c)**: Progressive bit-plane residuals on the frontier code (`EDEN-prod`) suffered **$+4.61\%$ to $+31.44\%$ recall penalties** across all three datasets (failed).
+* **Test (b)**: Progressive truncation price on shell codes was \(2\text{--}8\) points (failed).
+* **Test (c)**: Greedy dyadic progressive bit-plane residuals on the frontier code (`EDEN-prod`) suffered **\(+4.61\%\) to \(+31.44\%\) recall penalties** across all three datasets.
 
-**Final Verdict**: Single-index rate progressiveness cannot compete with rate-dedicated frontier codes. **Lane 4 is permanently closed.**
+**Final Verdict**: Cheap progressive bit-plane constructions on the frontier code fail decisively. While information theory (Equitz–Cover, 1991) establishes that continuous Gaussian sources under MSE are successively refinable, greedy discrete bit-plane cascades cannot achieve this bound without prohibitive distortion. Not worth further runs in this benchmark. **Lane 4 is closed.**

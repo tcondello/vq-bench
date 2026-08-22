@@ -82,6 +82,9 @@ quantizers! {
     apex_manifold => ApexManifold,
     progressive_eden => ProgressiveEden,
     task_aware_eden => TaskAwareEden,
+    anisotropic_pq => AnisotropicPq,
+    anisotropic_opq => AnisotropicOpq,
     joint_token_eden => JointTokenEden,
+    colbertv2_quant => Colbertv2Quant,
     hierarchical_shell => HierarchicalShell,
 }

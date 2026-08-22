@@ -87,6 +87,49 @@ pub const DATASETS: &[Dataset] = &[
         dim: 1024,
         source: "VIBE",
     },
+    // MRL dimension slices (Nomic Embed v1.5 Matryoshka representations)
+    Dataset {
+        name: "coco-nomic-64-normalized",
+        dim: 64,
+        source: "MRL",
+    },
+    Dataset {
+        name: "coco-nomic-128-normalized",
+        dim: 128,
+        source: "MRL",
+    },
+    Dataset {
+        name: "coco-nomic-256-normalized",
+        dim: 256,
+        source: "MRL",
+    },
+    Dataset {
+        name: "coco-nomic-512-normalized",
+        dim: 512,
+        source: "MRL",
+    },
+    // MRL dimension slices (MS MARCO Qwen / GTE-Qwen Matryoshka representations)
+    Dataset {
+        name: "msmarco-qwen-128-normalized",
+        dim: 128,
+        source: "MRL",
+    },
+    Dataset {
+        name: "msmarco-qwen-256-normalized",
+        dim: 256,
+        source: "MRL",
+    },
+    Dataset {
+        name: "msmarco-qwen-512-normalized",
+        dim: 512,
+        source: "MRL",
+    },
+    // Late-Interaction token embeddings (ColBERTv2 multi-vector token embeddings)
+    Dataset {
+        name: "msmarco-colbert-128-normalized",
+        dim: 128,
+        source: "ColBERT",
+    },
     Dataset {
         name: "hotpotqa-harrier-640-normalized",
         dim: 640,

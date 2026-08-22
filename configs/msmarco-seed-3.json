@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    "msmarco-qwen-1024-normalized"
+  ],
+  "seed": 3,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [
+    1,
+    10,
+    100
+  ],
+  "temp": [
+    0.05,
+    0.2,
+    1.0
+  ],
+  "methods": [
+    {
+      "name": "eden_prod",
+      "b": [
+        4,
+        5
+      ]
+    },
+    {
+      "name": "eden_mse",
+      "b": [
+        4,
+        5
+      ]
+    },
+    {
+      "name": "spectral_band_quant"
+    }
+  ],
+  "metrics": [
+    "recall",
+    "mse_score",
+    "mse_recon",
+    "bias_score",
+    "bias_recon",
+    "sos",
+    "exp_sos",
+    "kl",
+    "tv"
+  ]
+}

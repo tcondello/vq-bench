@@ -23,4 +23,5 @@ primitives! { Primitive:
     cast_multi_shell_e8 => CastMultiShellE8,
     cast_leech24 => CastLeech24,
     kmeans => Kmeans,
+    anisotropic_kmeans => AnisotropicKmeans,
 }

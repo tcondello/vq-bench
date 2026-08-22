@@ -1208,24 +1208,21 @@ mod tests {
 
     #[test]
     #[ignore]
-    fn compute_quantizability_theory_metrics() {
-        use vqb::Primitive;
+    fn reconcile_variance_statistics() {
         let datasets = [
             "imagenet-clip-512-normalized",
             "laion-clip-512-normalized",
             "coco-nomic-768-normalized",
             "msmarco-qwen-1024-normalized",
-            "yahoo-minilm-384-normalized",
-            "llama-128-ip",
         ];
         let data_dir = std::path::Path::new("data");
 
-        println!("\n{:=<120}", "");
-        println!(" LANE 2: A THEORY OF QUANTIZABILITY — JOINT STRUCTURE & CLUSTER TENDENCY DIAGNOSTICS");
-        println!("{:=<120}", "");
-        println!("{:<30} | {:>5} | {:>9} | {:>10} | {:>10} | {:>10} | {:>10} | {:>14}",
-            "Dataset", "Dim", "Eff_Dim", "D_kmeans64", "D_Gauss64", "Gap_Ratio", "Hopkins_H", "Measured_Delta");
-        println!("{:-<120}", "");
+        println!("\n{:=<110}", "");
+        println!(" VARIANCE & ENERGY RECONCILIATION TABLE");
+        println!("{:=<110}", "");
+        println!("{:<30} | {:>5} | {:>14} | {:>14} | {:>12} | {:>10}",
+            "Dataset", "Dim", "Top5%RawEnergy", "Top5%CentVar", "Max/MedVar", "Top5%Kurt");
+        println!("{:-<110}", "");
 
         for &ds_name in &datasets {
             let path = data_dir.join(format!("{ds_name}.hdf5"));
@@ -1237,94 +1234,51 @@ mod tests {
                     Base::Mem(m) => m.view(),
                     Base::Disk(_) => unreachable!(),
                 };
-                let n_sample = fit_vecs.nrows().min(5000);
-                let sub = fit_vecs.slice(ndarray::s![..n_sample, ..]);
-                let d = sub.ncols();
-                let n = n_sample as f32;
+                let n = fit_vecs.nrows().min(20000) as f32;
+                let fit_sub = fit_vecs.slice(ndarray::s![..fit_vecs.nrows().min(20000), ..]);
+                let d = fit_sub.ncols();
 
-                // 1. Eigenvalues of covariance to compute effective dimensionality & Gaussian bound
-                let mean = sub.mean_axis(Axis(0)).unwrap();
-                let mut centered = sub.to_owned();
-                for mut row in centered.rows_mut() {
-                    row -= &mean;
-                }
-                
-                // Sample covariance diagonal variances for quick trace
-                let vars: Vec<f32> = (0..d).map(|j| {
-                    let col = centered.column(j);
-                    col.iter().map(|&x| x * x).sum::<f32>() / n
-                }).collect();
-                let tr_sigma: f32 = vars.iter().sum();
-                let tr_sigma_sq: f32 = vars.iter().map(|&v| v * v).sum();
-                let d_eff = if tr_sigma_sq > 0.0 { (tr_sigma * tr_sigma) / tr_sigma_sq } else { d as f32 };
+                let mut raw_energies = Vec::with_capacity(d);
+                let mut vars = Vec::with_capacity(d);
+                let mut kurts = Vec::with_capacity(d);
 
-                // 2. K-means pilot distortion (k = 64)
-                let kmeans = vqb::Kmeans::new(64, 42);
-                let km_model = kmeans.fit(sub.view(), None);
-                let km_codes = kmeans.encode(&km_model, sub.view());
-                let km_refs: Vec<&[u8]> = km_codes.iter().map(Vec::as_slice).collect();
-                let km_recon = kmeans.reconstruct(&km_model, &km_refs, None);
-                
-                let mut total_dist = 0.0f32;
-                for (orig, rec) in sub.rows().into_iter().zip(km_recon.rows()) {
-                    total_dist += orig.iter().zip(rec.iter()).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>();
-                }
-                let d_kmeans = total_dist / (n * d as f32);
+                for j in 0..d {
+                    let col = fit_sub.column(j);
+                    let raw_e = col.iter().map(|&x| x * x).sum::<f32>() / n;
+                    raw_energies.push(raw_e);
 
-                // 3. Gaussian bound at matched rate: R = log2(k)/d
-                let rate = (64.0f32).log2() / (d as f32);
-                let d_gauss = (tr_sigma / d as f32) * 2.0f32.powf(-2.0 * rate);
-                let gap_ratio = if d_kmeans > 0.0 { d_gauss / d_kmeans } else { 1.0 };
+                    let mean = col.sum() / n;
+                    let var = col.iter().map(|&x| (x - mean).powi(2)).sum::<f32>() / n;
+                    vars.push(var);
 
-                // 4. Hopkins Statistic for cluster tendency (H ~ 0.5: uniform/gaussian; H > 0.75: clustered)
-                let m_test = 100;
-                let mut u_dists = Vec::with_capacity(m_test);
-                let mut w_dists = Vec::with_capacity(m_test);
-
-                // U: random points generated from the bounding box of the dataset
-                let min_coords: Vec<f32> = (0..d).map(|j| sub.column(j).iter().copied().fold(f32::INFINITY, f32::min)).collect();
-                let max_coords: Vec<f32> = (0..d).map(|j| sub.column(j).iter().copied().fold(f32::NEG_INFINITY, f32::max)).collect();
-
-                let mut lcg_state: u64 = 42;
-                for _ in 0..m_test {
-                    // random point in box
-                    let rand_pt: Vec<f32> = (0..d).map(|j| {
-                        let span = max_coords[j] - min_coords[j];
-                        lcg_state = lcg_state.wrapping_mul(6364136223846793005).wrapping_add(1);
-                        let r = ((lcg_state >> 33) as f32) / (u32::MAX as f32);
-                        min_coords[j] + r * span
-                    }).collect();
-                    let min_u = sub.rows().into_iter().map(|row| {
-                        row.iter().zip(&rand_pt).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>()
-                    }).fold(f32::INFINITY, f32::min).sqrt();
-                    u_dists.push(min_u);
-
-                    // random sample from sub
-                    lcg_state = lcg_state.wrapping_mul(6364136223846793005).wrapping_add(1);
-                    let idx = ((lcg_state >> 33) as usize) % (n_sample);
-                    let row = sub.row(idx);
-                    let min_w = sub.rows().into_iter().enumerate().filter(|&(i, _)| i != idx).map(|(_, r)| {
-                        row.iter().zip(r.iter()).map(|(&x, &y)| (x - y).powi(2)).sum::<f32>()
-                    }).fold(f32::INFINITY, f32::min).sqrt();
-                    w_dists.push(min_w);
+                    let std = var.sqrt().max(1e-9);
+                    let m4 = col.iter().map(|&x| ((x - mean) / std).powi(4)).sum::<f32>() / n;
+                    kurts.push(m4 - 3.0);
                 }
 
-                let sum_u: f32 = u_dists.iter().sum();
-                let sum_w: f32 = w_dists.iter().sum();
-                let hopkins = if (sum_u + sum_w) > 0.0 { sum_u / (sum_u + sum_w) } else { 0.5 };
+                let top5_count = (d as f32 * 0.05).ceil() as usize;
 
-                let measured_delta = match ds_name {
-                    "imagenet-clip-512-normalized" => "+1.86% to +8.19%",
-                    "laion-clip-512-normalized" => "-1.09% to -2.51%",
-                    "coco-nomic-768-normalized" => "-2.31% to -8.32%",
-                    "msmarco-qwen-1024-normalized" => "+0.19% ± 0.14%",
-                    _ => "N/A",
-                };
+                let mut sorted_raw = raw_energies.clone();
+                sorted_raw.sort_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+                let total_raw: f32 = raw_energies.iter().sum();
+                let top5_raw: f32 = sorted_raw[d.saturating_sub(top5_count)..].iter().sum();
+                let top5_raw_frac = top5_raw / total_raw;
 
-                println!("{:<30} | {:>5} | {:>9.1} | {:>10.4} | {:>10.4} | {:>10.2}x | {:>10.3} | {:>14}",
-                    ds_name, d, d_eff, d_kmeans, d_gauss, gap_ratio, hopkins, measured_delta);
+                let mut sorted_vars = vars.clone();
+                sorted_vars.sort_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+                let total_var: f32 = vars.iter().sum();
+                let top5_var: f32 = sorted_vars[d.saturating_sub(top5_count)..].iter().sum();
+                let top5_var_frac = top5_var / total_var;
+                let var_ratio = sorted_vars[d - 1] / sorted_vars[d / 2].max(1e-9);
+
+                let mut sorted_kurts = kurts.clone();
+                sorted_kurts.sort_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+                let top5_kurt: f32 = sorted_kurts[d.saturating_sub(top5_count)..].iter().sum::<f32>() / top5_count as f32;
+
+                println!("{:<30} | {:>5} | {:>13.1}% | {:>13.1}% | {:>11.1}x | {:>10.2}",
+                    ds_name, d, top5_raw_frac * 100.0, top5_var_frac * 100.0, var_ratio, top5_kurt);
             }
         }
-        println!("{:=<120}\n", "");
+        println!("{:=<110}\n", "");
     }
 }

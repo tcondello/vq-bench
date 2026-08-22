@@ -1,5 +1,5 @@
 {
-  "generated": 1787338768,
+  "generated": 1787367439,
   "runs": [
     {
       "name": "all-adv-phases-bench",
@@ -79,6 +79,32 @@
       "timestamp": 1786731355
     },
     {
+      "name": "colbert-spike-adaptive-manifold",
+      "path": "colbert-spike-adaptive-manifold.json",
+      "datasets": [
+        {
+          "dataset": "msmarco-colbert-128-normalized",
+          "n_base": 250000
+        }
+      ],
+      "timestamp": 1787354022
+    },
+    {
+      "name": "colbert-token-bench",
+      "path": "colbert-token-bench.json",
+      "datasets": [
+        {
+          "dataset": "msmarco-colbert-128-normalized",
+          "n_base": 50000
+        },
+        {
+          "dataset": "llama-128-ip",
+          "n_base": 256921
+        }
+      ],
+      "timestamp": 1787350343
+    },
+    {
       "name": "complete-all-phases-bench",
       "path": "complete-all-phases-bench.json",
       "datasets": [
@@ -134,6 +160,25 @@
         }
       ],
       "timestamp": 1787265983
+    },
+    {
+      "name": "hierarchical-shell-falsification",
+      "path": "hierarchical-shell-falsification.json",
+      "datasets": [
+        {
+          "dataset": "msmarco-colbert-128-normalized",
+          "n_base": 250000
+        },
+        {
+          "dataset": "imagenet-clip-512-normalized",
+          "n_base": 1281167
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787367404
     },
     {
       "name": "high-bit-manifold-bench",
@@ -236,6 +281,33 @@
       "timestamp": 1787325663
     },
     {
+      "name": "mrl-dimension-sweep",
+      "path": "mrl-dimension-sweep.json",
+      "datasets": [
+        {
+          "dataset": "coco-nomic-64-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "coco-nomic-128-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "coco-nomic-256-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "coco-nomic-512-normalized",
+          "n_base": 282360
+        },
+        {
+          "dataset": "coco-nomic-768-normalized",
+          "n_base": 282360
+        }
+      ],
+      "timestamp": 1787350357
+    },
+    {
       "name": "msmarco-1024-bench",
       "path": "msmarco-1024-bench.json",
       "datasets": [
@@ -245,6 +317,17 @@
         }
       ],
       "timestamp": 1787317359
+    },
+    {
+      "name": "msmarco-colbert-all",
+      "path": "msmarco-colbert-all.json",
+      "datasets": [
+        {
+          "dataset": "msmarco-colbert-128-normalized",
+          "n_base": 250000
+        }
+      ],
+      "timestamp": 1787353472
     },
     {
       "name": "multi-dataset-experiments",
@@ -321,6 +404,25 @@
         }
       ],
       "timestamp": 1787328008
+    },
+    {
+      "name": "test-mrl-colbert-quick",
+      "path": "test-mrl-colbert-quick.json",
+      "datasets": [
+        {
+          "dataset": "coco-nomic-64-normalized",
+          "n_base": 20000
+        },
+        {
+          "dataset": "coco-nomic-128-normalized",
+          "n_base": 20000
+        },
+        {
+          "dataset": "msmarco-colbert-128-normalized",
+          "n_base": 20000
+        }
+      ],
+      "timestamp": 1787346440
     }
   ]
 }
