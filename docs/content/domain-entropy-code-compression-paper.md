@@ -1,4 +1,4 @@
-# Domain-Entropy Compression of Code Embeddings: The Two-Regime Law of Quantizability and Encoder Invariance
+# Domain-Entropy Compression of Code Embeddings: The Two-Regime Law of Quantizability and the Limits of Encoder Invariance
 
 **Authors:** Tim Condello & The VQ-bench Research Group  
 **Date:** August 2026  
@@ -11,9 +11,9 @@
 
 Dense vector representations of source code underpin modern semantic code search, repository indexing, and retrieval-augmented generation. However, scaling multi-vector retrieval across millions of repositories is severely constrained by memory footprints. In this work, we demonstrate that programming language source code represents an intrinsically low-entropy embedding distribution compared to natural text ($d_{\text{eff}} \le 22$ vs. $79.3$, vocabulary clustering redundancy $>75\%$ vs. $9.3\%$). 
 
-Through an extensive multi-cycle empirical program spanning 9 programming languages, 4 contrasting encoder architectures (contextual-English, contextual-code, general-static, and code-static), and multi-seed replications ($N=5$), we establish three fundamental results:
+Through an extensive multi-cycle empirical program spanning five diverse multi-repository codebases (Go, Java, Rust, TypeScript, Python), four contrasting encoder architectures (contextual-English, contextual-code, general-static, and code-static), and multi-seed replications ($N=5$), we establish three fundamental results:
 1. **The Four-Instrument Matrix**: Contextualization—rather than vocabulary or training corpus—is the dominant entropy-inflating mechanism in dense token representations. Removing contextual attention (via static embedding tables such as `MinishLab/potion-code-16M`) increases vocabulary redundancy from $27\%\text{--}49\%$ to **$72.6\%\text{--}91.7\%$**, enabling corpus-level dictionary coding at $1.35$ bits/dim with reconstruction distortion $\text{MSE} \le 0.0015$ (a $100\times$ improvement over contextual encoders).
-2. **The Margin Expansion Mechanism**: Single-vector code embeddings suffer from razor-thin ranking margins ($\bar{M}_{\text{pooled}} \approx 0.17\text{--}0.24$), rendering them highly vulnerable to quantization noise. Late-Interaction MaxSim multi-token aggregation widens the effective margin by **$11.16\times\text{--}25.59\times$** ($\bar{M}_{\text{MaxSim}} \approx 2.28\text{--}4.31$), allowing token-level quantization errors to cancel out constructively.
+2. **The Margin Expansion Mechanism**: Single-vector code embeddings suffer from razor-thin ranking margins ($\bar{M}_{\text{pooled}} \approx 0.17\text{--}0.24$ under `ColBERTv2`), rendering them highly vulnerable to quantization noise. Late-Interaction MaxSim multi-token aggregation widens the effective margin by **$11.16\times\text{--}25.59\times$** ($\bar{M}_{\text{MaxSim}} \approx 2.28\text{--}4.31$), allowing token-level quantization errors to cancel out constructively.
 3. **The Two-Regime Law of Quantizability**: We formulate and fit Law v2 ($R_{10}(b) \approx \Phi(\frac{\bar{M} \cdot 2^{b \cdot \alpha(\Gamma)}}{\sqrt{2 D_0}})$), mapping its strict boundary conditions. In the multi-vector MaxSim regime, offline ingest-time diagnostics predict held-out rate-recall curves with a mean absolute error of $\mathbf{0.068}$. In production pipelines, a two-stage index ($1.35$ b/d filter + exact top-100 rescore) achieves **$99.20\%\text{--}99.45\%$ retention of uncompressed retrieval quality while reducing index memory by $95.8\%$**.
 
 ---
@@ -48,14 +48,15 @@ $$\Gamma = \frac{D_{\text{Gaussian}}(R)}{D_{\text{K-Means}}(R)}, \quad d_{\text{
   msmarco-colbert-128        3.5%          9.3%         21.6%         1.28x        79.3      1.000          1.9332
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
-* **Redundancy Monotonicity**: Programming languages exhibit $3.5\times\text{--}5.3\times$ higher vocabulary clustering than natural language text.
+* **Corpus Partition**: Analysis is restricted to five real multi-repository codebases (`Go`, `Java`, `Rust`, `TypeScript`, `Python`) alongside open text (`MS MARCO`). Synthetic template datasets (`JSON`, `C`, `Markdown`) were disqualified due to artificial query margin collapse ($\bar{M} \le 0.036$).
+* **Redundancy Monotonicity**: Real codebases exhibit $3.5\times\text{--}5.3\times$ higher vocabulary clustering than natural language text.
 * **Subspace Dimension**: Code representations concentrate into $d_{\text{eff}} \approx 28\text{--}35$ dimensions, whereas natural text spans $d_{\text{eff}} = 79.3$.
 
 ---
 
 ## 3. The Ranking Margin Mechanism: Measured $11\times\text{--}25\times$ Expansion
 
-Earlier theoretical approximations posited that multi-token aggregation widened query margins by a factor of $\sqrt{L_{\text{query}}} \approx 3.5\times$. In Cycle 4, we replaced assertions with direct empirical measurements on aggregated document blocks ($L=32, M=8$):
+Earlier theoretical approximations posited that multi-token aggregation widened query margins by a heuristic factor of $\approx 3.5\times$. In Cycle 4, we measured the exact empirical margins on aggregated document blocks ($L=32, M=8$) under `colbert-ir/colbertv2.0`:
 
 ```
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
@@ -69,7 +70,8 @@ Earlier theoretical approximations posited that multi-token aggregation widened 
   MS MARCO Natural Text     0.2095           1.9332           2.4785           6.3080              3.26x
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
-* **The Mechanism**: In single-vector code search, ranking margins are tiny ($\bar{M}_{\text{pooled}} \le 0.24$), causing individual coordinate errors to flip nearest neighbors. Under MaxSim, summing the maximum inner products across 8 query tokens constructively amplifies genuine semantic alignment while independent quantization noise averages out, expanding margins by **$11.16\times\text{--}25.59\times$**.
+* **Instrument Attribution**: Measured under `colbert-ir/colbertv2.0` ($d=128$). The mechanism derives from multi-token inner-product summation and is structurally expected to hold across multi-vector encoders.
+* **The Mechanism**: In single-vector code search, ranking margins are minuscule ($\bar{M}_{\text{pooled}} \le 0.24$), causing individual coordinate errors to flip nearest neighbors. Under MaxSim, summing the maximum inner products across 8 query tokens constructively amplifies genuine semantic alignment while independent quantization noise averages out, expanding margins by **$11.16\times\text{--}25.59\times$**.
 
 ---
 
@@ -105,15 +107,16 @@ $$\mathbf{R_{10}(b) \approx \Phi\left(\frac{\bar{M}_{\text{measured}} \cdot 2^{b
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
   Held-Out Corpus    Scoring Unit    b (b/d)    Empirical R@10    Law v2 Pred    Absolute Error    Status
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
-  Go Code            MaxSim          1.0        0.683             0.714          0.031             HIT
-  Go Code            MaxSim          2.0        0.775             0.734          0.041             HIT
+  Go Code            MaxSim          1.0        0.683             0.714          0.031             HIT (±5%)
+  Go Code            MaxSim          2.0        0.775             0.734          0.041             HIT (±5%)
   Go Code            MaxSim          3.0        0.835             0.755          0.080             Near Hit
-  Java Code          MaxSim          3.0        0.891             0.900          0.009             HIT
-  TypeScript Code    MaxSim          3.0        0.865             0.881          0.016             HIT
+  Java Code          MaxSim          3.0        0.891             0.900          0.009             HIT (±5%)
+  TypeScript Code    MaxSim          3.0        0.865             0.881          0.016             HIT (±5%)
  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
-* **MaxSim Regime**: Law v2 accurately predicts rate-recall curves on held-out codebases with **$\text{MAE} = 0.068$**.
-* **Pooled Regime**: Single-vector ranking collapses under quantization noise, disconfirming a unified cross-architecture noise parameter. Law v2 is valid as a **scoring-unit conditioned capacity-planning instrument**.
+* **Committed Metric Adjudication**: The pre-committed metric was a unified $\pm 5\%$ error band hit rate across all 18 test combinations. The unified hit rate scored **$4/18$ (22.2%)**, representing a **formal disconfirmation of the single unified cross-unit model**.
+* **MaxSim Regime**: When conditioned on the MaxSim scoring unit, Law v2 accurately predicts rate-recall curves on held-out codebases with **$\text{MAE} = 0.068$**.
+* **Pooled Regime**: Single-vector ranking collapses under quantization noise ($\text{Mean Absolute Error} = 0.222$), proving that pooled and MaxSim operate in separate physical regimes. Law v2 is valid as a **scoring-unit conditioned capacity-planning instrument**.
 
 ---
 
@@ -121,8 +124,8 @@ $$\mathbf{R_{10}(b) \approx \Phi\left(\frac{\bar{M}_{\text{measured}} \cdot 2^{b
 
 In accordance with our research charter, all disconfirmed hypotheses are permanently archived:
 
-1. **Leech Lattice ($\Lambda_{24}$) Coding**: Falsified. High packing density in 24D does not translate to retrieval gains due to high boundary-crossing sensitivity.
-2. **Sharpness-Aware Minimization (SAM)**: Negative result on embeddings. Flat minima in parameter space did not improve low-bit codebook robustness.
+1. **Leech Lattice ($\Lambda_{24}$) Coding**: Falsified. High sphere-packing density in 24 dimensions did not translate to retrieval gains due to high boundary-crossing sensitivity.
+2. **SpikeAdaptiveManifold (SAM)**: Retired negative result. Attempting to isolate kurtosis outlier coordinates onto local sub-manifolds failed to improve retrieval accuracy.
 3. **Kurtosis as a Quantizability Predictor**: Falsified out-of-sample. High coordinate kurtosis on COCO ($\kappa = 31.7$) predicted large quantizability gains but yielded negative margins ($-2.3\text{--}8.3\%$). Replaced by $\Gamma$.
 4. **Pure Tokenizer Wordpiece Fragmentation**: Disconfirmed. Java identifiers do not fragment more than Go ($2.015$ vs $2.687$ subwords/ident, $\rho = 0.1000$). Redundancy is governed by API surface area and keyword vocabulary.
 5. **Unified Noise Law Across Scoring Units**: Disconfirmed. Single-vector pooled and multi-vector MaxSim operate in distinct mathematical regimes and cannot share a single noise parameter.
@@ -133,5 +136,6 @@ In accordance with our research charter, all disconfirmed hypotheses are permane
 
 * **Correction 1 (Cycle 1)**: Reconciled top-5% variance metric with actual principal component measurement scripts.
 * **Correction 2 (Cycle 3)**: Formalized the Two-Tier claim standard (Tier 1: Encoder-Conditional product claims vs. Tier 2: Encoder-Invariant science claims).
-* **Correction 3 (Cycle 4)**: Replaced asserted margin multipliers ($2.0\times, 3.5\times$) with direct empirical measurements ($11.16\times\text{--}25.59\times$).
+* **Correction 3 (Cycle 4)**: Replaced asserted margin multipliers ($2.0\times, 3.5\times$) with direct empirical measurements ($11.16\times\text{--}25.59\times$ under ColBERTv2).
 * **Correction 4 (Cycle 4)**: Established the Retention Referent Principle: all $R_{10}$ metrics evaluate same-encoder compression retention.
+* **Correction 5 (Cycle 5)**: Adjudicated Law v2 against the committed $\pm 5\%$ band hit rate ($22.2\%$ on unified model $\implies$ Disconfirmed), logging MAE $0.068$ for the conditioned MaxSim regime.
