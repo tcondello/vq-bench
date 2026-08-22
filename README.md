@@ -19,11 +19,13 @@ See [vq-bench.com](https://www.vq-bench.com) for current benchmarks and document
 
 ## Production Code Indexing & Two-Stage MaxSim Ingestion
 
-| Chunker / Pipeline Strategy | Ingestion Latency (150+ files) | Index Footprint | MaxSim Retention @ 1.35 b/d | Tokens / Answered Query (vs Grep) |
+| Chunker Strategy | Indexing Wall-Clock (150+ files) | Index Footprint | MaxSim Retention @ 1.35 b/d | Tokens / Answered Query (vs Grep) |
 | :--- | :---: | :---: | :---: | :---: |
-| **`CodeChunker` (AST-Aligned + `potion-code-16M`)** | **1.74s** (33.6ms / 100 docs) | **1.35 bits/dim** ($>95\%$ savings) | **94.0% MRR@10** | **256 tokens** ($50\times$ prompt reduction) |
-| **`TokenChunker` (Fixed-Window + `potion-code-16M`)** | **0.06s** (14.1ms / 100 docs) | **1.35 bits/dim** ($>95\%$ savings) | **100.0% R@10** | **256 tokens** ($50\times$ prompt reduction) |
-| **Grep-and-Read (Unindexed Baseline)** | 0.00s | N/A (Full Text) | Baseline Exact Match | 12,800+ tokens / query |
+| **`CodeChunker` (AST-Aligned + `potion-code-16M`)** | **1.74s** (33.6ms / 100 docs) | **1.35 bits/dim** ($>95\%$ savings) | **94.0% MRR@10** | **256 tokens** ($48.5\times$ prompt reduction) |
+| **`TokenChunker` (Fixed-Window + `potion-code-16M`)** | **0.06s** (14.1ms / 100 docs) | **1.35 bits/dim** ($>95\%$ savings) | **100.0% R@10** | **256 tokens** ($48.5\times$ prompt reduction) |
+| **Grep-and-Read (Unindexed Baseline)** | 0.00s | N/A (Full Text) | Baseline Exact Match | 12,420 tokens / query |
+
+* **Chunker Ablation Verdict**: Fixed-window chunking (`TokenChunker`) achieves $+6.0\%$ higher snippet recall on broad keyword lookups due to dense sliding overlap, while AST-aligned (`CodeChunker`) retains complete function/class boundaries for generative coding prompts.
 
 > [!TIP]
 > **Research Highlights**: See [**Domain-Entropy Compression of Code Embeddings (Research Paper)**](docs/content/domain-entropy-code-compression-paper.md) for the complete scientific manuscript, four-instrument encoder matrix, and the Two-Regime Law of Quantizability. All 11 benchmark datasets are hosted on [**`astr010/vqbench-datasets`**](https://huggingface.co/datasets/astr010/vqbench-datasets).
