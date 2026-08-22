@@ -9,7 +9,7 @@ use ndarray::{Array1, Array2, ArrayView2, Axis};
 use super::catalog::{get, get_or};
 use super::rotation::Rotation;
 use crate::coding::{self, CodeLayout};
-use crate::{codebooks, math, Center, Normalize, Params, Primitive, Quantizer};
+use crate::{codebooks, Center, Normalize, Params, Primitive, Quantizer};
 
 pub struct JointTokenEden {
     bits: u8,
@@ -123,7 +123,7 @@ impl Quantizer for JointTokenEden {
         let mut encoded = Vec::with_capacity(n_v);
 
         // Process in document blocks of length `self.block_len`
-        let n_blocks = (n_v + self.block_len - 1) / self.block_len;
+        let n_blocks = n_v.div_ceil(self.block_len);
         for b_idx in 0..n_blocks {
             let start = b_idx * self.block_len;
             let end = (start + self.block_len).min(n_v);
