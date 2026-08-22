@@ -3,10 +3,16 @@ from huggingface_hub import HfApi
 
 REPO_ID = "astr010/vqbench-datasets"
 DATASETS_TO_UPLOAD = [
-    "data/colbert-python-128-normalized.hdf5",
+    "data/colbert-json-128-normalized.hdf5",
+    "data/colbert-go-128-normalized.hdf5",
+    "data/colbert-c-128-normalized.hdf5",
     "data/colbert-rust-128-normalized.hdf5",
-    "data/cifar100-clip-512-normalized.hdf5",
+    "data/colbert-java-128-normalized.hdf5",
+    "data/colbert-typescript-128-normalized.hdf5",
+    "data/colbert-python-128-normalized.hdf5",
+    "data/colbert-markdown-128-normalized.hdf5",
     "data/msmarco-colbert-128-normalized.hdf5",
+    "data/cifar100-clip-512-normalized.hdf5",
     "data/synthetic-shells-128.hdf5",
 ]
 

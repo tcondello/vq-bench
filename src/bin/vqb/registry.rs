@@ -81,19 +81,49 @@ pub const DATASETS: &[Dataset] = &[
         source: "ForwardTest",
     },
     Dataset {
-        name: "colbert-python-128-normalized",
+        name: "colbert-json-128-normalized",
         dim: 128,
-        source: "Phase2Code",
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-go-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-c-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
     },
     Dataset {
         name: "colbert-rust-128-normalized",
         dim: 128,
-        source: "Phase3Rust",
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-java-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-typescript-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-python-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
+    },
+    Dataset {
+        name: "colbert-markdown-128-normalized",
+        dim: 128,
+        source: "Cycle2Sweep",
     },
     Dataset {
         name: "msmarco-colbert-128-normalized",
         dim: 128,
-        source: "Phase2Colbert",
+        source: "Cycle2Sweep",
     },
     Dataset {
         name: "synthetic-shells-128",
