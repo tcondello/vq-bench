@@ -7,7 +7,10 @@
 
 ---
 
-## 1. Executive Summary: Run 4.1 Scorecard
+> [!IMPORTANT]
+> **The Retention Referent Principle**: All \(R_{10}\) values reported throughout this program measure **same-encoder retention against that specific encoder's own uncompressed float ground truth**. They quantify quantization degradation within an instrument, not cross-encoder retrieval quality. Comparing retention between Potion and ColBERTv2 evaluates relative compressibility, not absolute ranking accuracy on external benchmarks. Evaluating absolute retrieval relevance requires encoder-independent relevance labels (such as the Semble code benchmark suite or CoIR), scheduled as the product gate.
+>
+> **Instrument Context**: `potion-base-8M` was initially evaluated as the general-domain static baseline; `potion-code-16M` (code-trained static model2vec table, 61,826 code vocabulary) is evaluated in Run 4.2 to complete the Four-Instrument Matrix.
 
 ```
  ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
