@@ -80,4 +80,6 @@ quantizers! {
     multiscale_leech => MultiScaleLeech,
     fast_gosset_compand => FastGossetCompand,
     apex_manifold => ApexManifold,
+    progressive_eden => ProgressiveEden,
+    hierarchical_shell => HierarchicalShell,
 }
