@@ -11,10 +11,11 @@
 
 Dense vector representations of source code underpin modern semantic code search, repository indexing, and retrieval-augmented generation. However, scaling multi-vector retrieval across millions of repositories is severely constrained by memory footprints. In this work, we demonstrate that programming language source code represents an intrinsically low-entropy embedding distribution compared to natural text ($d_{\text{eff}} \le 22$ vs. $79.3$, vocabulary clustering redundancy $>75\%$ vs. $9.3\%$). 
 
-Through an extensive multi-cycle empirical program spanning five diverse multi-repository codebases (Go, Java, Rust, TypeScript, Python) alongside open natural text (MS MARCO), four contrasting encoder architectures (contextual-English, contextual-code, general-static, and code-static), and multi-seed replications ($N=5$), we establish three fundamental results:
+Through an extensive multi-cycle empirical program spanning five diverse multi-repository codebases (Go, Java, Rust, TypeScript, Python) alongside open natural text (MS MARCO), four contrasting encoder architectures (contextual-English, contextual-code, general-static, and code-static), and multi-seed replications ($N=5$), we establish four fundamental results:
 1. **The Four-Instrument Matrix**: Contextualization—rather than vocabulary or training corpus—is the dominant entropy-inflating mechanism in dense token representations. Removing contextual attention (via static embedding tables such as `MinishLab/potion-code-16M`) increases vocabulary redundancy from $27\%\text{--}49\%$ to **$72.6\%\text{--}91.7\%$**, enabling corpus-level dictionary coding at $1.35$ bits/dim with reconstruction distortion $\text{MSE} \le 0.0015$ (a $100\times$ improvement over contextual encoders).
 2. **The Margin Expansion Mechanism**: Single-vector code embeddings suffer from razor-thin ranking margins ($\bar{M}_{\text{pooled}} \approx 0.17\text{--}0.24$ under `ColBERTv2`), rendering them highly vulnerable to quantization noise. Late-Interaction MaxSim multi-token aggregation widens the effective margin by **$11.16\times\text{--}25.59\times$** ($\bar{M}_{\text{MaxSim}} \approx 2.28\text{--}4.31$), allowing token-level quantization errors to cancel out constructively.
-3. **The Two-Regime Law of Quantizability**: We formulate and fit Law v2 ($R_{10}(b) \approx \Phi(\frac{\bar{M} \cdot 2^{b \cdot \alpha(\Gamma)}}{\sqrt{2 D_0}})$), mapping its strict boundary conditions. The pre-committed $\pm 5\%$ error band metric is formally adjudicated as **disconfirmed on the unified cross-unit model ($4/18$ hits, $22.2\%$)**, proving that pooled and MaxSim operate in distinct physical regimes. In the conditioned multi-vector MaxSim regime, offline ingest-time diagnostics predict held-out rate-recall curves with a mean absolute error of $\mathbf{0.068}$. In production pipelines, a two-stage index ($1.35$ b/d filter + exact top-100 rescore) achieves **$99.20\%\text{--}99.45\%$ retention of uncompressed retrieval quality while reducing index memory by $95.8\%$**.
+3. **The Two-Regime Law of Quantizability**: We formulate and fit Law v2 ($R_{10}(b) \approx \Phi(\frac{\bar{M} \cdot 2^{b \cdot \alpha(\Gamma)}}{\sqrt{2 D_0}})$), mapping its strict boundary conditions. The pre-committed $\pm 5\%$ error band metric is formally adjudicated as **disconfirmed on the unified cross-unit model ($4/18$ hits, $22.2\%$)**, proving that pooled and MaxSim operate in distinct physical regimes. In the conditioned multi-vector MaxSim regime, offline ingest-time diagnostics predict held-out rate-recall curves with a mean absolute error of $\mathbf{0.068}$.
+4. **Ingest-Time Router Compilation**: Beyond write-time index sizing, ingest-time domain entropy diagnostics predict where read-path query routing provides statistical return ($\rho = 0.4643$). Across polymorphic typed systems (Java, TypeScript, C#, Rust, Ruby, Go), routing unlocks **$+13.89\text{--}+22.63$ points NDCG@10** of true routing headroom, whereas in purely contextual docstring regimes (Python), single-model `ColBERTv2 Dense` achieves near-ceiling $0.9889$ NDCG, allowing the plan compiler to eliminate router overhead entirely. In production pipelines, a two-stage index ($1.35$ b/d filter + exact top-100 rescore) achieves **$99.20\%\text{--}99.45\%$ retention of uncompressed retrieval quality while reducing index memory by $95.8\%$**.
 
 ---
 
@@ -120,6 +121,31 @@ $$\mathbf{R_{10}(b) \approx \Phi\left(\frac{\bar{M}_{\text{measured}} \cdot 2^{b
 * **Committed $\pm 5\%$ Band Metric**: The pre-committed metric was a unified $\pm 5\%$ error band hit rate across all 18 test points (pooled + MaxSim on Go, Java, TypeScript at 1, 2, 3 b/d). The unified model achieved **$4/18$ hits ($22.2\%$)**, representing a **formal disconfirmation of the single unified cross-architecture form**.
 * **Conditioned MaxSim Regime (MAE = 0.068)**: When conditioned specifically on the MaxSim multi-token architecture, Law v2 predicts held-out code retrieval with **Mean Absolute Error = 0.068** (hitting $b=3$ rates within $0.9\%\text{--}1.6\%$).
 * **Conditioned Pooled Regime (MAE = 0.222)**: Single-vector pooled search suffers from low-margin rank collapse ($\bar{M}_{\text{pooled}} \le 0.24$), establishing a strict physical regime boundary. Law v2 is valid as a **scoring-unit conditioned capacity-planning instrument**.
+
+---
+
+## 5.1 Mechanism 4: Ingest-Time Router Compilation & Language-Conditioned Headroom
+
+Beyond offline capacity planning, ingest-time rigidity diagnostics ($\Gamma, R_{0.25}$) couple directly into read-path optimization:
+
+```
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Language Partition   (1) Two-Tier Baseline    (2) Best Single Static      (3) Oracle Routing     Routing Headroom (3-2)     Compilation Decision
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Java                 0.4252 [0.345, 0.514]    0.5884 [0.508, 0.666]     0.7370 [0.665, 0.805]   +14.85 pts [+10.1,+20.2]  Deploy Router
+  TypeScript / JS      0.4552 [0.378, 0.536]    0.5499 [0.463, 0.634]     0.7707 [0.704, 0.838]   +22.08 pts [+16.0,+29.1]  Deploy Router
+  C# / PHP             0.5744 [0.489, 0.653]    0.5436 [0.458, 0.630]     0.7699 [0.702, 0.832]   +22.63 pts [+17.4,+28.3]  Deploy Router
+  Rust                 0.2999 [0.226, 0.379]    0.3962 [0.317, 0.478]     0.5761 [0.493, 0.662]   +17.99 pts [+12.5,+24.5]  Deploy Router
+  Ruby                 0.4676 [0.390, 0.546]    0.6560 [0.578, 0.724]     0.7949 [0.730, 0.854]   +13.89 pts [ +9.4,+19.2]  Deploy Router
+  Go                   0.7753 [0.728, 0.821]    0.7151 [0.654, 0.771]     0.9068 [0.871, 0.941]   +19.17 pts [+14.4,+24.6]  Deploy Router
+  Python               0.9742 [0.956, 0.993]    0.9889 [0.974, 1.000]     0.9889 [0.974, 1.000]    +0.00 pts [ +0.0, +0.0]  Static Default
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  OVERALL AGGREGATE    0.5674 [0.536, 0.600]    0.6340 [0.604, 0.665]     0.7920 [0.766, 0.817]   +15.80 pts [+13.8,+17.9]  Deploy Router
+ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+```
+
+* **Adaptivity About Adaptivity**: Ingest-time domain entropy diagnostics predict where query routing provides statistical return ($\rho = 0.4643$). For polymorphic, typed, and multi-paradigm systems (Java, TypeScript, C#, Rust, Ruby, Go), routing unlocks **$+13.89\text{--}+22.63$ points NDCG@10** of true routing headroom ($95\%\text{ CI strictly } > 9.4\text{ pts}$). In purely contextual docstring regimes (Python), single-model `ColBERTv2 Dense` achieves near-ceiling $0.9889$ NDCG, allowing the plan compiler to eliminate router overhead entirely.
+* **The Final Read-Path Principle**: Ingest-time diagnostics compile both the storage index and the query dispatch policy per namespace, closing the full loop between offline source entropy and online retrieval execution.
 
 ---
 
