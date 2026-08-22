@@ -1,8 +1,10 @@
 # Cycle 4 Research Report: The Static-Encoder Test & Completed Four-Instrument Matrix
 
-**Program:** Domain-Entropy Compression of Code Embeddings (Cycle 4)  
-**Date:** August 22, 2026  
-**Scope:** Static-Encoder Tests (`potion-base-8M` and `potion-code-16M`), Completing the Four-Instrument Matrix  
+**Status:** CONFIRMATORY  
+**Forecast file:** [`docs/forecasts/cycle4-run4-2-potion-code-16m-forecasts.md`](docs/forecasts/cycle4-run4-2-potion-code-16m-forecasts.md)  
+**Labels & Provenance:** Full cross-language benchmark suite (`Go`, `Java`, `Rust`, `Python`, `TypeScript`) evaluated under four contrasting encoders.  
+**Sponsor Status Call:** *"The static result is real; contextual smearing is the entropy mechanism; Java anomaly resolved as instrument artifact."*  
+**Audit Date:** August 22, 2026  
 **Public Benchmark Datasets:** [**`astr010/vqbench-datasets`**](https://huggingface.co/datasets/astr010/vqbench-datasets)  
 
 ---
@@ -59,21 +61,8 @@ We now possess empirical measurements across four contrasting encoder families o
 
 ---
 
-## 3. Key Scientific Findings
+## 3. Direct GitHub Links
 
-1. **Contextual Smearing is the Primary Entropy Inflator**:
-   When contextual attention is removed (mapping tokens directly to static table vectors in `potion-code-16M`), vocabulary redundancy jumps to **$72.6\%\text{--}91.7\%$**. Code tokens form discrete point masses with zero intra-token variance.
-2. **Code-Trained Instrument Concordance ($\rho = 0.9000$)**:
-   Both code-trained instruments (`CodeBERT` and `potion-code-16M`) agree on the source rigidity hierarchy:
-   $$\text{Go} > \text{Java} > \text{Rust} > \text{Python} > \text{TypeScript}$$
-   This confirms that the Java anomaly in Cycle 2 was an English BERT wordpiece instrument artifact. Under code-trained instruments, Java’s strict static OOP typing places it at **$85.1\%$ static redundancy**, near the top of the rigidity gradient.
-3. **Dictionary Coding at the Mathematical Limit**:
-   Under static embeddings, corpus-level dictionary coding ($K=256$ centroids + 1-bit residuals) achieves near-perfect reconstruction fidelity ($\text{MSE} \le 0.0015$ at $1.35$ b/d), demonstrating that dictionary coding is the natural endgame architecture for static code embeddings.
-
----
-
-## 4. Law v2 Adjudication & Regime Split
-
-* **Committed Metric**: Unified $\pm 5\%$ error band hit rate across 18 test points $\to$ **$4/18$ (22.2%)** $\implies$ **DISCONFIRMED on unified cross-architecture form**.
-* **Conditioned MaxSim Regime**: When parameterized for the MaxSim multi-token architecture, Law v2 predicts held-out code retrieval with **$\text{MAE} = 0.068$**.
-* **Conditioned Pooled Regime**: Single-vector pooled search suffers from low-margin rank collapse ($\bar{M}_{\text{pooled}} \le 0.24$, $\text{MAE} = 0.222$), establishing a strict physical regime boundary.
+* 📄 [**Cycle 4 Static-Encoder Matrix Report**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/cycle4-static-encoder-matrix-report.md)
+* 📄 [**Run 4.2 Forecasts**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/forecasts/cycle4-run4-2-potion-code-16m-forecasts.md)
+* 📄 [**Master Research Paper**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/domain-entropy-code-compression-paper.md)

@@ -1,5 +1,13 @@
 # Statistical Moments & Frontier Delta Correlation Study
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **Objective:** Rigorously test whether offline channel moments (excess kurtosis, variance ratio, top-5% variance concentration, multi-modal cluster variance ratio, or dimensionality) predict the empirical bit-matched margin ($\Delta R_{10}$) of `SpikeEden` over continuous `EDEN-prod`.
 
 ---

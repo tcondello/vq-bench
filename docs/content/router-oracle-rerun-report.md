@@ -1,9 +1,10 @@
 # Router Oracle Re-Run Report: Heterogeneous Multi-Class Headroom & Router Architecture
 
-**Program:** Domain-Entropy Compression of Code Embeddings (Cycle 5)  
-**Date:** August 22, 2026  
-**Status:** **ORACLE RE-RUN COMPLETE — +12.11 PTS HEADROOM CONFIRMED ACROSS QUERY MIX**  
-**Pre-Registration Audit:** [`docs/forecasts/cycle5-router-oracle-rerun-forecasts.md`](docs/forecasts/cycle5-router-oracle-rerun-forecasts.md) (Commit: `d460c94`)  
+**Status:** CONFIRMATORY  
+**Forecast file:** [`docs/forecasts/cycle5-router-oracle-rerun-forecasts.md`](docs/forecasts/cycle5-router-oracle-rerun-forecasts.md)  
+**Labels & Provenance:** Heterogeneous 4-class evaluation mix ($N=199$ tasks: 50 Semantic, 50 Symbol, 50 Architecture, 49 Agent Harvest).  
+**Sponsor Status Call:** *"Measured headroom is +12.11 pts across multi-class mix, defeating the homogeneous doc-matching kill verdict."*  
+**Audit Date:** August 22, 2026  
 **Public Benchmark Datasets:** [**`astr010/vqbench-datasets`**](https://huggingface.co/datasets/astr010/vqbench-datasets)  
 
 ---
@@ -60,15 +61,8 @@ Evaluated across four distinct query distributions reflecting real production se
 
 ---
 
-## 5. Scientific & Product Adjudication
+## 5. Direct GitHub Links
 
-1. **Re-Run Adjudication vs. Committed Criterion**:
-   * Pre-registered kill criterion was $\text{Headroom} < +2.0$ points.
-   * Empirical measurement: **$+12.11$ points NDCG@10** ($12.11 \gg 2.0$).
-   * **Verdict**: **The kill criterion does NOT fire**. The homogeneous doc-matching test obscured substantial routing opportunity that exists across the real heterogeneous query stream.
-2. **Spread Mechanism**:
-   * Headroom is distributed across all four classes rather than isolated in symbols, ruling out a simple regex-based trivial heuristic router.
-   * While `ColBERTv2 Dense` wins the plurality of queries ($139/199$, $69.8\%$), `potion-code-16M` wins $35/199$ ($17.6\%$) of queries where static token rigidity avoids contextual dilution, and hybrid BM25 fusion rescues rare identifier mismatches.
-3. **Engineering Roadmap**:
-   * **V1 Shipping Standard**: Two-Tier Static Compilation (potion-code-16M for budget tier, ColBERTv2 for quality tier).
-   * **V2 Architecture**: Lightweight learned query router (distilled fast-text classifier on query embedding) to unlock the $+12.11$ points oracle headroom.
+* 📄 [**Router Oracle Re-Run Report**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/router-oracle-rerun-report.md)
+* 📄 [**Router Oracle Forecasts**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/forecasts/cycle5-router-oracle-rerun-forecasts.md)
+* 📄 [**Master Research Paper**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/domain-entropy-code-compression-paper.md)

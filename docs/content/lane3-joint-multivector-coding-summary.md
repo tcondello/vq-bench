@@ -1,7 +1,9 @@
 # Lane 3 Research Report: ColBERTv2 Corpus Residual Coding & Bit Accounting
 
 **Date:** August 22, 2026  
-**Status:** **PROVISIONALLY CLOSED (COLBERTV2 VALIDITY GATE EVALUATED)**  
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical Phase 2 research archive.
 **Pre-Registered Kill Criterion:** $< +2.0$ percentage points at matched b/d over independent `EDEN-prod` on `msmarco-colbert-128-normalized`.
 
 ---

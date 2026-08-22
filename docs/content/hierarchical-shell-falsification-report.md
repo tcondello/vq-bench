@@ -1,5 +1,13 @@
 # Scientific Report: Hierarchical Shell Codes — Candidate Generation & Prefix Decodability
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **Objective:** Test whether a progressive hierarchical shell code (H3-style nested spatial indexing) delivers:
 1. **Candidate Generation:** Beat binary baselines (QJL, RaBitQ, SimHash, Scalar) by $\ge +1.0$ point Recall at $1.0\text{--}1.5$ b/d across 3 datasets.
 2. **Prefix Decodability:** Retain accuracy when truncating a 4 b/d index to 2 b/d and 1 b/d ($\Delta_{\text{trunc}} < 1.0$ point vs. retrained codes).

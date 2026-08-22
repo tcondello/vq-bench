@@ -1,5 +1,13 @@
 # Phase 2 Research Report: Domain-Entropy Compression of Code Embeddings (Goals G1–G3)
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **Date:** August 22, 2026  
 **Program:** Domain-Entropy Compression of Code Embeddings  
 **Scope:** Out-of-Sample Predictor Grading (G2) & Headline Experiment (G3) across 5 Seeds ($N=5$)

@@ -1,5 +1,13 @@
 # 10 Iterative Quantization Strategies: Scientific Findings & Frontier Analysis
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 This document details the 10-cycle iterative research and development loop evaluated using **replicated multi-seed trials ($N=5$ seeds)** and **distance above the interpolated baseline Pareto frontier ($\Delta R_{10}(b)$)**.
 
 ---

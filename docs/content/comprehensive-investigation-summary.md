@@ -2,7 +2,9 @@
 
 **Project:** VQ-Bench Quantization Exploration (MRL, Late-Interaction ColBERT, Outlier Isolation & Hierarchical Indexing)  
 **Date:** August 2026  
-**Status:** Completed & Archival Synthesis  
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical Phase 2 summary archive.  
 
 ---
 

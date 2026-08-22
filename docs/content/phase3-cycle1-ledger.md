@@ -1,5 +1,13 @@
 # Phase 3 Cycle 1 Master Experiment Ledger
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **Program:** Phase 3 — Validate the Law, Explore the Territory  
 **Cycle:** Cycle 1 (Five Axes Executed across Multi-Seed Sweeps)  
 

@@ -1,7 +1,9 @@
 # Lane 1 Research Report: Task-Aware Anisotropic Coding & ScaNN Reproduction
 
 **Date:** August 22, 2026  
-**Status:** **PROVISIONALLY CLOSED (SCANN VALIDITY GATE REPRODUCED)**  
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical Phase 2 research archive.
 **Pre-Registered Kill Criterion:** $< +1.0$ percentage point above the global baseline envelope at 2–4 b/d on three datasets.
 
 ---

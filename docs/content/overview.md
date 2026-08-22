@@ -1,5 +1,13 @@
 # Overview
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **VQ-bench** is an open-source benchmark and framework for vector quantization. The purpose of this documentation is to explain the core motivation and design principles behind VQ-bench and to (eventually) provide detailed guidelines for contributing to the project. 
 
 ## Motivation

@@ -1,5 +1,13 @@
 # Advanced Quantization Architectures: Theory, Primitives, and Empirical Synthesis
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 This document presents the mathematical foundations, architectural topology, and empirical evaluation for the three leading quantization strategies developed in VQ-Bench:
 
 1. **`SpikeAdaptiveManifold`**: Tri-Stage Outlier-Protected Tangent $\Lambda_{24}$ Leech Lattice with Noise-Floor-Free Adaptive Normal Rounding.

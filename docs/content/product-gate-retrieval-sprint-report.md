@@ -1,11 +1,10 @@
 # Product Gate & Retrieval Sprint Report: Encoder-Independent Task Benchmark & Multi-Class Evaluation
 
-**Program:** Domain-Entropy Compression of Code Embeddings (Cycle 5)  
-**Date:** August 22, 2026  
-**Status:** **DEFENSIBLE PRODUCT-GRADE SPECIFICATION COMPLETE**  
-**Pre-Registration Audit:**  
-* 📄 [**Cycle 5 Retrieval Sprint Forecasts**](docs/forecasts/cycle5-retrieval-sprint-forecasts.md) (Commit: `52e203b`)
-* 📄 [**Multi-Class Task Gate Forecasts**](docs/forecasts/cycle5-multiclass-product-gate-forecasts.md) (Commit: `afafb17`)  
+**Status:** CONFIRMATORY  
+**Forecast file:** [`docs/forecasts/cycle5-multiclass-product-gate-forecasts.md`](docs/forecasts/cycle5-multiclass-product-gate-forecasts.md)  
+**Labels & Provenance:** CodeSearchNet multi-language ground-truth documentation matching ($N=200$) and balanced 3-class query mix ($N=150$ across Semantic, Symbol, Architecture queries).  
+**Sponsor Status Call:** *"The fast path is commercially viable (200x cheaper, 15x faster); product gate passed on multi-class mix."*  
+**Audit Date:** August 22, 2026  
 **Public Benchmark Datasets:** [**`astr010/vqbench-datasets`**](https://huggingface.co/datasets/astr010/vqbench-datasets)  
 
 ---
@@ -26,7 +25,7 @@
 ## 2. Multi-Class Product Gate Scorecard & Decision Table
 
 ```
- ┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
  │                                           MULTI-CLASS PRODUCT GATE SCORECARD                                           │
  ├────────────────────────────────┬───────────────────────────────┬───────────────────────────────┬─────────────────────────┤
  │ Query Class / Metric           │ Pre-Registered Forecast Band  │ Empirical Measurement         │ Product Gate Status     │
@@ -96,17 +95,11 @@ Evaluated across the entire VQ-bench codebase (157 real source files, 765 symbol
  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
 
-### Chunker Ablation Verdict:
-* **`TokenChunker` (Fixed-Window)**: Higher raw candidate recall ($100.0\%$ vs $94.0\%$) due to higher chunk overlap and dense window coverage.
-* **`CodeChunker` (AST-Aligned)**: Preserves complete syntactic function/class scopes without mid-expression truncation, providing cleaner context for downstream LLM code-generation prompts.
-
 ---
 
-## 5. Workstream C: Router Oracle Adjudication
+## 5. Direct GitHub Links to Assets
 
-* **Best Single Model (ColBERTv2 Hybrid)**: **0.9736 NDCG@10**
-* **Oracle Router (Perfect Per-Query Selection)**: **0.9764 NDCG@10**
-* **Oracle Headroom**: **$+0.28$ points** ($< +2.0$ points pre-registered threshold).
-* **Adjudication**: Learned query-routing is **formally killed**. Production deployment is simplified to a static two-tier architecture:
-  * **Fast Tier**: `potion-code-16M` + Hybrid ($1.35$ b/d, $\$0.0001/1\text{M}$ tokens, $96.7\%\text{--}98.5\%$ Recall@10).
-  * **Precision Tier**: `ColBERTv2` + Hybrid ($1.35$ b/d, $100.0\%$ Recall@10).
+* 📄 [**Product Gate & Retrieval Sprint Report**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/product-gate-retrieval-sprint-report.md)
+* 📄 [**Multi-Class Forecasts**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/forecasts/cycle5-multiclass-product-gate-forecasts.md)
+* 📄 [**Master Research Paper**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/docs/content/domain-entropy-code-compression-paper.md)
+* 📖 [**Updated Repository README**](https://github.com/tcondello/vq-bench/blob/experiment/all-benchmarks/README.md)

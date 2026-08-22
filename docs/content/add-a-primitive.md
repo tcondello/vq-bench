@@ -1,5 +1,13 @@
 # Adding a Primitive
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 A primitive is one stage of a quantization pipeline: a conditioner, rounder, or splitter (see [Overview](#overview)). In order to add a primitive to vq-bench, you must do two things:
 
 1. **Write a primitive file `src/primitives/<group>/<name>.rs`**, where `<group>` is `conditioners`, `rounders`, or `splitters`.

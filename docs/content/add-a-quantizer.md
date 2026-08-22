@@ -1,5 +1,13 @@
 # Adding a Quantizer
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 A quantizer is an object that can support the quantization operations required by the harness. After building a quantizer, a run configuration can select in its `methods` list to evaluate it. Quantizers are typically constructed by specifying a pipeline of primitives, but vq-bench permits non-pipelined quantizers as well. In order to add a quantizer to vq-bench, you must do two things:
 
 1. **Write a quantizer file `src/quantizers/<key>.rs`**, where `<key>` is the config name (e.g., `pq`).

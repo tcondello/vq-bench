@@ -1,5 +1,13 @@
 # Research Memo: Out-of-Sample Falsification, Kurtosis Reconciliation & Upstream Architecture
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **To:** Research Colleague  
 **From:** Quantization Research & Benchmarking Team  
 **Date:** August 21, 2026  

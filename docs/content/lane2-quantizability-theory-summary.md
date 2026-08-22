@@ -1,7 +1,9 @@
 # Lane 2 Research Report: A Theory of Quantizability & Forward Test Replication
 
 **Date:** August 22, 2026  
-**Status:** **FORMALIZED & VALIDATED BY PRE-REGISTERED FORWARD TEST**  
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical Phase 2 research archive.
 **Core Question:** Why does `SpikeEden` beat the frontier on `imagenet-clip-512` (+8.19%) while losing on `laion-clip-512` (-2.51%) under the identical CLIP ViT-512 encoder?
 
 ---

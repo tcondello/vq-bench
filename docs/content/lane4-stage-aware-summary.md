@@ -1,7 +1,9 @@
 # Lane 4 Adjudication Report: The Price of Progressiveness & Lane Closure
 
 **Date:** August 22, 2026  
-**Status:** **LANE 4 OFFICIALLY CLOSED (CERTIFICATE AIRTIGHT)**  
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical Phase 2 research archive.
 **Pre-Registered Kill Criterion:** Truncation Penalty $\ge 1.0$ percentage point at any rate vs. retrained `EDEN-prod` on three datasets.
 
 ---

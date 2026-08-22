@@ -1,5 +1,13 @@
 # Benchmark Report: SpikeAdaptiveManifold on ColBERT Token Embeddings
 
+**Status:** EXPLORATORY
+**Forecast file:** NONE
+**Labels & Provenance:** Historical research archive.
+
+---
+
+
+
 **Dataset:** `msmarco-colbert-128-normalized` (250,000 base tokens, 1,000 eval queries, candidate pool $L=100$)  
 **Encoder:** `colbert-ir/colbertv2.0` ($d=128$, unit $\ell_2$-normalized)  
 **Run Name in Dashboard:** `colbert-spike-adaptive-manifold`  
