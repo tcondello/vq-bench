@@ -53,7 +53,8 @@ One sentence to ground every decision: **if an experiment cannot, even in princi
 5. **Negative Results Archived by Name**: Negative results are archived by name, never rebranded.
 6. **Same-Machine Timings**: Timings come from one machine in one run.
 6. **The Instrument Rule (Two-Tier Claims)**: Any claim about a source must either name its encoder (Tier 1: encoder-conditional product claim) or demonstrate invariance across at least two contrasting encoders (Tier 2: encoder-invariant science claim). Instruments are hypotheses too.
-7. **Same-Machine Timings**: Timings come from one machine in one run.
+7. **Primary Instrument Rule**: A pre-registration names one primary instrument per run. Alternates may be added alongside it, never substituted for it. Disjunctions ("A, B, or C") are not commitments.
+8. **Same-Machine Timings**: Timings come from one machine in one run.
 8. **Transparent Correction Logs**: Corrections are logged with the bug, the affected numbers, and the new values.
 9. **Consolidation is Continuous**: Results get written up when a lane closes, because the writeups are the maps the next lane runs on.
 10. **Closure Requires Countersignature**: A kill criterion firing closes a lane provisionally; the closure becomes final only after an implementation-validity review by the advisor. Kill criteria protect against wishful positives; they do not protect against strawman negatives.
