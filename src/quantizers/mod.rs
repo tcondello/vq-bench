@@ -82,5 +82,6 @@ quantizers! {
     apex_manifold => ApexManifold,
     progressive_eden => ProgressiveEden,
     task_aware_eden => TaskAwareEden,
+    joint_token_eden => JointTokenEden,
     hierarchical_shell => HierarchicalShell,
 }
