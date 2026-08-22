@@ -1212,6 +1212,8 @@ mod tests {
         let datasets = [
             "imagenet-clip-512-normalized",
             "cifar100-clip-512-normalized",
+            "colbert-python-128-normalized",
+            "msmarco-colbert-128-normalized",
             "laion-clip-512-normalized",
             "coco-nomic-768-normalized",
             "msmarco-qwen-1024-normalized",
@@ -1290,6 +1292,9 @@ mod tests {
         let datasets = [
             "imagenet-clip-512-normalized",
             "cifar100-clip-512-normalized",
+            "colbert-python-128-normalized",
+            "msmarco-colbert-128-normalized",
+            "synthetic-shells-128",
             "laion-clip-512-normalized",
             "coco-nomic-768-normalized",
             "msmarco-qwen-1024-normalized",

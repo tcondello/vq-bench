@@ -81,6 +81,26 @@ pub const DATASETS: &[Dataset] = &[
         source: "ForwardTest",
     },
     Dataset {
+        name: "colbert-python-128-normalized",
+        dim: 128,
+        source: "Phase2Code",
+    },
+    Dataset {
+        name: "colbert-rust-128-normalized",
+        dim: 128,
+        source: "Phase3Rust",
+    },
+    Dataset {
+        name: "msmarco-colbert-128-normalized",
+        dim: 128,
+        source: "Phase2Colbert",
+    },
+    Dataset {
+        name: "synthetic-shells-128",
+        dim: 128,
+        source: "Attack",
+    },
+    Dataset {
         name: "llama-128-ip",
         dim: 128,
         source: "VIBE",
