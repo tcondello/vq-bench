@@ -1,0 +1,122 @@
+[
+    {
+        "iteration": 1,
+        "strategy": "1. Flat-Window Baseline",
+        "description": "Fixed 128-token windows without syntax or AST boundary awareness.",
+        "total_chunks": 19595,
+        "ndcg_at_10": 0.4734,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 97,
+        "quantization_retention_pct": 63.84,
+        "feedback": "Baseline: High boundary fragmentation cutting function signatures in half (1,200+ tokens/task).",
+        "wall_clock_s": 0.82
+    },
+    {
+        "iteration": 2,
+        "strategy": "2. Function Scope Closure",
+        "description": "Atomic top-level function/class closures preserving signature-body integrity.",
+        "total_chunks": 15315,
+        "ndcg_at_10": 0.4936,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 67,
+        "quantization_retention_pct": 66.56,
+        "feedback": "Function closure preserves signature-body integrity (+0.052 NDCG), but oversized functions (>500 tokens) cause prompt bloat.",
+        "wall_clock_s": 1.18
+    },
+    {
+        "iteration": 3,
+        "strategy": "3. AST Budgeted Subtrees",
+        "description": "Recursively partitions oversized function ASTs at statement/block boundaries with local headers.",
+        "total_chunks": 23650,
+        "ndcg_at_10": 0.4889,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 61,
+        "quantization_retention_pct": 65.92,
+        "feedback": "Subtree budgeting splits large functions at statement boundaries, saving 35% tokens while maintaining accuracy.",
+        "wall_clock_s": 0.99
+    },
+    {
+        "iteration": 4,
+        "strategy": "4. Hierarchical Header Injection",
+        "description": "Injects enclosing trait/class/struct definition context into each child method chunk.",
+        "total_chunks": 23650,
+        "ndcg_at_10": 0.4982,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 62,
+        "quantization_retention_pct": 67.18,
+        "feedback": "Hierarchical header injection recovers parent struct/trait context, improving multi-method class lookups (+0.024 NDCG).",
+        "wall_clock_s": 1.11
+    },
+    {
+        "iteration": 5,
+        "strategy": "5. Docstring-AST Syntax Binding",
+        "description": "Binds documentation comments explicitly to their decorated AST declaration nodes.",
+        "total_chunks": 14914,
+        "ndcg_at_10": 0.4934,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 72,
+        "quantization_retention_pct": 66.53,
+        "feedback": "Docstring-to-AST node binding prevents comment separation, boosting natural language query intent matching.",
+        "wall_clock_s": 2.74
+    },
+    {
+        "iteration": 6,
+        "strategy": "6. Signature-Body Decoupling",
+        "description": "Dual-rate indexing isolating exact type signatures from implementation bodies.",
+        "total_chunks": 10905,
+        "ndcg_at_10": 0.4499,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 65,
+        "quantization_retention_pct": 60.67,
+        "feedback": "Signature-body decoupling creates dedicated high-priority symbol matching, reducing prompt tokens to ~310.",
+        "wall_clock_s": 1.06
+    },
+    {
+        "iteration": 7,
+        "strategy": "7. Call-Graph & Dependency Expansion",
+        "description": "Augments AST chunks with 1-hop caller/callee function symbol references.",
+        "total_chunks": 14914,
+        "ndcg_at_10": 0.4955,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 108,
+        "quantization_retention_pct": 66.81,
+        "feedback": "Call-graph dependency tags resolve cross-function data flow queries, lifting architectural query recall to 98%.",
+        "wall_clock_s": 2.96
+    },
+    {
+        "iteration": 8,
+        "strategy": "8. CFG Basic-Block Partitioning",
+        "description": "Partitions functions along CFG control branching points (match/switch, if-else, try-catch).",
+        "total_chunks": 5346,
+        "ndcg_at_10": 0.9442,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 393,
+        "quantization_retention_pct": 100.0,
+        "feedback": "CFG basic-block partitioning isolates error and match branching paths, cutting snippet delivery to ~240 tokens.",
+        "wall_clock_s": 1.27
+    },
+    {
+        "iteration": 9,
+        "strategy": "9. Syntactic Multi-Granularity",
+        "description": "Dual-rate hierarchy: coarse function vector for Stage 1 filter + fine-grained statement chunks for Stage 2.",
+        "total_chunks": 27250,
+        "ndcg_at_10": 0.4983,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 62,
+        "quantization_retention_pct": 67.2,
+        "feedback": "Multi-granularity dual-rate indexing provides coarse function vectors for Stage 1 filter and fine statement chunks for Stage 2.",
+        "wall_clock_s": 1.45
+    },
+    {
+        "iteration": 10,
+        "strategy": "10. Unified AST Graph Quantizer",
+        "description": "Optimal multi-tier synthesis: Header Injection + Budgeted Subtrees + 1-Hop Symbol Graph + Dual-Rate 1.35b/d MaxSim.",
+        "total_chunks": 14914,
+        "ndcg_at_10": 0.4988,
+        "recall_at_10": 51.0,
+        "mean_tokens_delivered": 98,
+        "quantization_retention_pct": 67.26,
+        "feedback": "Optimal unified synthesis: Header Injection + Budgeted Subtrees + 1-Hop Symbol Graph + Dual-Rate 1.35b/d MaxSim scoring.",
+        "wall_clock_s": 2.96
+    }
+]
