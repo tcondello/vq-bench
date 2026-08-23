@@ -1,0 +1,1002 @@
+[
+    {
+        "iteration": 1,
+        "description": "CFG Granularity Sweep (min_chars=14, header=False)",
+        "total_chunks": 20051,
+        "ndcg_at_10": 0.8515,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5197,
+        "wall_clock_s": 1.06
+    },
+    {
+        "iteration": 2,
+        "description": "CFG Granularity Sweep (min_chars=18, header=False)",
+        "total_chunks": 20010,
+        "ndcg_at_10": 0.8513,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5183,
+        "wall_clock_s": 1.08
+    },
+    {
+        "iteration": 3,
+        "description": "CFG Granularity Sweep (min_chars=22, header=False)",
+        "total_chunks": 19960,
+        "ndcg_at_10": 0.8513,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5183,
+        "wall_clock_s": 1.07
+    },
+    {
+        "iteration": 4,
+        "description": "CFG Granularity Sweep (min_chars=26, header=False)",
+        "total_chunks": 19904,
+        "ndcg_at_10": 0.8513,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5175,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 5,
+        "description": "CFG Granularity Sweep (min_chars=30, header=False)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8513,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5175,
+        "wall_clock_s": 1.08
+    },
+    {
+        "iteration": 6,
+        "description": "CFG Granularity Sweep (min_chars=34, header=False)",
+        "total_chunks": 19820,
+        "ndcg_at_10": 0.8513,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5182,
+        "wall_clock_s": 1.08
+    },
+    {
+        "iteration": 7,
+        "description": "CFG Granularity Sweep (min_chars=38, header=False)",
+        "total_chunks": 19767,
+        "ndcg_at_10": 0.8522,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5283,
+        "wall_clock_s": 1.09
+    },
+    {
+        "iteration": 8,
+        "description": "CFG Granularity Sweep (min_chars=42, header=False)",
+        "total_chunks": 19730,
+        "ndcg_at_10": 0.8522,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 80,
+        "pareto_efficiency_score": 9.5283,
+        "wall_clock_s": 1.1
+    },
+    {
+        "iteration": 9,
+        "description": "CFG Granularity Sweep (min_chars=46, header=True)",
+        "total_chunks": 19666,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.501,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 10,
+        "description": "CFG Granularity Sweep (min_chars=50, header=True)",
+        "total_chunks": 19616,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.501,
+        "wall_clock_s": 1.06
+    },
+    {
+        "iteration": 11,
+        "description": "CFG Granularity Sweep (min_chars=54, header=True)",
+        "total_chunks": 19547,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.501,
+        "wall_clock_s": 1.07
+    },
+    {
+        "iteration": 12,
+        "description": "CFG Granularity Sweep (min_chars=58, header=True)",
+        "total_chunks": 19493,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.501,
+        "wall_clock_s": 1.06
+    },
+    {
+        "iteration": 13,
+        "description": "CFG Granularity Sweep (min_chars=62, header=True)",
+        "total_chunks": 19424,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.501,
+        "wall_clock_s": 1.05
+    },
+    {
+        "iteration": 14,
+        "description": "CFG Granularity Sweep (min_chars=66, header=True)",
+        "total_chunks": 19340,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.5015,
+        "wall_clock_s": 1.18
+    },
+    {
+        "iteration": 15,
+        "description": "CFG Granularity Sweep (min_chars=70, header=True)",
+        "total_chunks": 19270,
+        "ndcg_at_10": 0.8551,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 81,
+        "pareto_efficiency_score": 9.5015,
+        "wall_clock_s": 1.07
+    },
+    {
+        "iteration": 16,
+        "description": "DFG Def-Use Integration (min_chars=23, def_use=True)",
+        "total_chunks": 19951,
+        "ndcg_at_10": 0.8493,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1587,
+        "wall_clock_s": 1.15
+    },
+    {
+        "iteration": 17,
+        "description": "DFG Def-Use Integration (min_chars=26, def_use=True)",
+        "total_chunks": 19904,
+        "ndcg_at_10": 0.8493,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1581,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 18,
+        "description": "DFG Def-Use Integration (min_chars=29, def_use=True)",
+        "total_chunks": 19888,
+        "ndcg_at_10": 0.8493,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1581,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 19,
+        "description": "DFG Def-Use Integration (min_chars=32, def_use=True)",
+        "total_chunks": 19858,
+        "ndcg_at_10": 0.8493,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1581,
+        "wall_clock_s": 1.26
+    },
+    {
+        "iteration": 20,
+        "description": "DFG Def-Use Integration (min_chars=35, def_use=True)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8503,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1693,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 21,
+        "description": "DFG Def-Use Integration (min_chars=38, def_use=True)",
+        "total_chunks": 19767,
+        "ndcg_at_10": 0.8503,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1693,
+        "wall_clock_s": 1.16
+    },
+    {
+        "iteration": 22,
+        "description": "DFG Def-Use Integration (min_chars=41, def_use=True)",
+        "total_chunks": 19739,
+        "ndcg_at_10": 0.8503,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1693,
+        "wall_clock_s": 1.17
+    },
+    {
+        "iteration": 23,
+        "description": "DFG Def-Use Integration (min_chars=44, def_use=True)",
+        "total_chunks": 19692,
+        "ndcg_at_10": 0.8503,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1693,
+        "wall_clock_s": 1.19
+    },
+    {
+        "iteration": 24,
+        "description": "DFG Def-Use Integration (min_chars=47, def_use=True)",
+        "total_chunks": 19656,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 25,
+        "description": "DFG Def-Use Integration (min_chars=50, def_use=True)",
+        "total_chunks": 19616,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.15
+    },
+    {
+        "iteration": 26,
+        "description": "DFG Def-Use Integration (min_chars=53, def_use=True)",
+        "total_chunks": 19569,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.16
+    },
+    {
+        "iteration": 27,
+        "description": "DFG Def-Use Integration (min_chars=56, def_use=True)",
+        "total_chunks": 19520,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.14
+    },
+    {
+        "iteration": 28,
+        "description": "DFG Def-Use Integration (min_chars=59, def_use=True)",
+        "total_chunks": 19479,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.15
+    },
+    {
+        "iteration": 29,
+        "description": "DFG Def-Use Integration (min_chars=62, def_use=True)",
+        "total_chunks": 19424,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 30,
+        "description": "DFG Def-Use Integration (min_chars=65, def_use=True)",
+        "total_chunks": 19357,
+        "ndcg_at_10": 0.8496,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 86,
+        "pareto_efficiency_score": 9.1612,
+        "wall_clock_s": 1.14
+    },
+    {
+        "iteration": 31,
+        "description": "Type-Flow Conditioning (types=True, min_chars=27)",
+        "total_chunks": 19898,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 32,
+        "description": "Type-Flow Conditioning (types=True, min_chars=29)",
+        "total_chunks": 19888,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 33,
+        "description": "Type-Flow Conditioning (types=True, min_chars=31)",
+        "total_chunks": 19867,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 34,
+        "description": "Type-Flow Conditioning (types=True, min_chars=33)",
+        "total_chunks": 19832,
+        "ndcg_at_10": 0.878,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0563,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 35,
+        "description": "Type-Flow Conditioning (types=True, min_chars=35)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 36,
+        "description": "Type-Flow Conditioning (types=True, min_chars=37)",
+        "total_chunks": 19784,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 37,
+        "description": "Type-Flow Conditioning (types=True, min_chars=39)",
+        "total_chunks": 19754,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 38,
+        "description": "Type-Flow Conditioning (types=True, min_chars=41)",
+        "total_chunks": 19739,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 39,
+        "description": "Type-Flow Conditioning (types=True, min_chars=43)",
+        "total_chunks": 19703,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 40,
+        "description": "Type-Flow Conditioning (types=True, min_chars=45)",
+        "total_chunks": 19683,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 41,
+        "description": "Type-Flow Conditioning (types=True, min_chars=47)",
+        "total_chunks": 19656,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 42,
+        "description": "Type-Flow Conditioning (types=True, min_chars=49)",
+        "total_chunks": 19627,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 43,
+        "description": "Type-Flow Conditioning (types=True, min_chars=51)",
+        "total_chunks": 19599,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.29
+    },
+    {
+        "iteration": 44,
+        "description": "Type-Flow Conditioning (types=True, min_chars=53)",
+        "total_chunks": 19569,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.2
+    },
+    {
+        "iteration": 45,
+        "description": "Type-Flow Conditioning (types=True, min_chars=55)",
+        "total_chunks": 19533,
+        "ndcg_at_10": 0.8766,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0419,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 46,
+        "description": "Hierarchical Compactor (compact_lines=3)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0594,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 47,
+        "description": "Hierarchical Compactor (compact_lines=4)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8773,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0489,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 48,
+        "description": "Hierarchical Compactor (compact_lines=5)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 49,
+        "description": "Hierarchical Compactor (compact_lines=6)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 50,
+        "description": "Hierarchical Compactor (compact_lines=7)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 51,
+        "description": "Hierarchical Compactor (compact_lines=2)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0594,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 52,
+        "description": "Hierarchical Compactor (compact_lines=3)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0594,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 53,
+        "description": "Hierarchical Compactor (compact_lines=4)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8773,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0489,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 54,
+        "description": "Hierarchical Compactor (compact_lines=5)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 55,
+        "description": "Hierarchical Compactor (compact_lines=6)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 56,
+        "description": "Hierarchical Compactor (compact_lines=7)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 57,
+        "description": "Hierarchical Compactor (compact_lines=2)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0594,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 58,
+        "description": "Hierarchical Compactor (compact_lines=3)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0594,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 59,
+        "description": "Hierarchical Compactor (compact_lines=4)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8773,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0489,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 60,
+        "description": "Hierarchical Compactor (compact_lines=5)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.8783,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.059,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 61,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=72)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 62,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=80)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.47
+    },
+    {
+        "iteration": 63,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=88)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.34
+    },
+    {
+        "iteration": 64,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=96)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.47
+    },
+    {
+        "iteration": 65,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=104)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.22
+    },
+    {
+        "iteration": 66,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=112)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.46
+    },
+    {
+        "iteration": 67,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=120)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.26
+    },
+    {
+        "iteration": 68,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=128)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.55
+    },
+    {
+        "iteration": 69,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=136)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 70,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=144)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.48
+    },
+    {
+        "iteration": 71,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=152)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 72,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=160)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.47
+    },
+    {
+        "iteration": 73,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=168)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 74,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=True, budget=176)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8982,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 8.6426,
+        "wall_clock_s": 1.46
+    },
+    {
+        "iteration": 75,
+        "description": "Call-Graph Tagging & Budgeting (call_graph=False, budget=184)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.26
+    },
+    {
+        "iteration": 76,
+        "description": "Symbol-Boosted RRF (boost_weight=1.15)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 77,
+        "description": "Symbol-Boosted RRF (boost_weight=1.30)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.31
+    },
+    {
+        "iteration": 78,
+        "description": "Symbol-Boosted RRF (boost_weight=1.45)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 79,
+        "description": "Symbol-Boosted RRF (boost_weight=1.60)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 80,
+        "description": "Symbol-Boosted RRF (boost_weight=1.75)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 81,
+        "description": "Symbol-Boosted RRF (boost_weight=1.90)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 82,
+        "description": "Symbol-Boosted RRF (boost_weight=2.05)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.31
+    },
+    {
+        "iteration": 83,
+        "description": "Symbol-Boosted RRF (boost_weight=2.20)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 84,
+        "description": "Symbol-Boosted RRF (boost_weight=2.35)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 85,
+        "description": "Symbol-Boosted RRF (boost_weight=2.50)",
+        "total_chunks": 19883,
+        "ndcg_at_10": 0.8777,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 94,
+        "pareto_efficiency_score": 9.0533,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 86,
+        "description": "Anisotropic Residual Compensation (omega=0.05)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8238,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 109,
+        "pareto_efficiency_score": 7.8909,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 87,
+        "description": "Anisotropic Residual Compensation (omega=0.10)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.818,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 109,
+        "pareto_efficiency_score": 7.8352,
+        "wall_clock_s": 1.32
+    },
+    {
+        "iteration": 88,
+        "description": "Anisotropic Residual Compensation (omega=0.15)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8162,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.8542,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 89,
+        "description": "Anisotropic Residual Compensation (omega=0.20)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.814,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.8327,
+        "wall_clock_s": 1.25
+    },
+    {
+        "iteration": 90,
+        "description": "Anisotropic Residual Compensation (omega=0.25)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8147,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.8391,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 91,
+        "description": "Anisotropic Residual Compensation (omega=0.30)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.813,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.8229,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 92,
+        "description": "Anisotropic Residual Compensation (omega=0.35)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8122,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.815,
+        "wall_clock_s": 1.33
+    },
+    {
+        "iteration": 93,
+        "description": "Anisotropic Residual Compensation (omega=0.40)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8106,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.8001,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 94,
+        "description": "Anisotropic Residual Compensation (omega=0.45)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8098,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.7923,
+        "wall_clock_s": 1.24
+    },
+    {
+        "iteration": 95,
+        "description": "Anisotropic Residual Compensation (omega=0.50)",
+        "total_chunks": 19894,
+        "ndcg_at_10": 0.8075,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 108,
+        "pareto_efficiency_score": 7.7697,
+        "wall_clock_s": 1.23
+    },
+    {
+        "iteration": 96,
+        "description": "Master Frontier Synthesis #1 (Optimal Unified)",
+        "total_chunks": 19898,
+        "ndcg_at_10": 0.9271,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 98,
+        "pareto_efficiency_score": 9.3648,
+        "wall_clock_s": 14.11
+    },
+    {
+        "iteration": 97,
+        "description": "Master Frontier Synthesis #2 (Optimal Unified)",
+        "total_chunks": 19888,
+        "ndcg_at_10": 0.9271,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 98,
+        "pareto_efficiency_score": 9.3648,
+        "wall_clock_s": 13.96
+    },
+    {
+        "iteration": 98,
+        "description": "Master Frontier Synthesis #3 (Optimal Unified)",
+        "total_chunks": 19867,
+        "ndcg_at_10": 0.9271,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 98,
+        "pareto_efficiency_score": 9.3648,
+        "wall_clock_s": 13.9
+    },
+    {
+        "iteration": 99,
+        "description": "Master Frontier Synthesis #4 (Optimal Unified)",
+        "total_chunks": 19832,
+        "ndcg_at_10": 0.9271,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 98,
+        "pareto_efficiency_score": 9.3648,
+        "wall_clock_s": 13.9
+    },
+    {
+        "iteration": 100,
+        "description": "Master Frontier Synthesis #5 (Optimal Unified)",
+        "total_chunks": 19801,
+        "ndcg_at_10": 0.9255,
+        "recall_at_10": 100.0,
+        "mean_tokens_delivered": 98,
+        "pareto_efficiency_score": 9.3494,
+        "wall_clock_s": 14.33
+    }
+]
