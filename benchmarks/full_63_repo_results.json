@@ -1,0 +1,825 @@
+{
+    "metadata": {
+        "total_repositories": 55,
+        "total_queries": 1091,
+        "total_files": 7821,
+        "total_chunks": 25817,
+        "wall_clock_s": 86.02
+    },
+    "overall_ndcg": {
+        "ripgrep": 0.4955,
+        "semble": 0.6925,
+        "ast_135b": 0.6863,
+        "cfg_champion": 0.6768
+    },
+    "expected_tokens_per_query": {
+        "ripgrep": 21266,
+        "semble": 9443,
+        "ast_135b": 9755,
+        "cfg_champion": 5781
+    },
+    "recall_at_token_budgets": {
+        "ripgrep": {
+            "500": 0.002,
+            "1000": 0.015,
+            "2000": 0.032,
+            "4000": 0.101,
+            "8000": 0.197,
+            "16000": 0.346,
+            "32000": 0.896
+        },
+        "semble": {
+            "500": 0.145,
+            "1000": 0.238,
+            "2000": 0.368,
+            "4000": 0.522,
+            "8000": 0.658,
+            "16000": 0.763,
+            "32000": 0.966
+        },
+        "ast_135b": {
+            "500": 0.149,
+            "1000": 0.247,
+            "2000": 0.359,
+            "4000": 0.516,
+            "8000": 0.647,
+            "16000": 0.75,
+            "32000": 0.964
+        },
+        "cfg_champion": {
+            "500": 0.294,
+            "1000": 0.472,
+            "2000": 0.643,
+            "4000": 0.748,
+            "8000": 0.832,
+            "16000": 0.865,
+            "32000": 1.0
+        }
+    },
+    "language_breakdown_ndcg": {
+        "python": {
+            "ripgrep": 0.535,
+            "semble": 0.754,
+            "ast_135b": 0.747,
+            "cfg_champion": 0.714
+        },
+        "javascript": {
+            "ripgrep": 0.632,
+            "semble": 0.817,
+            "ast_135b": 0.799,
+            "cfg_champion": 0.744
+        },
+        "typescript": {
+            "ripgrep": 0.391,
+            "semble": 0.492,
+            "ast_135b": 0.458,
+            "cfg_champion": 0.471
+        },
+        "rust": {
+            "ripgrep": 0.463,
+            "semble": 0.741,
+            "ast_135b": 0.715,
+            "cfg_champion": 0.708
+        },
+        "go": {
+            "ripgrep": 0.608,
+            "semble": 0.806,
+            "ast_135b": 0.798,
+            "cfg_champion": 0.746
+        },
+        "java": {
+            "ripgrep": 0.236,
+            "semble": 0.438,
+            "ast_135b": 0.476,
+            "cfg_champion": 0.565
+        },
+        "cpp": {
+            "ripgrep": 0.411,
+            "semble": 0.774,
+            "ast_135b": 0.789,
+            "cfg_champion": 0.655
+        },
+        "csharp": {
+            "ripgrep": 0.46,
+            "semble": 0.537,
+            "ast_135b": 0.511,
+            "cfg_champion": 0.486
+        },
+        "php": {
+            "ripgrep": 0.465,
+            "semble": 0.53,
+            "ast_135b": 0.534,
+            "cfg_champion": 0.563
+        },
+        "ruby": {
+            "ripgrep": 0.642,
+            "semble": 0.725,
+            "ast_135b": 0.745,
+            "cfg_champion": 0.74
+        },
+        "scala": {
+            "ripgrep": 0.424,
+            "semble": 0.67,
+            "ast_135b": 0.694,
+            "cfg_champion": 0.807
+        },
+        "zig": {
+            "ripgrep": 0.566,
+            "semble": 0.641,
+            "ast_135b": 0.622,
+            "cfg_champion": 0.622
+        },
+        "elixir": {
+            "ripgrep": 0.641,
+            "semble": 0.79,
+            "ast_135b": 0.809,
+            "cfg_champion": 0.802
+        },
+        "kotlin": {
+            "ripgrep": 0.448,
+            "semble": 0.702,
+            "ast_135b": 0.713,
+            "cfg_champion": 0.702
+        },
+        "swift": {
+            "ripgrep": 0.531,
+            "semble": 0.751,
+            "ast_135b": 0.745,
+            "cfg_champion": 0.697
+        },
+        "haskell": {
+            "ripgrep": 0.567,
+            "semble": 0.731,
+            "ast_135b": 0.682,
+            "cfg_champion": 0.625
+        },
+        "lua": {
+            "ripgrep": 0.355,
+            "semble": 0.741,
+            "ast_135b": 0.686,
+            "cfg_champion": 0.748
+        }
+    },
+    "repo_summaries": [
+        {
+            "repo": "aiohttp",
+            "language": "python",
+            "queries": 21,
+            "files": 52,
+            "chunks": 454,
+            "ndcg_semble": 0.5964,
+            "ndcg_ast_135b": 0.568,
+            "ndcg_cfg_champion": 0.5395,
+            "tokens_semble": 5757,
+            "tokens_cfg_champion": 6763
+        },
+        {
+            "repo": "fastapi",
+            "language": "python",
+            "queries": 20,
+            "files": 48,
+            "chunks": 299,
+            "ndcg_semble": 0.7338,
+            "ndcg_ast_135b": 0.7541,
+            "ndcg_cfg_champion": 0.6378,
+            "tokens_semble": 4844,
+            "tokens_cfg_champion": 5498
+        },
+        {
+            "repo": "flask",
+            "language": "python",
+            "queries": 21,
+            "files": 24,
+            "chunks": 142,
+            "ndcg_semble": 0.7456,
+            "ndcg_ast_135b": 0.766,
+            "ndcg_cfg_champion": 0.7058,
+            "tokens_semble": 5150,
+            "tokens_cfg_champion": 3635
+        },
+        {
+            "repo": "httpx",
+            "language": "python",
+            "queries": 21,
+            "files": 23,
+            "chunks": 175,
+            "ndcg_semble": 0.8658,
+            "ndcg_ast_135b": 0.8425,
+            "ndcg_cfg_champion": 0.8872,
+            "tokens_semble": 2426,
+            "tokens_cfg_champion": 520
+        },
+        {
+            "repo": "model2vec",
+            "language": "python",
+            "queries": 20,
+            "files": 31,
+            "chunks": 106,
+            "ndcg_semble": 0.7622,
+            "ndcg_ast_135b": 0.7992,
+            "ndcg_cfg_champion": 0.7128,
+            "tokens_semble": 1361,
+            "tokens_cfg_champion": 2243
+        },
+        {
+            "repo": "pydantic",
+            "language": "python",
+            "queries": 20,
+            "files": 105,
+            "chunks": 1080,
+            "ndcg_semble": 0.717,
+            "ndcg_ast_135b": 0.7083,
+            "ndcg_cfg_champion": 0.6604,
+            "tokens_semble": 5283,
+            "tokens_cfg_champion": 5417
+        },
+        {
+            "repo": "requests",
+            "language": "python",
+            "queries": 20,
+            "files": 19,
+            "chunks": 145,
+            "ndcg_semble": 0.7437,
+            "ndcg_ast_135b": 0.7229,
+            "ndcg_cfg_champion": 0.7303,
+            "tokens_semble": 5720,
+            "tokens_cfg_champion": 2306
+        },
+        {
+            "repo": "starlette",
+            "language": "python",
+            "queries": 21,
+            "files": 36,
+            "chunks": 173,
+            "ndcg_semble": 0.7467,
+            "ndcg_ast_135b": 0.7657,
+            "ndcg_cfg_champion": 0.7362,
+            "tokens_semble": 5901,
+            "tokens_cfg_champion": 1981
+        },
+        {
+            "repo": "axios",
+            "language": "javascript",
+            "queries": 20,
+            "files": 69,
+            "chunks": 79,
+            "ndcg_semble": 0.69,
+            "ndcg_ast_135b": 0.6716,
+            "ndcg_cfg_champion": 0.595,
+            "tokens_semble": 6901,
+            "tokens_cfg_champion": 5205
+        },
+        {
+            "repo": "express",
+            "language": "javascript",
+            "queries": 20,
+            "files": 6,
+            "chunks": 6,
+            "ndcg_semble": 0.9446,
+            "ndcg_ast_135b": 0.9262,
+            "ndcg_cfg_champion": 0.894,
+            "tokens_semble": 4224,
+            "tokens_cfg_champion": 372
+        },
+        {
+            "repo": "gin",
+            "language": "go",
+            "queries": 20,
+            "files": 98,
+            "chunks": 1575,
+            "ndcg_semble": 0.7135,
+            "ndcg_ast_135b": 0.6991,
+            "ndcg_cfg_champion": 0.7874,
+            "tokens_semble": 4943,
+            "tokens_cfg_champion": 3788
+        },
+        {
+            "repo": "cobra",
+            "language": "go",
+            "queries": 20,
+            "files": 36,
+            "chunks": 651,
+            "ndcg_semble": 0.8065,
+            "ndcg_ast_135b": 0.854,
+            "ndcg_cfg_champion": 0.7477,
+            "tokens_semble": 2207,
+            "tokens_cfg_champion": 3432
+        },
+        {
+            "repo": "chi",
+            "language": "go",
+            "queries": 18,
+            "files": 78,
+            "chunks": 539,
+            "ndcg_semble": 0.9069,
+            "ndcg_ast_135b": 0.8452,
+            "ndcg_cfg_champion": 0.697,
+            "tokens_semble": 228,
+            "tokens_cfg_champion": 733
+        },
+        {
+            "repo": "gson",
+            "language": "java",
+            "queries": 20,
+            "files": 87,
+            "chunks": 89,
+            "ndcg_semble": 0.4878,
+            "ndcg_ast_135b": 0.517,
+            "ndcg_cfg_champion": 0.6034,
+            "tokens_semble": 17036,
+            "tokens_cfg_champion": 7061
+        },
+        {
+            "repo": "commons-lang",
+            "language": "java",
+            "queries": 21,
+            "files": 264,
+            "chunks": 265,
+            "ndcg_semble": 0.5464,
+            "ndcg_ast_135b": 0.5878,
+            "ndcg_cfg_champion": 0.7123,
+            "tokens_semble": 19139,
+            "tokens_cfg_champion": 3060
+        },
+        {
+            "repo": "jackson-databind",
+            "language": "java",
+            "queries": 20,
+            "files": 575,
+            "chunks": 580,
+            "ndcg_semble": 0.2744,
+            "ndcg_ast_135b": 0.3166,
+            "ndcg_cfg_champion": 0.3723,
+            "tokens_semble": 25810,
+            "tokens_cfg_champion": 15779
+        },
+        {
+            "repo": "guzzle",
+            "language": "php",
+            "queries": 20,
+            "files": 70,
+            "chunks": 96,
+            "ndcg_semble": 0.6508,
+            "ndcg_ast_135b": 0.6271,
+            "ndcg_cfg_champion": 0.5863,
+            "tokens_semble": 12623,
+            "tokens_cfg_champion": 9314
+        },
+        {
+            "repo": "monolog",
+            "language": "php",
+            "queries": 20,
+            "files": 121,
+            "chunks": 224,
+            "ndcg_semble": 0.5113,
+            "ndcg_ast_135b": 0.5288,
+            "ndcg_cfg_champion": 0.6282,
+            "tokens_semble": 9683,
+            "tokens_cfg_champion": 5544
+        },
+        {
+            "repo": "laravel-framework",
+            "language": "php",
+            "queries": 20,
+            "files": 1688,
+            "chunks": 3054,
+            "ndcg_semble": 0.4272,
+            "ndcg_ast_135b": 0.4455,
+            "ndcg_cfg_champion": 0.4755,
+            "tokens_semble": 13889,
+            "tokens_cfg_champion": 9058
+        },
+        {
+            "repo": "sinatra",
+            "language": "ruby",
+            "queries": 20,
+            "files": 7,
+            "chunks": 14,
+            "ndcg_semble": 0.7905,
+            "ndcg_ast_135b": 0.849,
+            "ndcg_cfg_champion": 0.896,
+            "tokens_semble": 11221,
+            "tokens_cfg_champion": 871
+        },
+        {
+            "repo": "rack",
+            "language": "ruby",
+            "queries": 18,
+            "files": 49,
+            "chunks": 98,
+            "ndcg_semble": 0.7284,
+            "ndcg_ast_135b": 0.7714,
+            "ndcg_cfg_champion": 0.741,
+            "tokens_semble": 6344,
+            "tokens_cfg_champion": 4472
+        },
+        {
+            "repo": "rails",
+            "language": "ruby",
+            "queries": 20,
+            "files": 135,
+            "chunks": 263,
+            "ndcg_semble": 0.6552,
+            "ndcg_ast_135b": 0.6174,
+            "ndcg_cfg_champion": 0.5833,
+            "tokens_semble": 8290,
+            "tokens_cfg_champion": 5401
+        },
+        {
+            "repo": "tokio",
+            "language": "rust",
+            "queries": 20,
+            "files": 348,
+            "chunks": 1695,
+            "ndcg_semble": 0.8509,
+            "ndcg_ast_135b": 0.8031,
+            "ndcg_cfg_champion": 0.889,
+            "tokens_semble": 5782,
+            "tokens_cfg_champion": 3155
+        },
+        {
+            "repo": "trpc",
+            "language": "typescript",
+            "queries": 20,
+            "files": 94,
+            "chunks": 175,
+            "ndcg_semble": 0.5952,
+            "ndcg_ast_135b": 0.5174,
+            "ndcg_cfg_champion": 0.6031,
+            "tokens_semble": 6759,
+            "tokens_cfg_champion": 4908
+        },
+        {
+            "repo": "messagepack-csharp",
+            "language": "csharp",
+            "queries": 20,
+            "files": 115,
+            "chunks": 115,
+            "ndcg_semble": 0.449,
+            "ndcg_ast_135b": 0.4265,
+            "ndcg_cfg_champion": 0.4937,
+            "tokens_semble": 19074,
+            "tokens_cfg_champion": 9010
+        },
+        {
+            "repo": "ktor",
+            "language": "kotlin",
+            "queries": 20,
+            "files": 91,
+            "chunks": 91,
+            "ndcg_semble": 0.6445,
+            "ndcg_ast_135b": 0.6798,
+            "ndcg_cfg_champion": 0.6638,
+            "tokens_semble": 7772,
+            "tokens_cfg_champion": 4327
+        },
+        {
+            "repo": "cats",
+            "language": "scala",
+            "queries": 20,
+            "files": 206,
+            "chunks": 405,
+            "ndcg_semble": 0.6415,
+            "ndcg_ast_135b": 0.6083,
+            "ndcg_cfg_champion": 0.804,
+            "tokens_semble": 11522,
+            "tokens_cfg_champion": 5842
+        },
+        {
+            "repo": "alamofire",
+            "language": "swift",
+            "queries": 20,
+            "files": 43,
+            "chunks": 47,
+            "ndcg_semble": 0.9715,
+            "ndcg_ast_135b": 0.9381,
+            "ndcg_cfg_champion": 0.8696,
+            "tokens_semble": 8586,
+            "tokens_cfg_champion": 4089
+        },
+        {
+            "repo": "click",
+            "language": "python",
+            "queries": 20,
+            "files": 17,
+            "chunks": 249,
+            "ndcg_semble": 0.8755,
+            "ndcg_ast_135b": 0.8022,
+            "ndcg_cfg_champion": 0.8192,
+            "tokens_semble": 2974,
+            "tokens_cfg_champion": 2242
+        },
+        {
+            "repo": "serde",
+            "language": "rust",
+            "queries": 20,
+            "files": 57,
+            "chunks": 412,
+            "ndcg_semble": 0.5491,
+            "ndcg_ast_135b": 0.5195,
+            "ndcg_cfg_champion": 0.4549,
+            "tokens_semble": 10192,
+            "tokens_cfg_champion": 15588
+        },
+        {
+            "repo": "zod",
+            "language": "typescript",
+            "queries": 20,
+            "files": 132,
+            "chunks": 186,
+            "ndcg_semble": 0.3884,
+            "ndcg_ast_135b": 0.3989,
+            "ndcg_cfg_champion": 0.3383,
+            "tokens_semble": 21124,
+            "tokens_cfg_champion": 16474
+        },
+        {
+            "repo": "nlohmann-json",
+            "language": "cpp",
+            "queries": 20,
+            "files": 47,
+            "chunks": 240,
+            "ndcg_semble": 0.7509,
+            "ndcg_ast_135b": 0.7601,
+            "ndcg_cfg_champion": 0.6877,
+            "tokens_semble": 10949,
+            "tokens_cfg_champion": 5782
+        },
+        {
+            "repo": "phoenix",
+            "language": "elixir",
+            "queries": 19,
+            "files": 72,
+            "chunks": 72,
+            "ndcg_semble": 0.8502,
+            "ndcg_ast_135b": 0.8621,
+            "ndcg_cfg_champion": 0.8191,
+            "tokens_semble": 12097,
+            "tokens_cfg_champion": 3277
+        },
+        {
+            "repo": "axum",
+            "language": "rust",
+            "queries": 20,
+            "files": 48,
+            "chunks": 277,
+            "ndcg_semble": 0.8241,
+            "ndcg_ast_135b": 0.8227,
+            "ndcg_cfg_champion": 0.7791,
+            "tokens_semble": 2667,
+            "tokens_cfg_champion": 6008
+        },
+        {
+            "repo": "newtonsoft-json",
+            "language": "csharp",
+            "queries": 20,
+            "files": 240,
+            "chunks": 240,
+            "ndcg_semble": 0.4842,
+            "ndcg_ast_135b": 0.4187,
+            "ndcg_cfg_champion": 0.235,
+            "tokens_semble": 18432,
+            "tokens_cfg_champion": 20073
+        },
+        {
+            "repo": "dapper",
+            "language": "csharp",
+            "queries": 20,
+            "files": 51,
+            "chunks": 51,
+            "ndcg_semble": 0.6787,
+            "ndcg_ast_135b": 0.6891,
+            "ndcg_cfg_champion": 0.7305,
+            "tokens_semble": 22494,
+            "tokens_cfg_champion": 1369
+        },
+        {
+            "repo": "kotlinx-coroutines",
+            "language": "kotlin",
+            "queries": 20,
+            "files": 111,
+            "chunks": 111,
+            "ndcg_semble": 0.8693,
+            "ndcg_ast_135b": 0.8477,
+            "ndcg_cfg_champion": 0.8187,
+            "tokens_semble": 8886,
+            "tokens_cfg_champion": 4858
+        },
+        {
+            "repo": "exposed",
+            "language": "kotlin",
+            "queries": 20,
+            "files": 87,
+            "chunks": 247,
+            "ndcg_semble": 0.5921,
+            "ndcg_ast_135b": 0.6123,
+            "ndcg_cfg_champion": 0.623,
+            "tokens_semble": 12509,
+            "tokens_cfg_champion": 6804
+        },
+        {
+            "repo": "circe",
+            "language": "scala",
+            "queries": 19,
+            "files": 26,
+            "chunks": 32,
+            "ndcg_semble": 0.6363,
+            "ndcg_ast_135b": 0.7338,
+            "ndcg_cfg_champion": 0.7233,
+            "tokens_semble": 11926,
+            "tokens_cfg_champion": 6306
+        },
+        {
+            "repo": "http4s",
+            "language": "scala",
+            "queries": 20,
+            "files": 197,
+            "chunks": 233,
+            "ndcg_semble": 0.73,
+            "ndcg_ast_135b": 0.741,
+            "ndcg_cfg_champion": 0.8909,
+            "tokens_semble": 6593,
+            "tokens_cfg_champion": 2561
+        },
+        {
+            "repo": "vapor",
+            "language": "swift",
+            "queries": 20,
+            "files": 172,
+            "chunks": 175,
+            "ndcg_semble": 0.667,
+            "ndcg_ast_135b": 0.6504,
+            "ndcg_cfg_champion": 0.5532,
+            "tokens_semble": 5397,
+            "tokens_cfg_champion": 4581
+        },
+        {
+            "repo": "snapkit",
+            "language": "swift",
+            "queries": 13,
+            "files": 37,
+            "chunks": 37,
+            "ndcg_semble": 0.5425,
+            "ndcg_ast_135b": 0.5917,
+            "ndcg_cfg_champion": 0.6522,
+            "tokens_semble": 6562,
+            "tokens_cfg_champion": 3811
+        },
+        {
+            "repo": "plug",
+            "language": "elixir",
+            "queries": 20,
+            "files": 40,
+            "chunks": 40,
+            "ndcg_semble": 0.6643,
+            "ndcg_ast_135b": 0.7068,
+            "ndcg_cfg_champion": 0.744,
+            "tokens_semble": 11594,
+            "tokens_cfg_champion": 3267
+        },
+        {
+            "repo": "ecto",
+            "language": "elixir",
+            "queries": 19,
+            "files": 50,
+            "chunks": 50,
+            "ndcg_semble": 0.8628,
+            "ndcg_ast_135b": 0.8628,
+            "ndcg_cfg_champion": 0.8463,
+            "tokens_semble": 26314,
+            "tokens_cfg_champion": 3150
+        },
+        {
+            "repo": "abseil-cpp",
+            "language": "cpp",
+            "queries": 20,
+            "files": 873,
+            "chunks": 2751,
+            "ndcg_semble": 0.8446,
+            "ndcg_ast_135b": 0.8631,
+            "ndcg_cfg_champion": 0.6179,
+            "tokens_semble": 6038,
+            "tokens_cfg_champion": 10567
+        },
+        {
+            "repo": "fmtlib",
+            "language": "cpp",
+            "queries": 20,
+            "files": 16,
+            "chunks": 212,
+            "ndcg_semble": 0.7261,
+            "ndcg_ast_135b": 0.7432,
+            "ndcg_cfg_champion": 0.6607,
+            "tokens_semble": 4552,
+            "tokens_cfg_champion": 5738
+        },
+        {
+            "repo": "aeson",
+            "language": "haskell",
+            "queries": 20,
+            "files": 31,
+            "chunks": 127,
+            "ndcg_semble": 0.8604,
+            "ndcg_ast_135b": 0.7793,
+            "ndcg_cfg_champion": 0.6937,
+            "tokens_semble": 4683,
+            "tokens_cfg_champion": 13318
+        },
+        {
+            "repo": "telescope.nvim",
+            "language": "lua",
+            "queries": 20,
+            "files": 52,
+            "chunks": 52,
+            "ndcg_semble": 0.7044,
+            "ndcg_ast_135b": 0.6508,
+            "ndcg_cfg_champion": 0.8255,
+            "tokens_semble": 13081,
+            "tokens_cfg_champion": 1148
+        },
+        {
+            "repo": "lazy.nvim",
+            "language": "lua",
+            "queries": 20,
+            "files": 54,
+            "chunks": 54,
+            "ndcg_semble": 0.6546,
+            "ndcg_ast_135b": 0.5814,
+            "ndcg_cfg_champion": 0.5106,
+            "tokens_semble": 7719,
+            "tokens_cfg_champion": 11360
+        },
+        {
+            "repo": "zig",
+            "language": "zig",
+            "queries": 20,
+            "files": 546,
+            "chunks": 5887,
+            "ndcg_semble": 0.6458,
+            "ndcg_ast_135b": 0.6104,
+            "ndcg_cfg_champion": 0.6686,
+            "tokens_semble": 4934,
+            "tokens_cfg_champion": 3699
+        },
+        {
+            "repo": "pandoc",
+            "language": "haskell",
+            "queries": 20,
+            "files": 239,
+            "chunks": 692,
+            "ndcg_semble": 0.5954,
+            "ndcg_ast_135b": 0.5708,
+            "ndcg_cfg_champion": 0.4953,
+            "tokens_semble": 12538,
+            "tokens_cfg_champion": 10951
+        },
+        {
+            "repo": "xmonad",
+            "language": "haskell",
+            "queries": 20,
+            "files": 7,
+            "chunks": 23,
+            "ndcg_semble": 0.7368,
+            "ndcg_ast_135b": 0.6965,
+            "ndcg_cfg_champion": 0.6863,
+            "tokens_semble": 9994,
+            "tokens_cfg_champion": 7081
+        },
+        {
+            "repo": "mini.nvim",
+            "language": "lua",
+            "queries": 20,
+            "files": 46,
+            "chunks": 46,
+            "ndcg_semble": 0.8631,
+            "ndcg_ast_135b": 0.8262,
+            "ndcg_cfg_champion": 0.9074,
+            "tokens_semble": 19527,
+            "tokens_cfg_champion": 3960
+        },
+        {
+            "repo": "zls",
+            "language": "zig",
+            "queries": 20,
+            "files": 43,
+            "chunks": 629,
+            "ndcg_semble": 0.586,
+            "ndcg_ast_135b": 0.5488,
+            "ndcg_cfg_champion": 0.4763,
+            "tokens_semble": 4998,
+            "tokens_cfg_champion": 8461
+        },
+        {
+            "repo": "zig-clap",
+            "language": "zig",
+            "queries": 20,
+            "files": 12,
+            "chunks": 57,
+            "ndcg_semble": 0.6897,
+            "ndcg_ast_135b": 0.7064,
+            "ndcg_cfg_champion": 0.7223,
+            "tokens_semble": 1398,
+            "tokens_cfg_champion": 839
+        }
+    ]
+}
