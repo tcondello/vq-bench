@@ -1,0 +1,168 @@
+{
+    "overall_ndcg": {
+        "ripgrep": 0.5199,
+        "semble": 0.4717,
+        "ast_135b": 0.4638,
+        "cfg_champion": 0.4752
+    },
+    "expected_tokens_per_query": {
+        "ripgrep": 13154,
+        "semble": 1068,
+        "ast_135b": 1114,
+        "cfg_champion": 520
+    },
+    "recall_at_token_budgets": {
+        "ripgrep": {
+            "500": 0.0,
+            "1000": 0.0,
+            "2000": 0.325,
+            "4000": 0.325,
+            "8000": 0.572,
+            "16000": 0.631,
+            "32000": 0.752
+        },
+        "semble": {
+            "500": 0.371,
+            "1000": 0.574,
+            "2000": 0.821,
+            "4000": 1.0,
+            "8000": 1.0,
+            "16000": 1.0,
+            "32000": 1.0
+        },
+        "ast_135b": {
+            "500": 0.365,
+            "1000": 0.556,
+            "2000": 0.806,
+            "4000": 0.999,
+            "8000": 1.0,
+            "16000": 1.0,
+            "32000": 1.0
+        },
+        "cfg_champion": {
+            "500": 0.588,
+            "1000": 0.823,
+            "2000": 1.0,
+            "4000": 1.0,
+            "8000": 1.0,
+            "16000": 1.0,
+            "32000": 1.0
+        }
+    },
+    "language_breakdown_ndcg": {
+        "javascript": {
+            "ripgrep": 0.586,
+            "semble": 0.469,
+            "ast_135b": 0.464,
+            "cfg_champion": 0.494
+        },
+        "scala": {
+            "ripgrep": 0.517,
+            "semble": 0.476,
+            "ast_135b": 0.478,
+            "cfg_champion": 0.468
+        },
+        "zig": {
+            "ripgrep": 0.516,
+            "semble": 0.466,
+            "ast_135b": 0.472,
+            "cfg_champion": 0.474
+        },
+        "ruby": {
+            "ripgrep": 0.507,
+            "semble": 0.466,
+            "ast_135b": 0.459,
+            "cfg_champion": 0.478
+        },
+        "cpp": {
+            "ripgrep": 0.503,
+            "semble": 0.481,
+            "ast_135b": 0.501,
+            "cfg_champion": 0.479
+        },
+        "elixir": {
+            "ripgrep": 0.51,
+            "semble": 0.479,
+            "ast_135b": 0.485,
+            "cfg_champion": 0.446
+        },
+        "python": {
+            "ripgrep": 0.596,
+            "semble": 0.488,
+            "ast_135b": 0.458,
+            "cfg_champion": 0.491
+        },
+        "csharp": {
+            "ripgrep": 0.522,
+            "semble": 0.512,
+            "ast_135b": 0.498,
+            "cfg_champion": 0.47
+        },
+        "php": {
+            "ripgrep": 0.516,
+            "semble": 0.459,
+            "ast_135b": 0.426,
+            "cfg_champion": 0.472
+        },
+        "rust": {
+            "ripgrep": 0.471,
+            "semble": 0.458,
+            "ast_135b": 0.473,
+            "cfg_champion": 0.482
+        },
+        "go": {
+            "ripgrep": 0.519,
+            "semble": 0.482,
+            "ast_135b": 0.436,
+            "cfg_champion": 0.474
+        },
+        "java": {
+            "ripgrep": 0.519,
+            "semble": 0.462,
+            "ast_135b": 0.465,
+            "cfg_champion": 0.491
+        },
+        "typescript": {
+            "ripgrep": 0.519,
+            "semble": 0.469,
+            "ast_135b": 0.464,
+            "cfg_champion": 0.494
+        },
+        "kotlin": {
+            "ripgrep": 0.522,
+            "semble": 0.484,
+            "ast_135b": 0.459,
+            "cfg_champion": 0.48
+        },
+        "swift": {
+            "ripgrep": 0.51,
+            "semble": 0.467,
+            "ast_135b": 0.446,
+            "cfg_champion": 0.444
+        },
+        "haskell": {
+            "ripgrep": 0.511,
+            "semble": 0.42,
+            "ast_135b": 0.462,
+            "cfg_champion": 0.453
+        },
+        "ocaml": {
+            "ripgrep": 0.522,
+            "semble": 0.487,
+            "ast_135b": 0.474,
+            "cfg_champion": 0.51
+        },
+        "lua": {
+            "ripgrep": 0.52,
+            "semble": 0.504,
+            "ast_135b": 0.467,
+            "cfg_champion": 0.491
+        },
+        "r": {
+            "ripgrep": 0.495,
+            "semble": 0.431,
+            "ast_135b": 0.422,
+            "cfg_champion": 0.436
+        }
+    }
+}
