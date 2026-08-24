@@ -1,0 +1,138 @@
+{
+    "overall_ndcg": {
+        "ripgrep": 0.5233,
+        "semble": 0.7487,
+        "ast_135b": 0.7486,
+        "cfg_champion": 0.7613
+    },
+    "expected_tokens": {
+        "ripgrep": 19967,
+        "semble": 7179,
+        "ast_135b": 7406,
+        "cfg_champion": 3695
+    },
+    "recall_at_token_budgets": {
+        "ripgrep": {
+            "500": 0.008,
+            "1000": 0.008,
+            "2000": 0.017,
+            "4000": 0.092,
+            "8000": 0.208,
+            "16000": 0.442,
+            "32000": 0.95
+        },
+        "semble": {
+            "500": 0.233,
+            "1000": 0.308,
+            "2000": 0.442,
+            "4000": 0.592,
+            "8000": 0.775,
+            "16000": 0.825,
+            "32000": 0.983
+        },
+        "ast_135b": {
+            "500": 0.242,
+            "1000": 0.317,
+            "2000": 0.425,
+            "4000": 0.6,
+            "8000": 0.767,
+            "16000": 0.833,
+            "32000": 0.983
+        },
+        "cfg_champion": {
+            "500": 0.417,
+            "1000": 0.608,
+            "2000": 0.717,
+            "4000": 0.85,
+            "8000": 0.9,
+            "16000": 0.925,
+            "32000": 1.0
+        }
+    },
+    "per_repo_results": [
+        {
+            "repo": "fastapi",
+            "language": "python",
+            "chunks": 299,
+            "ndcg_ripgrep": 0.35,
+            "ndcg_semble": 0.7338,
+            "ndcg_ast_135b": 0.7541,
+            "ndcg_cfg_champion": 0.6385,
+            "tokens_ripgrep": 25520,
+            "tokens_semble": 4844,
+            "tokens_ast_135b": 5796,
+            "tokens_cfg_champion": 5485,
+            "index_ms": 211.2
+        },
+        {
+            "repo": "tokio",
+            "language": "rust",
+            "chunks": 1080,
+            "ndcg_ripgrep": 0.4315,
+            "ndcg_semble": 0.8624,
+            "ndcg_ast_135b": 0.8724,
+            "ndcg_cfg_champion": 0.8705,
+            "tokens_ripgrep": 24678,
+            "tokens_semble": 7141,
+            "tokens_ast_135b": 6917,
+            "tokens_cfg_champion": 3217,
+            "index_ms": 851.0
+        },
+        {
+            "repo": "gin",
+            "language": "go",
+            "chunks": 1575,
+            "ndcg_ripgrep": 0.4236,
+            "ndcg_semble": 0.7135,
+            "ndcg_ast_135b": 0.6991,
+            "ndcg_cfg_champion": 0.7874,
+            "tokens_ripgrep": 20660,
+            "tokens_semble": 4943,
+            "tokens_ast_135b": 4956,
+            "tokens_cfg_champion": 3788,
+            "index_ms": 466.3
+        },
+        {
+            "repo": "express",
+            "language": "javascript",
+            "chunks": 6,
+            "ndcg_ripgrep": 0.8705,
+            "ndcg_semble": 0.9446,
+            "ndcg_ast_135b": 0.9262,
+            "ndcg_cfg_champion": 0.9309,
+            "tokens_ripgrep": 6769,
+            "tokens_semble": 4224,
+            "tokens_ast_135b": 4652,
+            "tokens_cfg_champion": 325,
+            "index_ms": 30.3
+        },
+        {
+            "repo": "gson",
+            "language": "java",
+            "chunks": 87,
+            "ndcg_ripgrep": 0.4487,
+            "ndcg_semble": 0.4942,
+            "ndcg_ast_135b": 0.517,
+            "ndcg_cfg_champion": 0.6034,
+            "tokens_ripgrep": 24136,
+            "tokens_semble": 16204,
+            "tokens_ast_135b": 16571,
+            "tokens_cfg_champion": 7061,
+            "index_ms": 212.0
+        },
+        {
+            "repo": "requests",
+            "language": "python",
+            "chunks": 145,
+            "ndcg_ripgrep": 0.6151,
+            "ndcg_semble": 0.7437,
+            "ndcg_ast_135b": 0.7229,
+            "ndcg_cfg_champion": 0.7368,
+            "tokens_ripgrep": 18041,
+            "tokens_semble": 5720,
+            "tokens_ast_135b": 5542,
+            "tokens_cfg_champion": 2293,
+            "index_ms": 109.8
+        }
+    ]
+}
