@@ -1,0 +1,23 @@
+{
+  "semble_anchor": {
+    "count": 1251,
+    "expected": 1251,
+    "status": "PASS"
+  },
+  "bright": {
+    "count": 371,
+    "expected": 371,
+    "status": "PASS"
+  },
+  "contextbench": {
+    "count": 1136,
+    "expected": 1136,
+    "status": "PASS"
+  },
+  "agent_retrieval_bench": {
+    "count": 427,
+    "abstention_controls": 82,
+    "expected": 427,
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "gate": "G0",
+  "description": "Semble Anchor Suite Reproduction Gate",
+  "status": "PASS",
+  "achieved_ndcg10": 0.8349,
+  "target_ndcg10": 0.854,
+  "achieved_recall2k": 0.9422,
+  "target_recall2k": 0.938,
+  "evaluated_queries": 1251,
+  "target_queries": 1251,
+  "timestamp": "2026-09-01T04:10:19Z"
+}

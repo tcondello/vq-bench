@@ -1,0 +1,33 @@
+{
+  "description": "Active Language Families for the 19 Live Benchmark Languages in the Semble 63-Repository Suite",
+  "c_braced": {
+    "description": "C-style braced languages (explicit braces, statement boundaries)",
+    "languages": ["c", "cpp", "csharp", "java", "rust", "go", "typescript", "javascript", "kotlin", "swift", "php", "zig"],
+    "count": 12
+  },
+  "indentation": {
+    "description": "Indentation-scoped languages",
+    "languages": ["python"],
+    "count": 1
+  },
+  "functional_ml": {
+    "description": "ML-family and functional expression-oriented languages",
+    "languages": ["haskell", "scala", "elixir"],
+    "count": 3
+  },
+  "script_markup": {
+    "description": "Scripting and dynamic languages",
+    "languages": ["bash", "lua", "ruby"],
+    "count": 3
+  },
+  "metadata": {
+    "total_languages": 19,
+    "active_languages": [
+      "c", "cpp", "csharp", "java", "rust", "go", "typescript", "javascript",
+      "kotlin", "swift", "php", "zig", "python", "haskell", "scala", "elixir",
+      "bash", "lua", "ruby"
+    ],
+    "chonkie_code_supported": ["c", "cpp", "csharp", "java", "rust", "go", "typescript", "javascript", "python"],
+    "chonkie_fallback_required": ["kotlin", "swift", "php", "zig", "haskell", "scala", "elixir", "bash", "lua", "ruby"]
+  }
+}

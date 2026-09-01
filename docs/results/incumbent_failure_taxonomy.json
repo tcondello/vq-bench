@@ -1,0 +1,198 @@
+{
+  "summary": {
+    "total_queries": 1251,
+    "queries_with_imperfect_ndcg": 460,
+    "queries_with_zero_ndcg": 25,
+    "queries_with_incomplete_coverage_at_2k": 100,
+    "queries_with_zero_coverage_at_2k": 45,
+    "overall_ndcg10": 0.8349,
+    "overall_recall2k": 0.9422
+  },
+  "by_category": {
+    "architecture": {
+      "total": 344,
+      "imperfect_ndcg": 177,
+      "zero_ndcg": 5,
+      "incomplete_2k": 47,
+      "zero_2k": 13
+    },
+    "semantic": {
+      "total": 703,
+      "imperfect_ndcg": 259,
+      "zero_ndcg": 16,
+      "incomplete_2k": 48,
+      "zero_2k": 28
+    },
+    "symbol": {
+      "total": 204,
+      "imperfect_ndcg": 24,
+      "zero_ndcg": 4,
+      "incomplete_2k": 5,
+      "zero_2k": 4
+    }
+  },
+  "by_language": {
+    "cpp": {
+      "imperfect_ndcg": 18,
+      "zero_ndcg": 0,
+      "incomplete_2k": 1,
+      "zero_2k": 0
+    },
+    "haskell": {
+      "imperfect_ndcg": 29,
+      "zero_ndcg": 0,
+      "incomplete_2k": 5,
+      "zero_2k": 4
+    },
+    "python": {
+      "imperfect_ndcg": 88,
+      "zero_ndcg": 3,
+      "incomplete_2k": 15,
+      "zero_2k": 4
+    },
+    "swift": {
+      "imperfect_ndcg": 21,
+      "zero_ndcg": 1,
+      "incomplete_2k": 6,
+      "zero_2k": 2
+    },
+    "javascript": {
+      "imperfect_ndcg": 17,
+      "zero_ndcg": 2,
+      "incomplete_2k": 3,
+      "zero_2k": 1
+    },
+    "rust": {
+      "imperfect_ndcg": 20,
+      "zero_ndcg": 0,
+      "incomplete_2k": 5,
+      "zero_2k": 3
+    },
+    "bash": {
+      "imperfect_ndcg": 17,
+      "zero_ndcg": 4,
+      "incomplete_2k": 5,
+      "zero_2k": 4
+    },
+    "scala": {
+      "imperfect_ndcg": 15,
+      "zero_ndcg": 2,
+      "incomplete_2k": 3,
+      "zero_2k": 2
+    },
+    "go": {
+      "imperfect_ndcg": 19,
+      "zero_ndcg": 1,
+      "incomplete_2k": 2,
+      "zero_2k": 1
+    },
+    "java": {
+      "imperfect_ndcg": 24,
+      "zero_ndcg": 3,
+      "incomplete_2k": 7,
+      "zero_2k": 3
+    },
+    "c": {
+      "imperfect_ndcg": 26,
+      "zero_ndcg": 1,
+      "incomplete_2k": 7,
+      "zero_2k": 4
+    },
+    "csharp": {
+      "imperfect_ndcg": 17,
+      "zero_ndcg": 1,
+      "incomplete_2k": 2,
+      "zero_2k": 0
+    },
+    "elixir": {
+      "imperfect_ndcg": 12,
+      "zero_ndcg": 0,
+      "incomplete_2k": 2,
+      "zero_2k": 2
+    },
+    "kotlin": {
+      "imperfect_ndcg": 29,
+      "zero_ndcg": 2,
+      "incomplete_2k": 10,
+      "zero_2k": 3
+    },
+    "php": {
+      "imperfect_ndcg": 21,
+      "zero_ndcg": 1,
+      "incomplete_2k": 6,
+      "zero_2k": 1
+    },
+    "lua": {
+      "imperfect_ndcg": 25,
+      "zero_ndcg": 1,
+      "incomplete_2k": 5,
+      "zero_2k": 3
+    },
+    "ruby": {
+      "imperfect_ndcg": 16,
+      "zero_ndcg": 0,
+      "incomplete_2k": 4,
+      "zero_2k": 0
+    },
+    "typescript": {
+      "imperfect_ndcg": 33,
+      "zero_ndcg": 2,
+      "incomplete_2k": 11,
+      "zero_2k": 7
+    },
+    "zig": {
+      "imperfect_ndcg": 13,
+      "zero_ndcg": 1,
+      "incomplete_2k": 1,
+      "zero_2k": 1
+    }
+  },
+  "reconciliations": {
+    "category_reconciliation": "Semble paper states 711 semantic / 343 architecture / 204 symbol (sum = 1,258). The 63 annotation files contain exactly 703 semantic, 344 architecture, and 204 symbol (sum = 1,251).",
+    "active_languages_count": 19,
+    "active_languages": [
+      "c",
+      "cpp",
+      "csharp",
+      "java",
+      "rust",
+      "go",
+      "typescript",
+      "javascript",
+      "kotlin",
+      "swift",
+      "php",
+      "zig",
+      "python",
+      "haskell",
+      "scala",
+      "elixir",
+      "bash",
+      "lua",
+      "ruby"
+    ],
+    "chonkie_code_supported": [
+      "c",
+      "cpp",
+      "csharp",
+      "java",
+      "rust",
+      "go",
+      "typescript",
+      "javascript",
+      "python"
+    ],
+    "chonkie_fallback_required": [
+      "kotlin",
+      "swift",
+      "php",
+      "zig",
+      "haskell",
+      "scala",
+      "elixir",
+      "bash",
+      "lua",
+      "ruby"
+    ]
+  }
+}

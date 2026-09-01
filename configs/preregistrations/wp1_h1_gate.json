@@ -1,0 +1,62 @@
+{
+  "gate": "G1",
+  "hypothesis": "H1 — Late interaction (LateOn-Code / multi-vector) beats contextual single-vector (CodeRankEmbed) at a viable exchange rate on the multi-dimensional Pareto surface.",
+  "arms": {
+    "arm_1": {
+      "name": "potion-code-16M-v2",
+      "type": "static_single_vector",
+      "vectors_per_chunk": 1,
+      "role": "incumbent_floor"
+    },
+    "arm_2": {
+      "name": "nomic-ai/CodeRankEmbed",
+      "type": "contextual_single_vector",
+      "vectors_per_chunk": 1,
+      "role": "contextualization_alone (Internal Ceiling & Baseline Threshold)"
+    },
+    "arm_3": {
+      "name": "LateOn-Code",
+      "type": "contextual_multi_vector",
+      "vectors_per_chunk": "~200",
+      "role": "late_interaction_alone"
+    }
+  },
+  "benchmarks": [
+    "semble_anchor (63 repos, 1251 queries)",
+    "agent_retrieval_bench (427 samples, native BCY@4k-32k)",
+    "contextbench (1136 instances)",
+    "bright_code (371 queries across pony, leetcode, stackoverflow)",
+    "coreb (5087 queries)"
+  ],
+  "decision_rule": {
+    "primary_test": "LateOn-Code (Arm 3) must beat CodeRankEmbed (Arm 2) by more than the paired bootstrap CI on the unsaturated benchmarks (ARB, ContextBench, BRIGHT, COREB) at an indexing and memory cost within the deployment envelope.",
+    "internal_referee_threshold": "Achieved NDCG@10 / Recall@2k of Arm 2 (CodeRankEmbed) measured on the frozen referee (external published 0.862 is demoted to a sanity check).",
+    "fail_branch": "If CodeRankEmbed (Arm 2) captures most of the gain or wins on the Pareto surface (Quality vs Index Time vs Bytes/Chunk vs p99 Latency), drop late interaction, drop H2/WP3 entirely, and the project becomes Contextual Single-Vector + Chonkie Chunking Optimization."
+  },
+  "per_category_preregistered_predictions": {
+    "semantic_703_queries": {
+      "predicted_locus": "PRIMARY GAIN",
+      "rationale": "Vocabulary mismatch on paraphrased intents lacking exact identifier stems is directly addressed by contextual token-level late interaction.",
+      "expected_delta_ndcg10": "+0.03 to +0.07 over Arm 1"
+    },
+    "symbol_204_queries": {
+      "predicted_locus": "NEAR SATURATION / INVARIANT",
+      "rationale": "Symbol queries are near saturation (NDCG@10 > 0.93) and governed by exact identifier matching and definition boosting; encoder sensitivity is minimal.",
+      "expected_delta_ndcg10": "< +0.01 over Arm 1"
+    },
+    "architecture_344_queries": {
+      "predicted_locus": "SECONDARY / UNCERTAIN",
+      "rationale": "Multi-file structural aggregation challenge. If late-interaction wins disproportionately here rather than semantic, investigate aggregation/chunking confounds.",
+      "expected_delta_ndcg10": "+0.01 to +0.03 over Arm 1"
+    }
+  },
+  "confounds_controlled": [
+    "Chunker (Chonkie 1500 chars / line fallback)",
+    "Index & Referee evaluation harness",
+    "5-Fold cross-validation splits and 12-repo confirmation held-out set"
+  ],
+  "confounds_not_tested_in_wp1": [
+    "Encoder x chunker interaction (WP2)",
+    "Hybrid lexical/BM25 fusion (WP5)"
+  ]
+}
