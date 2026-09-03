@@ -1,0 +1,6132 @@
+[
+  {
+    "query_id": "abseil-cpp_0002",
+    "repo": "abseil-cpp",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "absl::string_view for non-owning string references",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "abseil-cpp_0007",
+    "repo": "abseil-cpp",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "absl::optional and absl::variant for vocabulary types",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "abseil-cpp_0009",
+    "repo": "abseil-cpp",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "absl logging macros ABSL_LOG and ABSL_CHECK",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0003",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how parseEither runs a parser and returns Either String",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0004",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how parseMaybe runs a parser and returns Nothing on failure",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0007",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how Template Haskell derives FromJSON and ToJSON instances",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0009",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how camelCase field names are converted to snake_case for JSON keys",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0010",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how modifyFailure customizes error messages in a parser",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0012",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how JSON encoding produces Encoding without materializing a Value",
+    "ndcg10": 0.3562,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0013",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how Key type is used as object field identifier",
+    "ndcg10": 0.403,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      6,
+      9
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aeson_0017",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how emptyObject and emptyArray constants are defined",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0018",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how sum types are encoded with tag and contents fields",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aeson_0019",
+    "repo": "aeson",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how formatError formats a JSONPath and message into a string",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aiohttp_0002",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "WebSocket client implementation",
+    "ndcg10": 0.5706,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aiohttp_0003",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "request and response object internals",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aiohttp_0005",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "server-side middleware execution",
+    "ndcg10": 0.4556,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aiohttp_0006",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "multipart and form data handling",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aiohttp_0007",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "response streaming and payload",
+    "ndcg10": 0.3066,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      14,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aiohttp_0008",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "semantic",
+    "query": "HTTP exception types and error responses",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "aiohttp_0012",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "architecture",
+    "query": "how backpressure and flow control work in streaming",
+    "ndcg10": 0.301,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "aiohttp_0013",
+    "repo": "aiohttp",
+    "language": "python",
+    "category": "architecture",
+    "query": "how connection draining and cleanup happen on close",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "alamofire_0000",
+    "repo": "alamofire",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how the Session manages the underlying URLSession and dispatches requests",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "alamofire_0004",
+    "repo": "alamofire",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how multipart form data encodes fields and file attachments",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "alamofire_0007",
+    "repo": "alamofire",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how URL query parameters are encoded from Encodable values",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "alamofire_0009",
+    "repo": "alamofire",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how download requests save responses to disk",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "alamofire_0017",
+    "repo": "alamofire",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how upload requests stream data to the server",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axios_0000",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "how HTTP requests are dispatched through the configured adapter",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "axios_0001",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "request and response interceptors",
+    "ndcg10": 0.5912,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "axios_0003",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "how config defaults are merged before a request is sent",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "axios_0005",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "symbol",
+    "query": "InterceptorManager",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axios_0007",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "XHR browser adapter implementation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axios_0010",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "HTTP response settling and status code validation",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axios_0011",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "axios default configuration and request/response transformers",
+    "ndcg10": 0.0,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      12
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axios_0015",
+    "repo": "axios",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "how request and response data is transformed in the pipeline",
+    "ndcg10": 0.4825,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "axum_0000",
+    "repo": "axum",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how axum Handler trait dispatches requests to async handler functions",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0002",
+    "repo": "axum",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how extractors implement FromRequest and FromRequestParts",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0006",
+    "repo": "axum",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how IntoResponse converts handler return values to HTTP responses",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0009",
+    "repo": "axum",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how axum nests routers and merges router trees",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0013",
+    "repo": "axum",
+    "language": "rust",
+    "category": "semantic",
+    "query": "BoxedIntoRoute and type-erased route storage",
+    "ndcg10": 0.3562,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0015",
+    "repo": "axum",
+    "language": "rust",
+    "category": "semantic",
+    "query": "how axum maps Tower middleware layers onto the router",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "axum_0019",
+    "repo": "axum",
+    "language": "rust",
+    "category": "symbol",
+    "query": "FromRequest",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0000",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "how bash-it loads and enables plugins",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "bash-it_0002",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "how command duration is measured and displayed in prompt",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "bash-it_0003",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "battery level detection for shell prompt",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      11
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0006",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "color definitions and terminal color support",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      42
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0008",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "how tab completion scripts are sourced and activated",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      31,
+      29
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "bash-it_0009",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "preexec and precmd hook implementation",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "bash-it_0011",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "symbol",
+    "query": "ssh agent plugin for managing ssh keys",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0013",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "symbol",
+    "query": "node version manager nvm integration",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0015",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "semantic",
+    "query": "bash-it utility functions for string manipulation",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      13
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bash-it_0016",
+    "repo": "bash-it",
+    "language": "bash",
+    "category": "symbol",
+    "query": "hub github cli aliases and helpers",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0005",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "architecture",
+    "query": "how parallel test execution is gated with a semaphore",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0006",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "architecture",
+    "query": "how a test file is preprocessed before execution",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0009",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "semantic",
+    "query": "how bats formats test result output",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0010",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "architecture",
+    "query": "how bats validates the test count across parallel workers",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0014",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "semantic",
+    "query": "how warnings are emitted for deprecated bats features",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0015",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "architecture",
+    "query": "how the preprocessed test source is evaluated",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "bats-core_0016",
+    "repo": "bats-core",
+    "language": "bash",
+    "category": "architecture",
+    "query": "how flock and shlock provide mutual exclusion on file locks",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "cats_0001",
+    "repo": "cats",
+    "language": "scala",
+    "category": "architecture",
+    "query": "how Monad composes dependent effectful computations with flatMap",
+    "ndcg10": 0.5706,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "cats_0002",
+    "repo": "cats",
+    "language": "scala",
+    "category": "architecture",
+    "query": "how Applicative combines independent effects",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      36
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "cats_0010",
+    "repo": "cats",
+    "language": "scala",
+    "category": "semantic",
+    "query": "how natural transformations map between type constructors",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "chi_0000",
+    "repo": "chi",
+    "language": "go",
+    "category": "architecture",
+    "query": "HTTP router and middleware composition",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "chi_0002",
+    "repo": "chi",
+    "language": "go",
+    "category": "architecture",
+    "query": "request routing context storage",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "chi_0013",
+    "repo": "chi",
+    "language": "go",
+    "category": "architecture",
+    "query": "route grouping with sub-routers",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "chi_0014",
+    "repo": "chi",
+    "language": "go",
+    "category": "architecture",
+    "query": "how URL parameters are extracted from path segments at request time",
+    "ndcg10": 0.525,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "chi_0017",
+    "repo": "chi",
+    "language": "go",
+    "category": "architecture",
+    "query": "how chi resolves named URL parameters and wildcards during routing",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "circe_0006",
+    "repo": "circe",
+    "language": "scala",
+    "category": "semantic",
+    "query": "JsonObject for key-value JSON object representation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "circe_0009",
+    "repo": "circe",
+    "language": "scala",
+    "category": "semantic",
+    "query": "Printer for controlling JSON serialization formatting",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "circe_0012",
+    "repo": "circe",
+    "language": "scala",
+    "category": "architecture",
+    "query": "how circe parses a JSON string into a Json value",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      11
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "circe_0013",
+    "repo": "circe",
+    "language": "scala",
+    "category": "semantic",
+    "query": "KeyEncoder and KeyDecoder for Map key serialization",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "circe_0015",
+    "repo": "circe",
+    "language": "scala",
+    "category": "semantic",
+    "query": "down field and array index cursor operations",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "click_0004",
+    "repo": "click",
+    "language": "python",
+    "category": "semantic",
+    "query": "parameter type coercion and value validation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "click_0006",
+    "repo": "click",
+    "language": "python",
+    "category": "semantic",
+    "query": "help text formatting and usage rendering",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "click_0007",
+    "repo": "click",
+    "language": "python",
+    "category": "semantic",
+    "query": "test runner for CLI commands in isolation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "click_0009",
+    "repo": "click",
+    "language": "python",
+    "category": "semantic",
+    "query": "global context stack and current context access",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "cobra_0002",
+    "repo": "cobra",
+    "language": "go",
+    "category": "semantic",
+    "query": "bash completion generation",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "cobra_0003",
+    "repo": "cobra",
+    "language": "go",
+    "category": "semantic",
+    "query": "positional argument validators",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "cobra_0009",
+    "repo": "cobra",
+    "language": "go",
+    "category": "architecture",
+    "query": "how persistent flags are inherited by child commands",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "cobra_0011",
+    "repo": "cobra",
+    "language": "go",
+    "category": "architecture",
+    "query": "how the root command traverses the tree to find the active subcommand",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "cobra_0014",
+    "repo": "cobra",
+    "language": "go",
+    "category": "semantic",
+    "query": "error printing and exit code management",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "commons-lang_0002",
+    "repo": "commons-lang",
+    "language": "java",
+    "category": "architecture",
+    "query": "reflection-based equals implementation",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "commons-lang_0005",
+    "repo": "commons-lang",
+    "language": "java",
+    "category": "architecture",
+    "query": "reflection equals builder internals",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "commons-lang_0009",
+    "repo": "commons-lang",
+    "language": "java",
+    "category": "semantic",
+    "query": "number parsing with defaults and range checks",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "commons-lang_0013",
+    "repo": "commons-lang",
+    "language": "java",
+    "category": "semantic",
+    "query": "immutable pair container for two related values",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "commons-lang_0020",
+    "repo": "commons-lang",
+    "language": "java",
+    "category": "semantic",
+    "query": "class utility methods for reflection and package navigation",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0000",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "how curl resolves and connects to a remote host",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      16,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "curl_0001",
+    "repo": "curl",
+    "language": "c",
+    "category": "semantic",
+    "query": "how a new easy handle is initialized with default settings",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0005",
+    "repo": "curl",
+    "language": "c",
+    "category": "semantic",
+    "query": "how curl decides whether to retry a failed request",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0006",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "pre-transfer setup: resolving credentials, ranges, and timers",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0011",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "how the easy interface wraps the multi interface for synchronous use",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "curl_0012",
+    "repo": "curl",
+    "language": "c",
+    "category": "semantic",
+    "query": "how curl checks if HTTP If-Modified-Since condition is met",
+    "ndcg10": 0.3562,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0013",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "connection filter chain setup for proxies and TLS",
+    "ndcg10": 0.301,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0014",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "how SSL is configured on a connection",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      14,
+      21
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "curl_0016",
+    "repo": "curl",
+    "language": "c",
+    "category": "semantic",
+    "query": "how curl keepalive and connection upkeep works",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0018",
+    "repo": "curl",
+    "language": "c",
+    "category": "semantic",
+    "query": "freeing all resources when closing an easy handle",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "curl_0019",
+    "repo": "curl",
+    "language": "c",
+    "category": "architecture",
+    "query": "how HTTP proxy tunnel CONNECT method is initiated",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "dapper_0004",
+    "repo": "dapper",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how Dapper maps columns to object properties by name",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "dapper_0014",
+    "repo": "dapper",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "transaction support in Dapper queries",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ecto_0007",
+    "repo": "ecto",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "preload for loading associations eagerly",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ecto_0012",
+    "repo": "ecto",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "Ecto.Queryable protocol for query composition",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ecto_0013",
+    "repo": "ecto",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "Multi for composing multiple database operations in a transaction",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0000",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how Table defines columns and constraints in Exposed DSL",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0001",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "Column definition and column types in Exposed",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      13
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0002",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how SQL queries are built with the Exposed query DSL",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0003",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "Transaction block and database session management",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      17,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "exposed_0005",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "insert insertAndGetId and batch insert operations",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0006",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "update and delete statement builders",
+    "ndcg10": 0.2044,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      7,
+      11
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "exposed_0008",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "aggregate functions sum count avg and groupBy",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0009",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "SchemaUtils for creating and dropping database tables",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "exposed_0010",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how expressions and SQL operators are composed in Exposed",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      11
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0011",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "vendor-specific SQL generation and database dialect interface",
+    "ndcg10": 0.3155,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      8
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "exposed_0013",
+    "repo": "exposed",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "index and unique constraint definition on tables",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "express_0000",
+    "repo": "express",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "application initialization and default configuration",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "express_0003",
+    "repo": "express",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "template view lookup and rendering",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "express_0005",
+    "repo": "express",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "utility functions for content type detection and MIME handling",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "express_0013",
+    "repo": "express",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "how app.render resolves views and calls the template engine",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "express_0019",
+    "repo": "express",
+    "language": "javascript",
+    "category": "symbol",
+    "query": "view",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fastapi_0000",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does dependency injection work",
+    "ndcg10": 0.2961,
+    "recall_2k": 0.6667,
+    "relevant_ranks": [
+      2,
+      14,
+      12
+    ],
+    "n_targets": 3
+  },
+  {
+    "query_id": "fastapi_0001",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "request validation and error handling",
+    "ndcg10": 0.5013,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0002",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are routes registered",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0003",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "websocket endpoint implementation",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0004",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "OpenAPI schema generation",
+    "ndcg10": 0.4685,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0005",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "middleware stack and CORS",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0007",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "response model serialization",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      19,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0008",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "running work after returning an HTTP response without blocking",
+    "ndcg10": 0.3333,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fastapi_0009",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "semantic",
+    "query": "security and OAuth2 authentication",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0010",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "architecture",
+    "query": "how is response validation and serialization applied before sending",
+    "ndcg10": 0.7904,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      10
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0012",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does FastAPI run sync route functions without blocking",
+    "ndcg10": 0.5706,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0013",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are path parameters extracted and type-converted",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fastapi_0017",
+    "repo": "fastapi",
+    "language": "python",
+    "category": "symbol",
+    "query": "APIRouter",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "flask_0000",
+    "repo": "flask",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are routes registered",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0001",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "request context handling",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "flask_0003",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "blueprint registration",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0005",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "template rendering",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "flask_0009",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "JSON response helpers",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0011",
+    "repo": "flask",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does Flask select which error handler to invoke for an exception",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0012",
+    "repo": "flask",
+    "language": "python",
+    "category": "architecture",
+    "query": "how is g used to store data scoped to the current request",
+    "ndcg10": 0.6053,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0014",
+    "repo": "flask",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does Flask convert a view return value into a response object",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0015",
+    "repo": "flask",
+    "language": "python",
+    "category": "symbol",
+    "query": "Blueprint",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0018",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "session",
+    "ndcg10": 0.5803,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      8
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0019",
+    "repo": "flask",
+    "language": "python",
+    "category": "semantic",
+    "query": "g",
+    "ndcg10": 0.5706,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "flask_0020",
+    "repo": "flask",
+    "language": "python",
+    "category": "architecture",
+    "query": "how Blueprint inherits routing behaviour from its sansio base class",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "fmtlib_0000",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "how fmt::format and fmt::print format strings at runtime",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fmtlib_0002",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "formatter specialization for custom type formatting",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fmtlib_0011",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "dynamic_format_arg_store for building argument lists at runtime",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fmtlib_0013",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "format_error and error handling for invalid format strings",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fmtlib_0015",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "fmt::arg named arguments for use in format strings",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "fmtlib_0017",
+    "repo": "fmtlib",
+    "language": "cpp",
+    "category": "symbol",
+    "query": "formatter",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0003",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "catching runtime panics in request handlers and returning 500",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0004",
+    "repo": "gin",
+    "language": "go",
+    "category": "architecture",
+    "query": "JSON request binding and validation",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "gin_0005",
+    "repo": "gin",
+    "language": "go",
+    "category": "architecture",
+    "query": "how the Gin Engine embeds RouterGroup and uses Context per request",
+    "ndcg10": 0.9675,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      1,
+      4
+    ],
+    "n_targets": 3
+  },
+  {
+    "query_id": "gin_0009",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "query parameter and URL path variable extraction",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0010",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "multipart form and file upload handling",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0011",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "error types and per-request error collection",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0012",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "form data binding for URL-encoded requests",
+    "ndcg10": 0.2372,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "gin_0013",
+    "repo": "gin",
+    "language": "go",
+    "category": "architecture",
+    "query": "how validators are plugged in for struct binding",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gin_0015",
+    "repo": "gin",
+    "language": "go",
+    "category": "semantic",
+    "query": "utility helpers for path detection and content-type formatting",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      12
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gson_0000",
+    "repo": "gson",
+    "language": "java",
+    "category": "semantic",
+    "query": "main Gson API for toJson and fromJson",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gson_0005",
+    "repo": "gson",
+    "language": "java",
+    "category": "semantic",
+    "query": "streaming JSON reader and token parsing",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gson_0006",
+    "repo": "gson",
+    "language": "java",
+    "category": "semantic",
+    "query": "streaming JSON writer and token generation",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gson_0008",
+    "repo": "gson",
+    "language": "java",
+    "category": "semantic",
+    "query": "serialization exclusion strategies for fields and classes",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "gson_0010",
+    "repo": "gson",
+    "language": "java",
+    "category": "architecture",
+    "query": "how custom serializers and deserializers are registered and resolved",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "gson_0011",
+    "repo": "gson",
+    "language": "java",
+    "category": "architecture",
+    "query": "how null values are handled during serialization",
+    "ndcg10": 0.7904,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      10,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "gson_0014",
+    "repo": "gson",
+    "language": "java",
+    "category": "semantic",
+    "query": "JSON object with named fields",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "gson_0015",
+    "repo": "gson",
+    "language": "java",
+    "category": "architecture",
+    "query": "how type adapter factories are registered and selected for a given type",
+    "ndcg10": 0.6241,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "guzzle_0000",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "HTTP client request sending and defaults",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "guzzle_0002",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "retry middleware and exponential backoff",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "guzzle_0003",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "cookie jar implementation",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "guzzle_0005",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "curl-based HTTP handler and connection management",
+    "ndcg10": 0.6053,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "guzzle_0007",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "concurrent request pool with limited parallelism",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "guzzle_0008",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "available request options and their configuration",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "guzzle_0010",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "how request body and content-type are prepared before sending",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "guzzle_0011",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "exception hierarchy for HTTP and transfer errors",
+    "ndcg10": 0.0,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      15,
+      37
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "guzzle_0018",
+    "repo": "guzzle",
+    "language": "php",
+    "category": "semantic",
+    "query": "transfer statistics and timing information",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0000",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "architecture",
+    "query": "how HttpRoutes define pattern-matched HTTP request handlers",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0006",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "architecture",
+    "query": "how Kleisli and OptionT power the Http and HttpRoutes algebra",
+    "ndcg10": 0.6241,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "http4s_0008",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "semantic",
+    "query": "Method HTTP verb enumeration",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0009",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "semantic",
+    "query": "how query parameters are extracted and decoded from URIs",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0011",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "semantic",
+    "query": "Media type and content type handling",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0015",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "semantic",
+    "query": "Entity body representation and streaming",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "http4s_0017",
+    "repo": "http4s",
+    "language": "scala",
+    "category": "symbol",
+    "query": "HttpRoutes",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "httpx_0002",
+    "repo": "httpx",
+    "language": "python",
+    "category": "semantic",
+    "query": "connection pooling and transport",
+    "ndcg10": 0.5912,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "httpx_0003",
+    "repo": "httpx",
+    "language": "python",
+    "category": "semantic",
+    "query": "URL parsing and construction",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "httpx_0004",
+    "repo": "httpx",
+    "language": "python",
+    "category": "semantic",
+    "query": "response decoding and content",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "httpx_0005",
+    "repo": "httpx",
+    "language": "python",
+    "category": "semantic",
+    "query": "timeout configuration",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "httpx_0010",
+    "repo": "httpx",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does digest authentication handle the challenge-response flow",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "httpx_0012",
+    "repo": "httpx",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does streaming response body iteration work",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      16
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "httpx_0013",
+    "repo": "httpx",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are query parameters encoded into the URL",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "httpx_0020",
+    "repo": "httpx",
+    "language": "python",
+    "category": "architecture",
+    "query": "how the HTTP transport backend sends requests over the wire",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "jackson-databind_0001",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "architecture",
+    "query": "JSON-specific mapper builder",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "jackson-databind_0002",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "mutable JSON object node with named field operations",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      18
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "jackson-databind_0003",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "architecture",
+    "query": "polymorphic type resolution",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "jackson-databind_0005",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "symbol",
+    "query": "JsonMapper",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "jackson-databind_0007",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "reading and deserializing JSON into Java objects with type control",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      38
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0008",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "writing and serializing Java objects to JSON with configuration",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0009",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "bean deserialization from JSON properties",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0010",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "bean serialization of Java object fields to JSON",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      15
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0012",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "architecture",
+    "query": "deserialization context and error accumulation during parsing",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0014",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "semantic",
+    "query": "deserialization feature flags and configuration options",
+    "ndcg10": 0.301,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "jackson-databind_0015",
+    "repo": "jackson-databind",
+    "language": "java",
+    "category": "architecture",
+    "query": "how the mapper resolves a deserializer for a given Java type",
+    "ndcg10": 0.3066,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      3,
+      17
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "kotlinx-coroutines_0000",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how launch and async coroutine builders start coroutines",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "kotlinx-coroutines_0002",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "Job interface and coroutine lifecycle management",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "kotlinx-coroutines_0004",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "CoroutineContext and coroutine context elements",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "kotlinx-coroutines_0006",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "flow builder and how cold flows are created",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "kotlinx-coroutines_0008",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "Channel for sending and receiving values between coroutines",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "kotlinx-coroutines_0016",
+    "repo": "kotlinx-coroutines",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "delay and withTimeout suspending time functions",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ktor_0000",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how the HttpClient is configured with plugins and an engine",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0001",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how request and response pipelines process interceptors",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      21
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0002",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how HTTP caching stores and validates cached responses",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0003",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "how HTTP status codes are checked and exceptions raised on failure",
+    "ndcg10": 0.301,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ktor_0004",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "how request and response timeouts are enforced",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ktor_0005",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "how HTTP redirects are followed automatically",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "ktor_0006",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "how cookies are stored and sent with requests",
+    "ndcg10": 0.5912,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0009",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "how server-sent events are received and parsed from a streaming response",
+    "ndcg10": 0.3066,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      3,
+      14
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0010",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how the engine abstraction separates the client API from the transport",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0016",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how the HttpClient plugin installation and configuration pipeline works",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0017",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "architecture",
+    "query": "how client plugins intercept and transform requests and responses",
+    "ndcg10": 0.2372,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "ktor_0018",
+    "repo": "ktor",
+    "language": "kotlin",
+    "category": "semantic",
+    "query": "HTTP client engine abstraction and engine factory",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "laravel-framework_0006",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "semantic",
+    "query": "route parameter binding and model resolution",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "laravel-framework_0009",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "architecture",
+    "query": "service container dependency injection and binding resolution",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "laravel-framework_0011",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "semantic",
+    "query": "event dispatching and listener registration",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "laravel-framework_0012",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "semantic",
+    "query": "cache store repository and driver abstraction",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "laravel-framework_0013",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "semantic",
+    "query": "validation rules and error message collection",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "laravel-framework_0014",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "architecture",
+    "query": "how middleware is applied through the pipeline",
+    "ndcg10": 0.511,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "laravel-framework_0019",
+    "repo": "laravel-framework",
+    "language": "php",
+    "category": "architecture",
+    "query": "how Blade templates are compiled and rendered by the view factory",
+    "ndcg10": 0.3333,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0000",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how lazy.nvim loads a plugin on demand when its trigger fires",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0003",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how plugin installations and updates are managed with tasks",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      14
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "lazy.nvim_0004",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how lazy.nvim checks for plugin updates from git",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "lazy.nvim_0006",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how lazy.nvim renders the plugin UI view",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "lazy.nvim_0007",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how the lockfile pins plugin commits for reproducible installs",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0009",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how event handlers trigger lazy loading on Neovim events",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "lazy.nvim_0010",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how lazy.nvim config is validated and merged with defaults",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0012",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how plugin fragments handle multiple specs for the same plugin",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0014",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "reading and writing lazy plugin state to disk between sessions",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0015",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how the floating window for the lazy UI is created",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      11
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0016",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how text sections are rendered in the lazy view",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0017",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how git diff output is shown for plugin updates",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "lazy.nvim_0019",
+    "repo": "lazy.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how lazy util functions provide error handling and module loading",
+    "ndcg10": 0.301,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "libuv_0000",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "how libuv implements the event loop run and tick",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0002",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "thread pool and work queue for async operations",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "libuv_0003",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "async handle for waking up the event loop from another thread",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0007",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "resolving hostnames asynchronously using the thread pool",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0008",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "pipe IPC between processes",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0011",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "file system event watching with inotify or kqueue",
+    "ndcg10": 0.2184,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0012",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "idle and prepare handle callbacks before blocking",
+    "ndcg10": 0.3155,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      8
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "libuv_0013",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "random number generation using OS entropy",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0014",
+    "repo": "libuv",
+    "language": "c",
+    "category": "architecture",
+    "query": "shared library dlopen and dlsym wrapper",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "libuv_0015",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "network interface address enumeration",
+    "ndcg10": 0.4228,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0016",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "libuv handle reference counting and close",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      28,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0017",
+    "repo": "libuv",
+    "language": "c",
+    "category": "semantic",
+    "query": "thread creation and mutex synchronization primitives",
+    "ndcg10": 0.5912,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "libuv_0018",
+    "repo": "libuv",
+    "language": "c",
+    "category": "symbol",
+    "query": "IDNA internationalized domain name encoding",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "messagepack-csharp_0000",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how objects are serialized to MessagePack binary format",
+    "ndcg10": 0.1846,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      9,
+      23
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "messagepack-csharp_0001",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how binary data is deserialized back into typed C# objects",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "messagepack-csharp_0002",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how custom formatters are registered and resolved for types",
+    "ndcg10": 0.5438,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "messagepack-csharp_0004",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "how collections and arrays are serialized",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "messagepack-csharp_0005",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "how union types with subtypes are handled in serialization",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "messagepack-csharp_0007",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "how enums are serialized as integers or strings",
+    "ndcg10": 0.4367,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      13,
+      4
+    ],
+    "n_targets": 3
+  },
+  {
+    "query_id": "messagepack-csharp_0011",
+    "repo": "messagepack-csharp",
+    "language": "csharp",
+    "category": "symbol",
+    "query": "MessagePackSerializer",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "mini.nvim_0013",
+    "repo": "mini.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how mini.jump implements single-character jump navigation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0000",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how the StaticModel encodes text to embeddings",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0001",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how a model is distilled from a sentence transformer",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0002",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "tokenizer construction and vocabulary building",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0003",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "saving and loading models from disk",
+    "ndcg10": 0.3066,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      3,
+      20
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0004",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "reducing embedding precision to smaller integer representations",
+    "ndcg10": 0.4575,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      8
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0005",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "pushing and loading models from HuggingFace Hub",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0006",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "distillation inference and embedding extraction",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0007",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "training a classifier on top of embeddings",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0008",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "generating model cards for publication",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0009",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "utility functions used across the package",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0010",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how mean pooling is applied over token embeddings during distillation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0011",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how PCA reduces embedding dimensionality",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0012",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how out-of-vocabulary tokens are handled at inference time",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0013",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how vocabulary is pruned during distillation",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      12,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0014",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "architecture",
+    "query": "how subword token weights are aggregated for whole-word embeddings",
+    "ndcg10": 0.5912,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "model2vec_0018",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "semantic",
+    "query": "quantize",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "model2vec_0019",
+    "repo": "model2vec",
+    "language": "python",
+    "category": "symbol",
+    "query": "Tokenizer",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "monolog_0007",
+    "repo": "monolog",
+    "language": "php",
+    "category": "architecture",
+    "query": "how log handlers are registered and invoked by Logger",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      33
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "monolog_0008",
+    "repo": "monolog",
+    "language": "php",
+    "category": "semantic",
+    "query": "rotating file handler for log rotation by date",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "monolog_0015",
+    "repo": "monolog",
+    "language": "php",
+    "category": "architecture",
+    "query": "abstract processing handler with formatting lifecycle",
+    "ndcg10": 0.1772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      10,
+      20
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "monolog_0016",
+    "repo": "monolog",
+    "language": "php",
+    "category": "architecture",
+    "query": "how log records propagate through the handler bubble chain",
+    "ndcg10": 0.7904,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      10
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "monolog_0017",
+    "repo": "monolog",
+    "language": "php",
+    "category": "architecture",
+    "query": "how formatters transform log records into output strings",
+    "ndcg10": 0.2184,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      6,
+      24
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "newtonsoft-json_0002",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "JsonReader base class and token reading API",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0003",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "JsonWriter base class and token writing API",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0006",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "JToken JObject JArray LINQ to JSON object model",
+    "ndcg10": 0.5438,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "newtonsoft-json_0011",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how the internal serializer writer maps .NET objects to JSON tokens",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0012",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "architecture",
+    "query": "how the internal serializer reader maps JSON tokens to .NET objects",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0014",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "JsonProperty and JsonObject attribute for controlling serialization",
+    "ndcg10": 0.0,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      14
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0016",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "semantic",
+    "query": "date handling and ISO 8601 parsing in Newtonsoft.Json",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "newtonsoft-json_0018",
+    "repo": "newtonsoft-json",
+    "language": "csharp",
+    "category": "symbol",
+    "query": "JToken",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0001",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "JSON parser and tokenizer",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      12
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "nlohmann-json_0002",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "JSON lexer and token scanning",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0003",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "JSON serialization to string output",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0004",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "ADL-based to_json and from_json conversion hooks for custom types",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0005",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "exception types for parse and type errors",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0006",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "how from_json populates a custom C++ type from JSON",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "nlohmann-json_0007",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "architecture",
+    "query": "how to_json serializes a custom C++ type to JSON",
+    "ndcg10": 0.525,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "nlohmann-json_0012",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "value type enum for JSON null, boolean, number, string, array, object",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "nlohmann-json_0016",
+    "repo": "nlohmann-json",
+    "language": "cpp",
+    "category": "semantic",
+    "query": "iterator implementation for JSON arrays and objects",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0004",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how pandoc handles YAML metadata blocks in documents",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0008",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how pandoc options control output format and extensions",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0009",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how pandoc parses table structures in documents",
+    "ndcg10": 0.3333,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0013",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how pandoc handles Lua filter scripting",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0014",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how pandoc's app module orchestrates reading, filtering, and writing",
+    "ndcg10": 0.3562,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0015",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how pandoc handles TeX math in documents",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0016",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how pandoc parses generic parsing utilities for readers",
+    "ndcg10": 0.301,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      9
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pandoc_0017",
+    "repo": "pandoc",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how pandoc generates PDF output via LaTeX or other backends",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "phoenix_0008",
+    "repo": "phoenix",
+    "language": "elixir",
+    "category": "architecture",
+    "query": "how Phoenix logs request and response lifecycle events",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "phoenix_0009",
+    "repo": "phoenix",
+    "language": "elixir",
+    "category": "architecture",
+    "query": "how channels handle incoming messages and replies",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "phoenix_0013",
+    "repo": "phoenix",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "Param protocol for extracting URL-safe IDs",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "phoenix_0014",
+    "repo": "phoenix",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "naming conventions for controllers and view modules",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "plug_0004",
+    "repo": "plug",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "JSON body parser plug",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "plug_0005",
+    "repo": "plug",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "URL-encoded form body parser",
+    "ndcg10": 0.3333,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "plug_0008",
+    "repo": "plug",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "cookie store for Plug.Session",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "plug_0013",
+    "repo": "plug",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "how halt stops a plug pipeline from continuing",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "plug_0016",
+    "repo": "plug",
+    "language": "elixir",
+    "category": "semantic",
+    "query": "request path parameter extraction in Plug.Router",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pydantic_0001",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are model fields declared and constrained",
+    "ndcg10": 0.5803,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      8,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0003",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "semantic",
+    "query": "custom field and model validators",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0004",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how to serialize models to JSON",
+    "ndcg10": 0.5013,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0006",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "semantic",
+    "query": "model configuration and settings",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pydantic_0008",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "semantic",
+    "query": "alias handling for field names",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0010",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how discriminated unions select the right model variant",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0011",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how computed fields are defined on a model",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      20
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0012",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "semantic",
+    "query": "what runs after model initialisation in model_post_init",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "pydantic_0013",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how model inheritance and field overriding works",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0014",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "architecture",
+    "query": "how to validate a function's arguments with pydantic",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "pydantic_0019",
+    "repo": "pydantic",
+    "language": "python",
+    "category": "symbol",
+    "query": "Field",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rack_0009",
+    "repo": "rack",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "serving a file index page for a folder on disk",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rack_0012",
+    "repo": "rack",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "splitting multipart/form-data bodies into individual fields",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rails_0000",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "application boot process and initialization",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      11
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "rails_0001",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "engine configuration and load paths",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "rails_0005",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "symbol",
+    "query": "Rails::Engine",
+    "ndcg10": 0.3066,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "rails_0008",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "generator framework and base generator class",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      27
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "rails_0010",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "Rails command dispatch and subcommand routing",
+    "ndcg10": 0.3333,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rails_0012",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "how railties are sorted by initialization dependency",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      18
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "rails_0014",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "application routes reloader for development mode",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rails_0017",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "how rake tasks are loaded and registered from railties",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "rails_0018",
+    "repo": "rails",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "engine middleware insertion and plugin loading",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "redis_0009",
+    "repo": "redis",
+    "language": "c",
+    "category": "semantic",
+    "query": "how SETRANGE modifies a substring within a string value",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "redis_0012",
+    "repo": "redis",
+    "language": "c",
+    "category": "semantic",
+    "query": "how slave keys with expiry are tracked in replication",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "redux_0001",
+    "repo": "redux",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "middleware pipeline composition",
+    "ndcg10": 0.7977,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      9
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "redux_0003",
+    "repo": "redux",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "function composition utility",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "redux_0012",
+    "repo": "redux",
+    "language": "javascript",
+    "category": "semantic",
+    "query": "runtime type identification utility",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "redux_0015",
+    "repo": "redux",
+    "language": "javascript",
+    "category": "architecture",
+    "query": "how applyMiddleware wraps getState and dispatch for the middleware chain",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      12
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "requests_0000",
+    "repo": "requests",
+    "language": "python",
+    "category": "architecture",
+    "query": "how HTTP sessions manage state and connections",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0001",
+    "repo": "requests",
+    "language": "python",
+    "category": "semantic",
+    "query": "authentication mechanisms and credential handling",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0004",
+    "repo": "requests",
+    "language": "python",
+    "category": "architecture",
+    "query": "how redirects are followed",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "requests_0006",
+    "repo": "requests",
+    "language": "python",
+    "category": "semantic",
+    "query": "request and response model internals",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0007",
+    "repo": "requests",
+    "language": "python",
+    "category": "semantic",
+    "query": "SSL certificate verification",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "requests_0008",
+    "repo": "requests",
+    "language": "python",
+    "category": "semantic",
+    "query": "event hooks system",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0010",
+    "repo": "requests",
+    "language": "python",
+    "category": "architecture",
+    "query": "how a PreparedRequest is built from user-supplied arguments",
+    "ndcg10": 0.6934,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "requests_0015",
+    "repo": "requests",
+    "language": "python",
+    "category": "symbol",
+    "query": "Session",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0017",
+    "repo": "requests",
+    "language": "python",
+    "category": "symbol",
+    "query": "PreparedRequest",
+    "ndcg10": 0.2891,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "requests_0019",
+    "repo": "requests",
+    "language": "python",
+    "category": "symbol",
+    "query": "Response",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0002",
+    "repo": "serde",
+    "language": "rust",
+    "category": "architecture",
+    "query": "Visitor pattern for deserializer implementations",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0003",
+    "repo": "serde",
+    "language": "rust",
+    "category": "semantic",
+    "query": "standard library type Serialize implementations",
+    "ndcg10": 0.3333,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0004",
+    "repo": "serde",
+    "language": "rust",
+    "category": "semantic",
+    "query": "standard library type Deserialize implementations",
+    "ndcg10": 0.3155,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      8
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0005",
+    "repo": "serde",
+    "language": "rust",
+    "category": "semantic",
+    "query": "value-based deserialization for self-describing formats",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0007",
+    "repo": "serde",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how serde_derive generates Serialize impl with serialize_field and serialize_struct",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0008",
+    "repo": "serde",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how derive macros generate Deserialize code for structs and enums",
+    "ndcg10": 0.5714,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      9
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "serde_0011",
+    "repo": "serde",
+    "language": "rust",
+    "category": "architecture",
+    "query": "MapAccess and SeqAccess for deserializing collections",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0017",
+    "repo": "serde",
+    "language": "rust",
+    "category": "symbol",
+    "query": "Deserialize",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0018",
+    "repo": "serde",
+    "language": "rust",
+    "category": "symbol",
+    "query": "Serializer",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "serde_0019",
+    "repo": "serde",
+    "language": "rust",
+    "category": "symbol",
+    "query": "Visitor",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "sinatra_0001",
+    "repo": "sinatra",
+    "language": "ruby",
+    "category": "architecture",
+    "query": "application startup and command line entrypoint",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "sinatra_0002",
+    "repo": "sinatra",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "exception rendering and stack traces",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "sinatra_0003",
+    "repo": "sinatra",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "request logging middleware",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "sinatra_0009",
+    "repo": "sinatra",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "case-insensitive hash for request params",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "sinatra_0017",
+    "repo": "sinatra",
+    "language": "ruby",
+    "category": "semantic",
+    "query": "show_exceptions middleware for development error pages",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "snapkit_0001",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how remakeConstraints removes all existing constraints before applying new ones",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "snapkit_0003",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how offset and inset modifiers adjust the constant value of a constraint",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "snapkit_0005",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how content hugging and compression resistance priorities are exposed through snp",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "snapkit_0006",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how debug descriptions identify the source file and line number where a constraint was created",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      21
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "snapkit_0007",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how the snp property bridges UIView and NSView into the SnapKit DSL",
+    "ndcg10": 0.6241,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "snapkit_0008",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how DSL protocols define layout anchor properties like left, top, edges, and center for views and guides",
+    "ndcg10": 0.2641,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      4,
+      14
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "snapkit_0009",
+    "repo": "snapkit",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how ConstraintMaker accumulates descriptions and batch-activates them when the closure returns",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      17
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "starlette_0000",
+    "repo": "starlette",
+    "language": "python",
+    "category": "architecture",
+    "query": "how are URL routes registered and matched",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      14
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "starlette_0001",
+    "repo": "starlette",
+    "language": "python",
+    "category": "architecture",
+    "query": "how does authentication middleware work",
+    "ndcg10": 0.6131,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "starlette_0006",
+    "repo": "starlette",
+    "language": "python",
+    "category": "semantic",
+    "query": "background task scheduling and execution",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "starlette_0010",
+    "repo": "starlette",
+    "language": "python",
+    "category": "architecture",
+    "query": "how request state persists arbitrary data across middleware",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "starlette_0014",
+    "repo": "starlette",
+    "language": "python",
+    "category": "architecture",
+    "query": "how errors in ASGI apps are caught and turned into responses",
+    "ndcg10": 0.7904,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      10
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "telescope.nvim_0002",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how finders feed entries into a picker results buffer",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0003",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how telescope actions map keys to picker operations",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "telescope.nvim_0004",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how previewers render a selected entry in the preview window",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      22
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "telescope.nvim_0008",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how builtin file_files picker searches and presents files",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0009",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "TelescopeGlobalState storing picker status keyed by prompt bufnr",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0010",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how git status changes are listed in a picker",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0011",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how LSP references and definitions are shown in telescope",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0014",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how entry_manager stores and retrieves picker results",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0016",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how diagnostic entries are displayed with severity in telescope",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0017",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "semantic",
+    "query": "how operators apply actions to multiple selected entries",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "telescope.nvim_0019",
+    "repo": "telescope.nvim",
+    "language": "lua",
+    "category": "architecture",
+    "query": "how async_job runs an external command and streams results",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "tokio_0000",
+    "repo": "tokio",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how spawned tasks are scheduled onto threads",
+    "ndcg10": 0.389,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      7,
+      9
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "tokio_0003",
+    "repo": "tokio",
+    "language": "rust",
+    "category": "architecture",
+    "query": "how the timer wheel tracks sleep deadlines",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      15,
+      2
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "tokio_0017",
+    "repo": "tokio",
+    "language": "rust",
+    "category": "semantic",
+    "query": "async file I/O operations",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0000",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how a tRPC router is created and procedures are registered",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      26
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0002",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "how input validation and parsing works for procedures",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0003",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how HTTP requests are resolved to tRPC procedures",
+    "ndcg10": 0.2044,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      7,
+      23
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0004",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "how error formatting and serialization works",
+    "ndcg10": 0.1846,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      9,
+      14
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0005",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how server-sent events and subscriptions are streamed to the client",
+    "ndcg10": 0.8503,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0006",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "how the observable pattern is used for subscriptions",
+    "ndcg10": 0.6053,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0008",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "adapting tRPC to run as a Node.js HTTP server handler",
+    "ndcg10": 0.8175,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0010",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how tRPC is initialized with root config and context factory",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      6
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "trpc_0018",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how tRPC procedures are defined and chained with input and output validation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "trpc_0019",
+    "repo": "trpc",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how tRPC routers are created and merged",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0001",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how routes are registered on the RoutesBuilder",
+    "ndcg10": 0.8772,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "vapor_0002",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "Request type and HTTP request representation in Vapor",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0004",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "Content protocol for encoding and decoding request and response bodies",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0006",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "architecture",
+    "query": "how Vapor Application stores and retrieves services via Storage",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0007",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "WebSocket upgrade and handler registration in Vapor",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0009",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "Sessions and session driver for server-side session storage",
+    "ndcg10": 0.8316,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6,
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "vapor_0010",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "Validations and Validatable for request body validation",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vapor_0013",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "how serve and boot commands start the Vapor HTTP server",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 2
+  },
+  {
+    "query_id": "vapor_0016",
+    "repo": "vapor",
+    "language": "swift",
+    "category": "semantic",
+    "query": "HTTP status codes and media types in Vapor",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "vitest_0000",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how vitest discovers and runs test files",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0002",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how vitest statically collects describe it and test block locations for test discovery",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0004",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "vi mock and spy utilities for mocking modules and functions",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0005",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "snapshot testing serialization and comparison",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0008",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how beforeAll afterAll and lifecycle hooks affect the test execution order",
+    "ndcg10": 0.3333,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      7
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0009",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "test reporter interface for listening to test events and results",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0010",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how vitest initializes worker threads for parallel test execution",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0011",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "module mocker for intercepting and replacing module imports at runtime",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0012",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "task state and task result tracking",
+    "ndcg10": 0.3155,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      8
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0013",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "fake timers and timer mocking utilities",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "vitest_0015",
+    "repo": "vitest",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "project-level configuration and workspace projects",
+    "ndcg10": 0.2891,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      10
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0000",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how xmonad's X monad wraps IO with display and window state",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0003",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how xmonad applies layout algorithms to arrange windows on screen",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0005",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how xmonad reads and applies user configuration at startup",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0006",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how xmonad handles X11 events in its event loop",
+    "ndcg10": 0.9197,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      1,
+      3
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "xmonad_0007",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how xmonad kills a window and cleans up its state",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0008",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how xmonad uses withDisplay to get the X11 Display handle",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0010",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how xmonad redraws and refreshes windows after a layout change",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0015",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how xmonad handles floating windows separately from tiled ones",
+    "ndcg10": 0.8175,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      7
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "xmonad_0017",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how xmonad initializes the display and root window at startup",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0018",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "architecture",
+    "query": "how Layout typeclass allows pluggable tiling algorithms",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "xmonad_0019",
+    "repo": "xmonad",
+    "language": "haskell",
+    "category": "semantic",
+    "query": "how xmonad's windows function atomically applies StackSet transformations",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig_0000",
+    "repo": "zig",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how AutoHashMap provides a hash map with auto-derived hash and equality",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig_0005",
+    "repo": "zig",
+    "language": "zig",
+    "category": "architecture",
+    "query": "how the JSON scanner tokenizes a JSON byte stream",
+    "ndcg10": 0.3869,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig_0007",
+    "repo": "zig",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how std.testing.expect and expectEqual assert conditions in tests",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig_0011",
+    "repo": "zig",
+    "language": "zig",
+    "category": "architecture",
+    "query": "how comptime hash functions are auto-derived for arbitrary types",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig-clap_0004",
+    "repo": "zig-clap",
+    "language": "zig",
+    "category": "architecture",
+    "query": "how zig-clap streaming parser processes arguments one token at a time",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig-clap_0005",
+    "repo": "zig-clap",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zig-clap iterates over OS process arguments",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig-clap_0006",
+    "repo": "zig-clap",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zig-clap built-in parsers convert strings to typed values",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zig-clap_0017",
+    "repo": "zig-clap",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zig-clap detects and handles unrecognized flags as errors",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zls_0004",
+    "repo": "zls",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zls provides hover information for symbols under the cursor",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zls_0007",
+    "repo": "zls",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zls generates diagnostic errors and warnings",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zls_0009",
+    "repo": "zls",
+    "language": "zig",
+    "category": "architecture",
+    "query": "how zls traverses the Zig AST to resolve symbol scopes",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zls_0015",
+    "repo": "zls",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zls configuration is loaded and validated",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zls_0018",
+    "repo": "zls",
+    "language": "zig",
+    "category": "semantic",
+    "query": "how zls translates C headers for Zig interop",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0000",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how ZodType base class parses and validates input values",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0006",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "union and discriminated union schema types",
+    "ndcg10": 0.6509,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2,
+      4
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "zod_0008",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "z.transform and z.pipe for chaining Zod output transformations",
+    "ndcg10": 0.0,
+    "recall_2k": 0.0,
+    "relevant_ranks": [
+      11
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0009",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how safeParse returns a success/error result without throwing",
+    "ndcg10": 0.3869,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      2,
+      15
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "zod_0010",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "architecture",
+    "query": "how .refine and .superRefine add custom validation to a schema via the public API",
+    "ndcg10": 0.2372,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      5
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "zod_0011",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "classic Zod v4 array and tuple schema types",
+    "ndcg10": 0.3562,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      6
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0012",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "classic Zod v4 string schema with built-in validations",
+    "ndcg10": 0.6131,
+    "recall_2k": 0.5,
+    "relevant_ranks": [
+      1,
+      30
+    ],
+    "n_targets": 2
+  },
+  {
+    "query_id": "zod_0013",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "v3 compatibility error types and ZodError",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0014",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "z.record and z.map schema builders for key-value types",
+    "ndcg10": 0.5,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      3
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0015",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "ZodDefault and ZodCatch schema wrappers that supply fallback values on parse failure",
+    "ndcg10": 0.4307,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      4
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0016",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "semantic",
+    "query": "enum schema types for literal value sets",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  },
+  {
+    "query_id": "zod_0018",
+    "repo": "zod",
+    "language": "typescript",
+    "category": "symbol",
+    "query": "ZodError",
+    "ndcg10": 0.6309,
+    "recall_2k": 1.0,
+    "relevant_ranks": [
+      2
+    ],
+    "n_targets": 1
+  }
+]

@@ -598,11 +598,11 @@ class SembleReferenceRetriever(BaseRetriever):
             "repo": self.repo_name,
         }
 
-    def search(self, query: str, top_k: int = 50) -> list[RetrievedUnit]:
+    def search(self, query: str, top_k: int = 50, alpha: float | None = None) -> list[RetrievedUnit]:
         if not self.chunks or self.bm25_index is None:
             return []
 
-        alpha = resolve_alpha(query, None)
+        alpha = resolve_alpha(query, alpha)
         candidate_count = min(len(self.chunks), top_k * 5)
 
         # 1. Semantic Search

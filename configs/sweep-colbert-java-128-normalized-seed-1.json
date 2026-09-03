@@ -1,0 +1,45 @@
+{
+  "datasets": [
+    "colbert-java-128-normalized"
+  ],
+  "seed": 1,
+  "n_fit": 20000,
+  "n_reconstruct": 1000,
+  "n_eval": 1000,
+  "k": [
+    1,
+    10,
+    100
+  ],
+  "temp": [
+    0.05,
+    0.2,
+    1.0
+  ],
+  "methods": [
+    {
+      "name": "scalar",
+      "b": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "colbertv2_quant",
+      "centroids": [
+        256
+      ],
+      "residual_bits": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "metrics": [
+    "recall",
+    "mse_score",
+    "mse_recon"
+  ]
+}

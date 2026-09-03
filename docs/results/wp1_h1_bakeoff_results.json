@@ -1,0 +1,83 @@
+{
+  "metadata": {
+    "total_queries": 1251,
+    "total_repos": 63,
+    "wall_clock_s": 8584.34,
+    "device": "mps"
+  },
+  "quality_metrics": {
+    "arm_1_potion": {
+      "ndcg10": 0.6788,
+      "recall_500": 0.581,
+      "recall_1k": 0.7434,
+      "recall_2k": 0.8421,
+      "recall_4k": 0.9082
+    },
+    "arm_2_coderankembed": {
+      "ndcg10": 0.7404,
+      "recall_500": 0.7475,
+      "recall_1k": 0.8385,
+      "recall_2k": 0.9158,
+      "recall_4k": 0.9442
+    },
+    "arm_3_lateon_code": {
+      "ndcg10": 0.7829,
+      "recall_500": 0.7134,
+      "recall_1k": 0.8309,
+      "recall_2k": 0.9007,
+      "recall_4k": 0.9422
+    }
+  },
+  "paired_bootstrap_cis": {
+    "arm_3_vs_arm_2": {
+      "mean_delta": 0.0425,
+      "ci_lower": 0.0265,
+      "ci_upper": 0.0589
+    },
+    "arm_2_vs_arm_1": {
+      "mean_delta": 0.0616,
+      "ci_lower": 0.0427,
+      "ci_upper": 0.0803
+    },
+    "by_category_arm_3_vs_arm_2": {
+      "semantic": {
+        "mean_delta": 0.0378,
+        "ci_lower": 0.0175,
+        "ci_upper": 0.0584
+      },
+      "symbol": {
+        "mean_delta": 0.101,
+        "ci_lower": 0.0665,
+        "ci_upper": 0.1371
+      },
+      "architecture": {
+        "mean_delta": 0.0173,
+        "ci_lower": -0.015,
+        "ci_upper": 0.0493
+      }
+    }
+  },
+  "cost_metrics": {
+    "cold_index_time_per_repo_ms": {
+      "arm_1": 429.15,
+      "arm_2": 330708.89,
+      "arm_3": 69705.26
+    },
+    "incremental_reindex_ms_per_file": {
+      "arm1_potion_ms": 16.1,
+      "arm2_coderank_ms": 339.59,
+      "arm3_lateon_ms": 323.2
+    },
+    "p99_query_latency_ms": {
+      "arm_1": 2.26,
+      "arm_2": 9.76,
+      "arm_3": 128.88
+    },
+    "index_size_at_2m_chunks_gb": {
+      "arm_1_potion_256d_fp16": 1.02,
+      "arm_2_coderank_768d_fp16": 3.07,
+      "arm_3_lateon_128d_fp16": 102.4,
+      "arm_3_lateon_128d_1_35_bd_drq": 8.64
+    }
+  }
+}

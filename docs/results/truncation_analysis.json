@@ -1,0 +1,788 @@
+{
+  "languages": {
+    "cpp": {
+      "total_chunks": 7642,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 41.415859722585715,
+      "arm3_p50_tokens": 198.0,
+      "arm3_p95_tokens": 499.0
+    },
+    "haskell": {
+      "total_chunks": 5331,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 48.564997186269,
+      "arm3_p50_tokens": 290.0,
+      "arm3_p95_tokens": 484.0
+    },
+    "python": {
+      "total_chunks": 6917,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 33.8152378198641,
+      "arm3_p50_tokens": 212.0,
+      "arm3_p95_tokens": 425.0
+    },
+    "swift": {
+      "total_chunks": 2098,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 32.22116301239276,
+      "arm3_p50_tokens": 199.5,
+      "arm3_p95_tokens": 401.0
+    },
+    "javascript": {
+      "total_chunks": 496,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 39.314516129032256,
+      "arm3_p50_tokens": 236.0,
+      "arm3_p95_tokens": 463.25
+    },
+    "rust": {
+      "total_chunks": 6486,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 49.16743755781683,
+      "arm3_p50_tokens": 295.0,
+      "arm3_p95_tokens": 489.0
+    },
+    "bash": {
+      "total_chunks": 1188,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 52.77777777777778,
+      "arm3_p50_tokens": 318.5,
+      "arm3_p95_tokens": 595.6499999999999
+    },
+    "scala": {
+      "total_chunks": 3234,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 54.01978973407545,
+      "arm3_p50_tokens": 325.0,
+      "arm3_p95_tokens": 561.3499999999999
+    },
+    "go": {
+      "total_chunks": 2065,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 49.78208232445521,
+      "arm3_p50_tokens": 298.0,
+      "arm3_p95_tokens": 552.0
+    },
+    "java": {
+      "total_chunks": 12682,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 43.60510960416338,
+      "arm3_p50_tokens": 273.0,
+      "arm3_p95_tokens": 421.0
+    },
+    "c": {
+      "total_chunks": 21811,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 41.40571271376828,
+      "arm3_p50_tokens": 224.0,
+      "arm3_p95_tokens": 523.0
+    },
+    "csharp": {
+      "total_chunks": 7453,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 20.63598550919093,
+      "arm3_p50_tokens": 84.0,
+      "arm3_p95_tokens": 364.0
+    },
+    "elixir": {
+      "total_chunks": 2889,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 49.94807892004154,
+      "arm3_p50_tokens": 298.0,
+      "arm3_p95_tokens": 504.0
+    },
+    "kotlin": {
+      "total_chunks": 3279,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 38.76181762732541,
+      "arm3_p50_tokens": 238.0,
+      "arm3_p95_tokens": 415.0
+    },
+    "php": {
+      "total_chunks": 10100,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 46.89108910891089,
+      "arm3_p50_tokens": 279.0,
+      "arm3_p95_tokens": 432.0
+    },
+    "lua": {
+      "total_chunks": 4571,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 53.73003719098666,
+      "arm3_p50_tokens": 339.0,
+      "arm3_p95_tokens": 543.5
+    },
+    "ruby": {
+      "total_chunks": 1534,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 31.35593220338983,
+      "arm3_p50_tokens": 80.5,
+      "arm3_p95_tokens": 450.0
+    },
+    "typescript": {
+      "total_chunks": 7569,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 36.583432421720175,
+      "arm3_p50_tokens": 142.0,
+      "arm3_p95_tokens": 507.0
+    },
+    "zig": {
+      "total_chunks": 24693,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 42.49787389138622,
+      "arm3_p50_tokens": 229.0,
+      "arm3_p95_tokens": 581.0
+    }
+  },
+  "repos": {
+    "abseil-cpp": {
+      "language": "cpp",
+      "chunks": 5243,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 42.28495136372306,
+      "arm3_p50_tokens": 205.0,
+      "arm3_p95_tokens": 487.0,
+      "arm3_max_tokens": 726
+    },
+    "aeson": {
+      "language": "haskell",
+      "chunks": 483,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 66.45962732919256,
+      "arm3_p50_tokens": 363.0,
+      "arm3_p95_tokens": 504.79999999999995,
+      "arm3_max_tokens": 624
+    },
+    "aiohttp": {
+      "language": "python",
+      "chunks": 1197,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 33.24979114452798,
+      "arm3_p50_tokens": 214.0,
+      "arm3_p95_tokens": 425.4000000000001,
+      "arm3_max_tokens": 630
+    },
+    "alamofire": {
+      "language": "swift",
+      "chunks": 938,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 34.22174840085288,
+      "arm3_p50_tokens": 245.5,
+      "arm3_p95_tokens": 374.0,
+      "arm3_max_tokens": 433
+    },
+    "axios": {
+      "language": "javascript",
+      "chunks": 377,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 32.891246684350136,
+      "arm3_p50_tokens": 195.0,
+      "arm3_p95_tokens": 452.99999999999994,
+      "arm3_max_tokens": 597
+    },
+    "axum": {
+      "language": "rust",
+      "chunks": 689,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 57.9100145137881,
+      "arm3_p50_tokens": 346.0,
+      "arm3_p95_tokens": 484.0,
+      "arm3_max_tokens": 739
+    },
+    "bash-it": {
+      "language": "bash",
+      "chunks": 882,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 50.90702947845806,
+      "arm3_p50_tokens": 311.5,
+      "arm3_p95_tokens": 601.9499999999999,
+      "arm3_max_tokens": 823
+    },
+    "bats-core": {
+      "language": "bash",
+      "chunks": 61,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 63.934426229508205,
+      "arm3_p50_tokens": 344.0,
+      "arm3_p95_tokens": 523.0,
+      "arm3_max_tokens": 554
+    },
+    "cats": {
+      "language": "scala",
+      "chunks": 1598,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 57.446808510638306,
+      "arm3_p50_tokens": 339.0,
+      "arm3_p95_tokens": 588.0,
+      "arm3_max_tokens": 733
+    },
+    "chi": {
+      "language": "go",
+      "chunks": 528,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 42.234848484848484,
+      "arm3_p50_tokens": 206.5,
+      "arm3_p95_tokens": 546.0,
+      "arm3_max_tokens": 654
+    },
+    "circe": {
+      "language": "scala",
+      "chunks": 270,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 50.74074074074074,
+      "arm3_p50_tokens": 307.0,
+      "arm3_p95_tokens": 469.0,
+      "arm3_max_tokens": 571
+    },
+    "click": {
+      "language": "python",
+      "chunks": 562,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 36.47686832740214,
+      "arm3_p50_tokens": 238.0,
+      "arm3_p95_tokens": 414.0,
+      "arm3_max_tokens": 501
+    },
+    "cobra": {
+      "language": "go",
+      "chunks": 727,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 44.97936726272352,
+      "arm3_p50_tokens": 238.0,
+      "arm3_p95_tokens": 503.0,
+      "arm3_max_tokens": 605
+    },
+    "commons-lang": {
+      "language": "java",
+      "chunks": 3997,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 54.866149612209156,
+      "arm3_p50_tokens": 316.0,
+      "arm3_p95_tokens": 446.0,
+      "arm3_max_tokens": 676
+    },
+    "curl": {
+      "language": "c",
+      "chunks": 7514,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 44.6233697098749,
+      "arm3_p50_tokens": 262.0,
+      "arm3_p95_tokens": 541.3499999999995,
+      "arm3_max_tokens": 935
+    },
+    "dapper": {
+      "language": "csharp",
+      "chunks": 790,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 25.696202531645568,
+      "arm3_p50_tokens": 102.5,
+      "arm3_p95_tokens": 373.54999999999995,
+      "arm3_max_tokens": 546
+    },
+    "ecto": {
+      "language": "elixir",
+      "chunks": 1409,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 51.1000709723208,
+      "arm3_p50_tokens": 317.0,
+      "arm3_p95_tokens": 504.5999999999999,
+      "arm3_max_tokens": 773
+    },
+    "exposed": {
+      "language": "kotlin",
+      "chunks": 1076,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 43.215613382899626,
+      "arm3_p50_tokens": 267.5,
+      "arm3_p95_tokens": 414.0,
+      "arm3_max_tokens": 660
+    },
+    "express": {
+      "language": "javascript",
+      "chunks": 58,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 70.6896551724138,
+      "arm3_p50_tokens": 374.5,
+      "arm3_p95_tokens": 487.3,
+      "arm3_max_tokens": 500
+    },
+    "fastapi": {
+      "language": "python",
+      "chunks": 1119,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 25.826630920464698,
+      "arm3_p50_tokens": 181.0,
+      "arm3_p95_tokens": 407.1999999999998,
+      "arm3_max_tokens": 464
+    },
+    "flask": {
+      "language": "python",
+      "chunks": 444,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 36.93693693693694,
+      "arm3_p50_tokens": 229.0,
+      "arm3_p95_tokens": 411.84999999999997,
+      "arm3_max_tokens": 479
+    },
+    "fmtlib": {
+      "language": "cpp",
+      "chunks": 806,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 47.270471464019856,
+      "arm3_p50_tokens": 259.0,
+      "arm3_p95_tokens": 555.5,
+      "arm3_max_tokens": 1024
+    },
+    "gin": {
+      "language": "go",
+      "chunks": 810,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 59.01234567901235,
+      "arm3_p50_tokens": 362.0,
+      "arm3_p95_tokens": 576.0999999999999,
+      "arm3_max_tokens": 1070
+    },
+    "gson": {
+      "language": "java",
+      "chunks": 1951,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 50.17939518195797,
+      "arm3_p50_tokens": 302.0,
+      "arm3_p95_tokens": 451.0,
+      "arm3_max_tokens": 589
+    },
+    "guzzle": {
+      "language": "php",
+      "chunks": 962,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 34.407484407484404,
+      "arm3_p50_tokens": 213.5,
+      "arm3_p95_tokens": 433.94999999999993,
+      "arm3_max_tokens": 496
+    },
+    "http4s": {
+      "language": "scala",
+      "chunks": 1366,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 50.658857979502194,
+      "arm3_p50_tokens": 304.0,
+      "arm3_p95_tokens": 497.75,
+      "arm3_max_tokens": 789
+    },
+    "httpx": {
+      "language": "python",
+      "chunks": 332,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 40.963855421686745,
+      "arm3_p50_tokens": 272.5,
+      "arm3_p95_tokens": 434.9,
+      "arm3_max_tokens": 666
+    },
+    "jackson-databind": {
+      "language": "java",
+      "chunks": 6734,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 35.01633501633501,
+      "arm3_p50_tokens": 231.0,
+      "arm3_p95_tokens": 381.0,
+      "arm3_max_tokens": 520
+    },
+    "kotlinx-coroutines": {
+      "language": "kotlin",
+      "chunks": 1546,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 35.38163001293661,
+      "arm3_p50_tokens": 205.5,
+      "arm3_p95_tokens": 406.0,
+      "arm3_max_tokens": 536
+    },
+    "ktor": {
+      "language": "kotlin",
+      "chunks": 657,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 39.42161339421613,
+      "arm3_p50_tokens": 242.0,
+      "arm3_p95_tokens": 430.0,
+      "arm3_max_tokens": 465
+    },
+    "laravel-framework": {
+      "language": "php",
+      "chunks": 8584,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 48.928238583411,
+      "arm3_p50_tokens": 292.5,
+      "arm3_p95_tokens": 433.0,
+      "arm3_max_tokens": 1083
+    },
+    "lazy.nvim": {
+      "language": "lua",
+      "chunks": 395,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 58.734177215189874,
+      "arm3_p50_tokens": 357.0,
+      "arm3_p95_tokens": 668.3,
+      "arm3_max_tokens": 718
+    },
+    "libuv": {
+      "language": "c",
+      "chunks": 1973,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 51.849974657881404,
+      "arm3_p50_tokens": 314.0,
+      "arm3_p95_tokens": 577.0,
+      "arm3_max_tokens": 868
+    },
+    "messagepack-csharp": {
+      "language": "csharp",
+      "chunks": 2392,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 20.61036789297659,
+      "arm3_p50_tokens": 79.0,
+      "arm3_p95_tokens": 368.0,
+      "arm3_max_tokens": 584
+    },
+    "mini.nvim": {
+      "language": "lua",
+      "chunks": 3152,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 58.53426395939086,
+      "arm3_p50_tokens": 372.5,
+      "arm3_p95_tokens": 549.4499999999998,
+      "arm3_max_tokens": 1090
+    },
+    "model2vec": {
+      "language": "python",
+      "chunks": 189,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 38.095238095238095,
+      "arm3_p50_tokens": 215.0,
+      "arm3_p95_tokens": 427.0,
+      "arm3_max_tokens": 520
+    },
+    "monolog": {
+      "language": "php",
+      "chunks": 554,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 37.00361010830325,
+      "arm3_p50_tokens": 244.5,
+      "arm3_p95_tokens": 402.0,
+      "arm3_max_tokens": 453
+    },
+    "newtonsoft-json": {
+      "language": "csharp",
+      "chunks": 4271,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 19.714352610629827,
+      "arm3_p50_tokens": 88.0,
+      "arm3_p95_tokens": 359.0,
+      "arm3_max_tokens": 512
+    },
+    "nlohmann-json": {
+      "language": "cpp",
+      "chunks": 1593,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 35.59322033898305,
+      "arm3_p50_tokens": 149.0,
+      "arm3_p95_tokens": 534.7999999999997,
+      "arm3_max_tokens": 901
+    },
+    "nvm": {
+      "language": "bash",
+      "chunks": 245,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 56.734693877551024,
+      "arm3_p50_tokens": 331.0,
+      "arm3_p95_tokens": 580.5999999999999,
+      "arm3_max_tokens": 694
+    },
+    "pandoc": {
+      "language": "haskell",
+      "chunks": 4694,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 46.63400085215168,
+      "arm3_p50_tokens": 278.0,
+      "arm3_p95_tokens": 481.0,
+      "arm3_max_tokens": 910
+    },
+    "phoenix": {
+      "language": "elixir",
+      "chunks": 1010,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 47.32673267326732,
+      "arm3_p50_tokens": 271.5,
+      "arm3_p95_tokens": 489.0,
+      "arm3_max_tokens": 1052
+    },
+    "plug": {
+      "language": "elixir",
+      "chunks": 470,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 52.12765957446809,
+      "arm3_p50_tokens": 322.5,
+      "arm3_p95_tokens": 1099.7499999999998,
+      "arm3_max_tokens": 1143
+    },
+    "pydantic": {
+      "language": "python",
+      "chunks": 2467,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 34.089987839481154,
+      "arm3_p50_tokens": 205.0,
+      "arm3_p95_tokens": 437.0,
+      "arm3_max_tokens": 727
+    },
+    "rack": {
+      "language": "ruby",
+      "chunks": 460,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 35.869565217391305,
+      "arm3_p50_tokens": 144.5,
+      "arm3_p95_tokens": 502.04999999999995,
+      "arm3_max_tokens": 713
+    },
+    "rails": {
+      "language": "ruby",
+      "chunks": 966,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 27.22567287784679,
+      "arm3_p50_tokens": 46.5,
+      "arm3_p95_tokens": 426.0,
+      "arm3_max_tokens": 552
+    },
+    "redis": {
+      "language": "c",
+      "chunks": 12324,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 37.77182732878936,
+      "arm3_p50_tokens": 184.0,
+      "arm3_p95_tokens": 488.0,
+      "arm3_max_tokens": 1096
+    },
+    "redux": {
+      "language": "javascript",
+      "chunks": 61,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 49.18032786885246,
+      "arm3_p50_tokens": 297.0,
+      "arm3_p95_tokens": 437.0,
+      "arm3_max_tokens": 450
+    },
+    "requests": {
+      "language": "python",
+      "chunks": 255,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 43.529411764705884,
+      "arm3_p50_tokens": 259.0,
+      "arm3_p95_tokens": 437.59999999999997,
+      "arm3_max_tokens": 517
+    },
+    "serde": {
+      "language": "rust",
+      "chunks": 1752,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 39.04109589041096,
+      "arm3_p50_tokens": 205.0,
+      "arm3_p95_tokens": 494.4499999999998,
+      "arm3_max_tokens": 676
+    },
+    "sinatra": {
+      "language": "ruby",
+      "chunks": 108,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 49.074074074074076,
+      "arm3_p50_tokens": 281.0,
+      "arm3_p95_tokens": 458.65,
+      "arm3_max_tokens": 509
+    },
+    "snapkit": {
+      "language": "swift",
+      "chunks": 157,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 43.94904458598726,
+      "arm3_p50_tokens": 241.0,
+      "arm3_p95_tokens": 387.0,
+      "arm3_max_tokens": 478
+    },
+    "starlette": {
+      "language": "python",
+      "chunks": 352,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 34.94318181818182,
+      "arm3_p50_tokens": 215.5,
+      "arm3_p95_tokens": 429.45,
+      "arm3_max_tokens": 644
+    },
+    "telescope.nvim": {
+      "language": "lua",
+      "chunks": 1024,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 37.01171875,
+      "arm3_p50_tokens": 135.5,
+      "arm3_p95_tokens": 473.0,
+      "arm3_max_tokens": 550
+    },
+    "tokio": {
+      "language": "rust",
+      "chunks": 4045,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 52.064276885043256,
+      "arm3_p50_tokens": 316.0,
+      "arm3_p95_tokens": 485.0,
+      "arm3_max_tokens": 738
+    },
+    "trpc": {
+      "language": "typescript",
+      "chunks": 619,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 33.60258481421648,
+      "arm3_p50_tokens": 171.0,
+      "arm3_p95_tokens": 451.1,
+      "arm3_max_tokens": 538
+    },
+    "vapor": {
+      "language": "swift",
+      "chunks": 1003,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 28.51445663010967,
+      "arm3_p50_tokens": 153.0,
+      "arm3_p95_tokens": 423.4999999999999,
+      "arm3_max_tokens": 631
+    },
+    "vitest": {
+      "language": "typescript",
+      "chunks": 2588,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 32.689335394126736,
+      "arm3_p50_tokens": 152.5,
+      "arm3_p95_tokens": 436.0,
+      "arm3_max_tokens": 734
+    },
+    "xmonad": {
+      "language": "haskell",
+      "chunks": 154,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 51.298701298701296,
+      "arm3_p50_tokens": 312.5,
+      "arm3_p95_tokens": 438.0,
+      "arm3_max_tokens": 510
+    },
+    "zig": {
+      "language": "zig",
+      "chunks": 22154,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 43.72122415816557,
+      "arm3_p50_tokens": 240.0,
+      "arm3_p95_tokens": 590.0,
+      "arm3_max_tokens": 1075
+    },
+    "zig-clap": {
+      "language": "zig",
+      "chunks": 170,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 33.52941176470588,
+      "arm3_p50_tokens": 180.5,
+      "arm3_p95_tokens": 484.54999999999995,
+      "arm3_max_tokens": 637
+    },
+    "zls": {
+      "language": "zig",
+      "chunks": 2369,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 31.701139721401432,
+      "arm3_p50_tokens": 148.0,
+      "arm3_p95_tokens": 459.0,
+      "arm3_max_tokens": 651
+    },
+    "zod": {
+      "language": "typescript",
+      "chunks": 4362,
+      "arm1_trunc_pct": 0.0,
+      "arm2_trunc_pct": 0.0,
+      "arm3_trunc_pct": 39.31682714351215,
+      "arm3_p50_tokens": 117.5,
+      "arm3_p95_tokens": 551.0,
+      "arm3_max_tokens": 1916
+    }
+  }
+}

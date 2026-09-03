@@ -157,15 +157,25 @@ def recall_at_budget(
 
 
 def paired_bootstrap_ci(
-    deltas: Sequence[float],
+    a_or_deltas: Sequence[float],
+    b: Sequence[float] | int | None = None,
     n_boot: int = 10000,
     alpha: float = 0.05,
     seed: int = 42,
 ) -> tuple[float, float, float]:
     """Compute paired mean delta and 100*(1-alpha)% bootstrap confidence interval.
 
+    If two sequences (a, b) are provided, deltas = a - b is computed.
     Returns: (mean_delta, ci_lower, ci_upper)
     """
+    if isinstance(b, (list, tuple, np.ndarray)):
+        deltas = [x - y for x, y in zip(a_or_deltas, b)]
+    elif isinstance(b, int):
+        n_boot = b
+        deltas = a_or_deltas
+    else:
+        deltas = a_or_deltas
+
     arr = np.asarray(deltas, dtype=np.float64)
     if len(arr) == 0:
         return 0.0, 0.0, 0.0
@@ -179,3 +189,4 @@ def paired_bootstrap_ci(
     ci_lower = float(np.percentile(boot_means, 100 * (alpha / 2.0)))
     ci_upper = float(np.percentile(boot_means, 100 * (1.0 - alpha / 2.0)))
     return mean, ci_lower, ci_upper
+

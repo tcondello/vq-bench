@@ -1,0 +1,262 @@
+{
+  "total_chunks": 578414,
+  "global_mean_tokens_raw": 236.6,
+  "global_trunc_rate_300": 0.4201,
+  "global_trunc_rate_640": 0.0292,
+  "measured_mean_vectors_per_chunk_300": 173.7,
+  "measured_mean_vectors_per_chunk_640": 234.1,
+  "index_size_at_2m_chunks": {
+    "300_tokens": {
+      "fp16_gb": 82.82,
+      "drq_1_35_bd_gb": 6.99
+    },
+    "640_tokens": {
+      "fp16_gb": 111.63,
+      "drq_1_35_bd_gb": 9.42
+    },
+    "envelope_a_cap_gb": 12.0,
+    "envelope_a_breakeven_vectors_per_chunk": 278.0
+  },
+  "by_language": {
+    "bash": {
+      "chunks": 1701,
+      "mean_tokens": 289.4,
+      "p50": 309,
+      "p90": 543,
+      "p95": 593,
+      "p99": 672,
+      "trunc_count_300": 864,
+      "trunc_rate_300": 0.5079,
+      "trunc_count_640": 35,
+      "trunc_rate_640": 0.0206
+    },
+    "c": {
+      "chunks": 232099,
+      "mean_tokens": 268.8,
+      "p50": 253,
+      "p90": 581,
+      "p95": 657,
+      "p99": 775,
+      "trunc_count_300": 108019,
+      "trunc_rate_300": 0.4654,
+      "trunc_count_640": 13820,
+      "trunc_rate_640": 0.0595
+    },
+    "cpp": {
+      "chunks": 12420,
+      "mean_tokens": 217.5,
+      "p50": 188,
+      "p90": 482,
+      "p95": 544,
+      "p99": 681,
+      "trunc_count_300": 4656,
+      "trunc_rate_300": 0.3749,
+      "trunc_count_640": 209,
+      "trunc_rate_640": 0.0168
+    },
+    "csharp": {
+      "chunks": 19059,
+      "mean_tokens": 161.4,
+      "p50": 117,
+      "p90": 361,
+      "p95": 395,
+      "p99": 507,
+      "trunc_count_300": 4728,
+      "trunc_rate_300": 0.2481,
+      "trunc_count_640": 134,
+      "trunc_rate_640": 0.007
+    },
+    "elixir": {
+      "chunks": 6102,
+      "mean_tokens": 247.2,
+      "p50": 289,
+      "p90": 476,
+      "p95": 505,
+      "p99": 587,
+      "trunc_count_300": 2987,
+      "trunc_rate_300": 0.4895,
+      "trunc_count_640": 44,
+      "trunc_rate_640": 0.0072
+    },
+    "go": {
+      "chunks": 2065,
+      "mean_tokens": 258.5,
+      "p50": 298,
+      "p90": 521,
+      "p95": 552,
+      "p99": 616,
+      "trunc_count_300": 1028,
+      "trunc_rate_300": 0.4978,
+      "trunc_count_640": 13,
+      "trunc_rate_640": 0.0063
+    },
+    "haskell": {
+      "chunks": 7146,
+      "mean_tokens": 241.4,
+      "p50": 272,
+      "p90": 453,
+      "p95": 481,
+      "p99": 569,
+      "trunc_count_300": 3278,
+      "trunc_rate_300": 0.4587,
+      "trunc_count_640": 47,
+      "trunc_rate_640": 0.0066
+    },
+    "java": {
+      "chunks": 24426,
+      "mean_tokens": 239.5,
+      "p50": 280,
+      "p90": 401,
+      "p95": 425,
+      "p99": 482,
+      "trunc_count_300": 10921,
+      "trunc_rate_300": 0.4471,
+      "trunc_count_640": 14,
+      "trunc_rate_640": 0.0006
+    },
+    "javascript": {
+      "chunks": 8580,
+      "mean_tokens": 163.8,
+      "p50": 31,
+      "p90": 459,
+      "p95": 554,
+      "p99": 713,
+      "trunc_count_300": 2376,
+      "trunc_rate_300": 0.2769,
+      "trunc_count_640": 204,
+      "trunc_rate_640": 0.0238
+    },
+    "kotlin": {
+      "chunks": 28961,
+      "mean_tokens": 178.8,
+      "p50": 173,
+      "p90": 380,
+      "p95": 407,
+      "p99": 466,
+      "trunc_count_300": 8399,
+      "trunc_rate_300": 0.29,
+      "trunc_count_640": 12,
+      "trunc_rate_640": 0.0004
+    },
+    "lua": {
+      "chunks": 8987,
+      "mean_tokens": 284.7,
+      "p50": 349,
+      "p90": 527,
+      "p95": 564,
+      "p99": 648,
+      "trunc_count_300": 4944,
+      "trunc_rate_300": 0.5501,
+      "trunc_count_640": 110,
+      "trunc_rate_640": 0.0122
+    },
+    "php": {
+      "chunks": 24322,
+      "mean_tokens": 239.7,
+      "p50": 279,
+      "p90": 416,
+      "p95": 436,
+      "p99": 478,
+      "trunc_count_300": 11049,
+      "trunc_rate_300": 0.4543,
+      "trunc_count_640": 9,
+      "trunc_rate_640": 0.0004
+    },
+    "python": {
+      "chunks": 28357,
+      "mean_tokens": 181.2,
+      "p50": 150,
+      "p90": 421,
+      "p95": 456,
+      "p99": 518,
+      "trunc_count_300": 8821,
+      "trunc_rate_300": 0.3111,
+      "trunc_count_640": 15,
+      "trunc_rate_640": 0.0005
+    },
+    "ruby": {
+      "chunks": 30615,
+      "mean_tokens": 205.1,
+      "p50": 187,
+      "p90": 448,
+      "p95": 477,
+      "p99": 529,
+      "trunc_count_300": 12423,
+      "trunc_rate_300": 0.4058,
+      "trunc_count_640": 20,
+      "trunc_rate_640": 0.0007
+    },
+    "rust": {
+      "chunks": 11888,
+      "mean_tokens": 247.8,
+      "p50": 280,
+      "p90": 465,
+      "p95": 493,
+      "p99": 550,
+      "trunc_count_300": 5615,
+      "trunc_rate_300": 0.4723,
+      "trunc_count_640": 25,
+      "trunc_rate_640": 0.0021
+    },
+    "scala": {
+      "chunks": 9213,
+      "mean_tokens": 272.8,
+      "p50": 295,
+      "p90": 491,
+      "p95": 534,
+      "p99": 613,
+      "trunc_count_300": 4498,
+      "trunc_rate_300": 0.4882,
+      "trunc_count_640": 56,
+      "trunc_rate_640": 0.0061
+    },
+    "sql": {
+      "chunks": 50,
+      "mean_tokens": 241.8,
+      "p50": 176,
+      "p90": 472,
+      "p95": 482,
+      "p99": 494,
+      "trunc_count_300": 22,
+      "trunc_rate_300": 0.44,
+      "trunc_count_640": 0,
+      "trunc_rate_640": 0.0
+    },
+    "swift": {
+      "chunks": 4709,
+      "mean_tokens": 182.7,
+      "p50": 191,
+      "p90": 371,
+      "p95": 400,
+      "p99": 531,
+      "trunc_count_300": 1430,
+      "trunc_rate_300": 0.3037,
+      "trunc_count_640": 15,
+      "trunc_rate_640": 0.0032
+    },
+    "typescript": {
+      "chunks": 22285,
+      "mean_tokens": 176.8,
+      "p50": 103,
+      "p90": 436,
+      "p95": 472,
+      "p99": 575,
+      "trunc_count_300": 6919,
+      "trunc_rate_300": 0.3105,
+      "trunc_count_640": 129,
+      "trunc_rate_640": 0.0058
+    },
+    "zig": {
+      "chunks": 95429,
+      "mean_tokens": 229.9,
+      "p50": 239,
+      "p90": 504,
+      "p95": 596,
+      "p99": 713,
+      "trunc_count_300": 39996,
+      "trunc_rate_300": 0.4191,
+      "trunc_count_640": 1992,
+      "trunc_rate_640": 0.0209
+    }
+  }
+}

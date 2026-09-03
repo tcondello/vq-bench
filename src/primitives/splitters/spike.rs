@@ -53,20 +53,42 @@ impl Splitter for SpikeSplit {
         let k = ((dim as f32 * self.ratio).round() as usize)
             .clamp(1, dim.saturating_sub(1).max(1));
 
-        // Compute max absolute magnitude per column
-        let mut col_max: Vec<(f32, usize)> = (0..dim)
+        // Compute 4th-moment sample excess kurtosis and peak magnitude per column:
+        // mu_j = E[x_j], var_j = E[(x_j - mu_j)^2], m4_j = E[(x_j - mu_j)^4]
+        // kurt_j = m4_j / (var_j)^2 - 3.0
+        // Score = peak_magnitude * sqrt(1.0 + max(0, kurt_j))
+        let n_f64 = n.max(1) as f64;
+        let mut col_scores: Vec<(f32, usize)> = (0..dim)
             .map(|j| {
-                let mut mx = 0.0f32;
+                let mut sum = 0.0f64;
+                let mut peak = 0.0f32;
                 for i in 0..n {
-                    mx = mx.max(vectors[[i, j]].abs());
+                    let val = vectors[[i, j]];
+                    sum += val as f64;
+                    peak = peak.max(val.abs());
                 }
-                (mx, j)
+                let mu = sum / n_f64;
+
+                let mut var_sum = 0.0f64;
+                let mut m4_sum = 0.0f64;
+                for i in 0..n {
+                    let diff = vectors[[i, j]] as f64 - mu;
+                    let diff2 = diff * diff;
+                    var_sum += diff2;
+                    m4_sum += diff2 * diff2;
+                }
+                let var = var_sum / n_f64;
+                let m4 = m4_sum / n_f64;
+                let var_safe = var.max(1e-12);
+                let kurt = (m4 / (var_safe * var_safe)) - 3.0;
+                let score = peak * (1.0 + kurt.max(0.0) as f32).sqrt();
+                (score, j)
             })
             .collect();
 
-        // Sort descending by spike magnitude
-        col_max.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
-        let perm: Vec<usize> = col_max.iter().map(|&(_, j)| j).collect();
+        // Sort descending by spike outlier score
+        col_scores.sort_by(|a, b| b.0.partial_cmp(&a.0).unwrap_or(std::cmp::Ordering::Equal));
+        let perm: Vec<usize> = col_scores.iter().map(|&(_, j)| j).collect();
 
         coding::pack_model((k, perm))
     }

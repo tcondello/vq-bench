@@ -1,0 +1,9 @@
+{
+  "ndcg10": 0.7848,
+  "recall2k": 0.9186,
+  "categories": {
+    "semantic": 0.7782,
+    "architecture": 0.7451,
+    "symbol": 0.8744
+  }
+}

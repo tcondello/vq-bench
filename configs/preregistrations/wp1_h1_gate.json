@@ -5,58 +5,108 @@
     "arm_1": {
       "name": "potion-code-16M-v2",
       "type": "static_single_vector",
+      "dimension": 256,
       "vectors_per_chunk": 1,
+      "precision": "fp16",
+      "bytes_per_chunk": 512,
       "role": "incumbent_floor"
     },
     "arm_2": {
       "name": "nomic-ai/CodeRankEmbed",
       "type": "contextual_single_vector",
+      "dimension": 768,
       "vectors_per_chunk": 1,
+      "precision": "fp16",
+      "bytes_per_chunk": 1536,
       "role": "contextualization_alone (Internal Ceiling & Baseline Threshold)"
     },
     "arm_3": {
-      "name": "LateOn-Code",
+      "name": "lightonai/LateOn-Code",
       "type": "contextual_multi_vector",
+      "dimension": 128,
       "vectors_per_chunk": "~200",
+      "quality_measurement_precision": "fp16",
+      "memory_reporting_precisions": ["fp16 (51.2 KB/chunk)", "1.35 b/d DRQ (4.32 KB/chunk)"],
       "role": "late_interaction_alone"
+    }
+  },
+  "deployment_envelope_a_ide_resident": {
+    "status": "DECIDED_PRIMARY_GATE",
+    "target_platform": "16 GB Developer Laptop (~4 GB reserved for OS/editor/weights)",
+    "thresholds": {
+      "index_size_at_2m_chunks_gb": {
+        "limit": "<= 12.0",
+        "description": "Total index footprint at 2M chunks (~50M LOC); admits <= 1.88 b/d for multi-vector"
+      },
+      "cold_index_time_ratio": {
+        "limit": "<= 300x Semble (<= 150 s/repo)",
+        "description": "One-time amortized repository indexing"
+      },
+      "incremental_reindex_ms_per_file": {
+        "limit": "<= 500 ms/file",
+        "description": "Interactive latency upon file save (~40 chunks / 8,000 tokens)"
+      },
+      "p99_query_latency_ms": {
+        "limit": "<= 50 ms",
+        "description": "Interactive search latency"
+      }
+    }
+  },
+  "deployment_envelope_b_server_side": {
+    "status": "REPORTED_CONTEXT_ONLY",
+    "thresholds": {
+      "index_size_at_2m_chunks_gb": "<= 100.0",
+      "cold_index_time_ratio": "<= 250x Semble (<= 125 s/repo)",
+      "incremental_reindex_ms_per_file": "<= 5000 ms/file",
+      "p99_query_latency_ms": "<= 150 ms"
     }
   },
   "benchmarks": [
     "semble_anchor (63 repos, 1251 queries)",
-    "agent_retrieval_bench (427 samples, native BCY@4k-32k)",
-    "contextbench (1136 instances)",
+    "agent_retrieval_bench (427 samples, native BCY@4k-32k, 82 no-gold controls)",
+    "contextbench_lite500 (500 instances)",
     "bright_code (371 queries across pony, leetcode, stackoverflow)",
-    "coreb (5087 queries)"
+    "coreb (5087 queries)",
+    "coir (regression check only)"
   ],
+  "metrics_hierarchy": {
+    "primary_metrics": ["recall_500", "recall_2k"],
+    "primary_metric_description": "Recall-at-token-budget measures whether relevant code chunks are present within downstream LLM context windows (500 and 2000 tokens).",
+    "secondary_metrics": ["ndcg10", "recall_1k", "recall_4k"],
+    "secondary_metric_description": "NDCG@10 measures rank ordering of retrieved chunks."
+  },
   "decision_rule": {
-    "primary_test": "LateOn-Code (Arm 3) must beat CodeRankEmbed (Arm 2) by more than the paired bootstrap CI on the unsaturated benchmarks (ARB, ContextBench, BRIGHT, COREB) at an indexing and memory cost within the deployment envelope.",
-    "internal_referee_threshold": "Achieved NDCG@10 / Recall@2k of Arm 2 (CodeRankEmbed) measured on the frozen referee (external published 0.862 is demoted to a sanity check).",
-    "fail_branch": "If CodeRankEmbed (Arm 2) captures most of the gain or wins on the Pareto surface (Quality vs Index Time vs Bytes/Chunk vs p99 Latency), drop late interaction, drop H2/WP3 entirely, and the project becomes Contextual Single-Vector + Chonkie Chunking Optimization."
+    "primary_test": "LateOn-Code (Arm 3) must beat CodeRankEmbed (Arm 2) by more than the paired bootstrap 95% CI on primary recall-at-token-budget metrics (Recall@500 and Recall@2k) on the frozen referee while maintaining non-inferiority on NDCG@10 and satisfying Envelope A resource thresholds.",
+    "internal_referee_threshold": "Achieved Recall@500, Recall@2k, and NDCG@10 of Arm 2 (CodeRankEmbed) measured on the frozen referee.",
+    "fail_branch": "If CodeRankEmbed (Arm 2) matches or beats Arm 3 on primary recall within the CI, or if Arm 3 fails Envelope A (e.g. index > 12 GB at 2M chunks at 1.35 b/d, or incremental re-index > 500 ms/file), reject H1/late-interaction, drop WP3, and pivot to Contextual Single-Vector + Chonkie Chunking Optimization."
   },
   "per_category_preregistered_predictions": {
     "semantic_703_queries": {
       "predicted_locus": "PRIMARY GAIN",
-      "rationale": "Vocabulary mismatch on paraphrased intents lacking exact identifier stems is directly addressed by contextual token-level late interaction.",
-      "expected_delta_ndcg10": "+0.03 to +0.07 over Arm 1"
+      "test": true,
+      "expected_delta_ndcg10": "+0.03 to +0.07 over Arm 2",
+      "rationale": "Vocabulary mismatch on paraphrased intents lacking exact identifier stems is directly addressed by contextual token-level late interaction."
     },
     "symbol_204_queries": {
       "predicted_locus": "NEAR SATURATION / INVARIANT",
-      "rationale": "Symbol queries are near saturation (NDCG@10 > 0.93) and governed by exact identifier matching and definition boosting; encoder sensitivity is minimal.",
-      "expected_delta_ndcg10": "< +0.01 over Arm 1"
+      "test": false,
+      "expected_delta_ndcg10": "< +0.01 over Arm 2 (Directional)",
+      "rationale": "Symbol queries are near saturation (NDCG@10 > 0.93) and governed by exact identifier matching and definition boosting; encoder sensitivity is minimal."
     },
     "architecture_344_queries": {
       "predicted_locus": "SECONDARY / UNCERTAIN",
-      "rationale": "Multi-file structural aggregation challenge. If late-interaction wins disproportionately here rather than semantic, investigate aggregation/chunking confounds.",
-      "expected_delta_ndcg10": "+0.01 to +0.03 over Arm 1"
+      "test": true,
+      "expected_delta_ndcg10": "+0.01 to +0.03 over Arm 2",
+      "rationale": "Multi-file structural aggregation challenge. If late-interaction wins disproportionately here rather than semantic, investigate aggregation/chunking confounds."
     }
   },
+  "mechanistic_verification": "Gain must concentrate in Semantic. If gain is flat across categories or concentrates in Architecture, suspect multi-file aggregation confounds.",
   "confounds_controlled": [
-    "Chunker (Chonkie 1500 chars / line fallback)",
-    "Index & Referee evaluation harness",
-    "5-Fold cross-validation splits and 12-repo confirmation held-out set"
-  ],
-  "confounds_not_tested_in_wp1": [
-    "Encoder x chunker interaction (WP2)",
-    "Hybrid lexical/BM25 fusion (WP5)"
+    "Identical Chonkie chunker (CodeChunker for 9 native, TokenChunker for 10 fallback, tokenizer='tiktoken:cl100k_base')",
+    "Exact flat brute-force search across all arms (cosine for Arms 1-2, tensor MaxSim for Arm 3; zero ANN/HNSW/PLAID/IVF)",
+    "Arm 3 uses ColBERT query augmentation/padding and exact MaxSim sum_{q in Q} max_{d in D} <q, d>",
+    "Arm 3 quality evaluated at fp16 (quantization isolated to WP3)",
+    "Pure dense retrieval for all 3 arms (no BM25 fusion, no ensembling)",
+    "Character offset to line-span fidelity asserted across all chunks"
   ]
 }

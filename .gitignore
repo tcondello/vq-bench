@@ -3,6 +3,11 @@ paper/
 # Local working sets: downloaded datasets and run outputs (publish to docs/results).
 /data
 /results
+/scratch/
 
 sandbox/*.pkl
 *.pkl
+__pycache__/
+*.pyc
+.DS_Store
+

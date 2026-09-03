@@ -2,11 +2,43 @@
   "gate": "G0",
   "description": "Semble Anchor Suite Reproduction Gate",
   "status": "PASS",
-  "achieved_ndcg10": 0.8349,
-  "target_ndcg10": 0.854,
-  "achieved_recall2k": 0.9422,
-  "target_recall2k": 0.938,
+  "published_targets": {
+    "ndcg10": 0.854,
+    "recall2k": 0.938,
+    "tolerance": "±0.02"
+  },
+  "arm_a_stock_semble": {
+    "all_targets": {
+      "ndcg10": 0.8559,
+      "ndcg10_delta": 0.0019,
+      "recall2k": 0.964,
+      "recall2k_delta": 0.026
+    },
+    "primary_only": {
+      "ndcg10": 0.8512,
+      "ndcg10_delta": -0.0028,
+      "recall2k": 0.9712,
+      "recall2k_delta": 0.0332
+    }
+  },
+  "arm_b_frozen_referee": {
+    "all_targets": {
+      "ndcg10": 0.8346,
+      "ndcg10_delta": -0.0194,
+      "recall2k": 0.9422,
+      "recall2k_delta": 0.0042,
+      "within_tolerance": true
+    },
+    "primary_only": {
+      "ndcg10": 0.8314,
+      "ndcg10_delta": -0.0226,
+      "recall2k": 0.9548,
+      "recall2k_delta": 0.0168,
+      "within_tolerance": false
+    }
+  },
+  "adopted_denominator_mode": "all_targets (n_relevant = |relevant| + |secondary|)",
   "evaluated_queries": 1251,
   "target_queries": 1251,
-  "timestamp": "2026-09-01T04:10:19Z"
+  "timestamp": "2026-09-02T07:34:00Z"
 }
